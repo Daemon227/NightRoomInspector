@@ -1,0 +1,32 @@
+﻿{
+  "id": "5",
+  "npcName": "Phòng 204",
+  "description": "Một người đàn ông có rất nhiều tiền",
+  "dialogueByDay": [
+    {
+      "day": 1,
+      "options": [
+        {
+          "playerText": "Tối qua có ổn không?",
+          "npcTexts": [ "Tôi... không nhớ.", "Tôi ngủ sâu." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Anh tên là gì?",
+          "npcTexts": [ "Tên tôi không quan trọng.", "Tôi không nghĩ anh cần biết." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Tôi nghe tiếng la từ phòng này.",
+          "npcTexts": [ "Anh nghe nhầm rồi.", "Ở đây không có tiếng gì cả." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Rời đi.",
+          "npcTexts": [ "Tốt.", "Hãy để tôi yên." ],
+          "isExit": true
+        }
+      ]
+    }
+  ]
+}

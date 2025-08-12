@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: ImageGroup
+  m_EditorClassIdentifier: 
+  m_GroupName: ImageGroup
+  m_GUID: dc9ba7f474cdade43b81ed5f036cb26c
+  m_SerializeEntries:
+  - m_GUID: 0da5fc66a6371de4ba02d964f6a785a3
+    m_Address: CharacterImgs/NPC_Image_Id_7_day_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14a9a24acdcb0ee44821d259999bba8e
+    m_Address: CharacterImgs/NPC_Image_Id_3_day_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2405de7ee1e83b943b57e02d7d98f76c
+    m_Address: CharacterImgs/NPC_Image_Id_8_day_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 369634f9d1e2e064d873d3b78fc174dc
+    m_Address: CharacterImgs/NPC_Image_Id_1_day_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 586e2e863cf9d524487159370db0769c
+    m_Address: CharacterImgs/NPC_Image_Id_4_day_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 642ec0580de3234469158affa87c161d
+    m_Address: CharacterImgs/NPC_Image_Id_5_day_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 69e8ecb7c98dbbf4ab0d1ce1781d119c
+    m_Address: CharacterImgs/NPC_Image_Id_6_day_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad45ec3d5fa5a364f93ad5c0a60178e3
+    m_Address: CharacterImgs/NPC_Image_Id_2_day_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: c14e726273e9efb45b39dedea2323aa9, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 4794f0ba97c9fdb4b9399e1705b4118d, type: 2}
+    - {fileID: 11400000, guid: 9a73b7b51dd4f5c4dbbf19e5c238a8f7, type: 2}

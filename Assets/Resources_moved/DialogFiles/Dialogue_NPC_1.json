@@ -1,0 +1,57 @@
+﻿{
+  "id": 1,
+  "npcName": "Phòng 205",
+  "description": "Một cậu bé khoảng 10 tuổi, đi du lịch cùng mẹ.",
+  "dialogueByDay": [
+    {
+      "day": 1,
+      "options": [
+        {
+          "playerText": "Cháu có vui không?",
+          "npcTexts": [ "Vui lắm!", "Cháu thích khách sạn này, có nhiều hành lang tối." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Cháu có nghe tiếng gì lạ không?",
+          "npcTexts": [ "Cháu nghe có ai nói chuyện trong gương.", "Nhưng mẹ bảo đừng kể với ai." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Mẹ cháu đâu?",
+          "npcTexts": [ "Mẹ đang ngủ.", "Nhưng mẹ không giống như mọi ngày..." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Chào cháu.",
+          "npcTexts": [ "Bye chú!", "Nếu thấy bóng đen, đừng nói chuyện với nó nhé." ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "options": [
+        {
+          "playerText": "Cháu có vui không?",
+          "npcTexts": [ "Không", "Cháu sợ ma, có nhiều hành lang tối." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Cháu có nghe tiếng gì lạ không?",
+          "npcTexts": [ "Cháu không", "Nhưng mẹ bảo cháu ngủ sớm." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Mẹ cháu đâu?",
+          "npcTexts": [ "Mẹ đang ngủ.", "Nhưng mẹ không giống như mọi ngày..." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Chào cháu.",
+          "npcTexts": [ "Bye chú!", "Mai chú lại tới nhé." ],
+          "isExit": true
+        }
+      ]
+    }
+  ]
+}
