@@ -34,7 +34,7 @@ public class NotificationManager : MonoBehaviour
         panel.SetActive(true);
         notification.text = n;
         int day = GameManager.Instance.currentDay - 1;
-        if(day<= sprites.Count) playerImage.sprite = sprites[day];
+        if(day<= sprites.Count) playerImage.sprite = sprites[1];
 
         float startTime = Time.time;
         yield return new WaitUntil(() => Input.GetMouseButtonDown(0)|| (Time.time - startTime > 3));

@@ -1,29 +1,140 @@
 ﻿{
   "id": "3",
-  "npcName": "Phòng 204",
-  "description": "Một người đàn bà với chiếc miệng rất rộng",
+  "npcName": "Phòng 103",
+  "description": "Một cô gái trẻ với ánh mắt long lanh, nụ cười rộng đến mức đáng sợ. Trang điểm đậm, môi đỏ chói, luôn tràn đầy năng lượng nhưng lời nói thì khó đoán, đôi khi rợn gáy.",
+  "isMonster": false,
   "dialogueByDay": [
     {
       "day": 1,
       "options": [
         {
-          "playerText": "Tối qua có ổn không?",
-          "npcTexts": [ "Tôi... không nhớ.", "Tôi ngủ sâu." ],
+          "playerText": "Chào buổi tối.",
+          "npcTexts": [ "Ồ! Anh là nhân viên ca đêm mới hả?", "Đêm nay nhớ để mắt nhé… ở rạp xiếc của tôi, có người từng mất nguyên… cái đầu giả đấy!",
+          "Hahaha, đùa thôi mà, đừng nhìn tôi kiểu đó!"],
           "isExit": false
         },
         {
-          "playerText": "Anh tên là gì?",
-          "npcTexts": [ "Tên tôi không quan trọng.", "Tôi không nghĩ anh cần biết." ],
+          "playerText": "Chị sống ở đây lâu chưa?",
+          "npcTexts": [ "Mới dọn tới tuần trước thôi, nhưng tôi đã thuộc hết mấy tiếng kẽo kẹt của hành lang này rồi.", 
+          "Mỗi đêm nó như đang thở ấy… như một con thú lớn, biết không?",
+          "Ôi, tôi lại nói bậy rồi, không phải thật đâu!"],
           "isExit": false
         },
         {
-          "playerText": "Tôi nghe tiếng la từ phòng này.",
-          "npcTexts": [ "Anh nghe nhầm rồi.", "Ở đây không có tiếng gì cả." ],
+          "playerText": "Chị làm nghề gì thế?",
+          "npcTexts": [ "Tôi làm diễn viên hài… à không, xiếc!", "Có lúc tôi làm cả kẻ giả mạo ăn thịt người nữa",
+          "Anh đừng sợ nhé, tôi chưa bao giờ… ăn ai thật đâu."],
           "isExit": false
         },
         {
-          "playerText": "Rời đi.",
-          "npcTexts": [ "Tốt.", "Hãy để tôi yên." ],
+          "playerText": "Chị có gặp ai lạ ở khu này không?",
+          "npcTexts": [ "Ờm… đêm qua tôi thấy một người đứng ngoài cửa phòng tôi cả tiếng.", "Nhưng khi tôi mở cửa thì… chẳng có ai cả."],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": [ "Nếu đêm nay anh nghe tiếng cười trong hành lang… thì chắc là tôi thôi.", "Hoặc… là ai đó khác. Hehe, ngủ ngon nhé!" ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "options": [
+        {
+          "playerText": "Chào buổi tối.",
+          "npcTexts": [ "Ồ, chào anh nhân viên ca đêm!", "Anh có biết hôm qua tôi mơ gì không?",
+          "Tôi mơ thấy mọi người ở đây đều nhìn giống nhau hahaha"],
+          "isExit": false
+        },
+        {
+          "playerText": "Chị sống ở đây lâu chưa?",
+          "npcTexts": [ "Tôi bảo rồi mà, hơn một tuần thôi. À, hay là… hai tuần?", 
+          "Ôi, trí nhớ của tôi lúc nào cũng lộn xộn.",
+          "Ở rạp xiếc tôi từng quên cả ngày sinh của mình cơ mà!"],
+          "isExit": false
+        },
+        {
+          "playerText": "Chị thường ra ngoài vào ban đêm không?",
+          "npcTexts": [ "Có chứ! Đêm là lúc ánh đèn sân khấu đẹp nhất.", "Tôi là nhân viên rạp xiếc mà"],
+          "isExit": false
+        },
+        {
+          "playerText": "Chị có gặp ai lạ ở khu này không?",
+          "npcTexts": [ "Ờm không thấy ai lạ cả. Tất cả mọi người đều là người quen ", "Nhưng nếu có ai lạ chắc họ muốn tới xem xiếc hahaha"],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": [ "Nếu anh nghe tiếng vỗ tay đêm nay, nhớ vỗ tay lại nhé.", "Trong rạp xiếc, đó là phép lịch sự" ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "options": [
+        {
+          "playerText": "Chào buổi tối.",
+          "npcTexts": [ "Ồ, hôm nay anh vẫn khỏe chứ!", "Tối qua tôi lại mơ giấc mơ cũ đấy",
+          "Mọi người đều nhìn giống nhau và tôi phải phân biệt họ qua lời nói"],
+          "isExit": false
+        },
+        {
+          "playerText": "Chị thấy thoải mái khi sống ở đây chứ?",
+          "npcTexts": [ "Thoải mái à?", 
+          "Mặc dù tôi mới tới đây còn chưa được 2 tuần mà",
+          "Nhưng với tôi thì sống ở đâu cũng thoải mái cả"],
+          "isExit": false
+        },
+        {
+          "playerText": "Chị có nhiều bạn trong khu này không?",
+          "npcTexts": [ "Có chứ! Ai thấy tôi cũng cười hết", "Một nụ cười cứng đờ luôn. Cứ như là tượng vậy"],
+          "isExit": false
+        },
+        {
+          "playerText": "Chị thấy ai đáng ngờ không?",
+          "npcTexts": [ "Tất cả mọi người đều đáng ngờ nếu anh nhìn đủ lâu.", "Nhưng nếu nhìn tôi lâu quá… anh sẽ thấy tôi cũng hơi đáng ngờ đấy",
+          "Haha, thử đi!"],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": [ "Chúc anh làm việc vui vẻ.", "Và nhớ… nếu ai đó gõ cửa ba lần, đừng mở. Trừ khi là tôi, tất nhiên!" ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "options": [
+        {
+          "playerText": "Chào buổi tối.",
+          "npcTexts": [ "Chào anh! Đừng hoảng, tôi chỉ… hơi khác một chút thôi.", "Ở rạp xiếc, chúng tôi thay đổi ngoại hình suốt mà.",
+          "Nhưng tôi thề, da tôi không phải lớp hóa trang… ít nhất là hôm nay."],
+          "isExit": false
+        },
+        {
+          "playerText": "Chị ổn chứ?",
+          "npcTexts": [ "Ổn! Chỉ là… tôi ngủ ít hơn.", 
+          "Đôi khi tôi thèm một chút thịt sống",
+          "Mà này nhìn cậu cũng ngon đấy chứ..."],
+          "isExit": false
+        },
+        {
+          "playerText": "Chị nhớ những gì đã kể cho tôi không?",
+          "npcTexts": [ "Ờm… tôi nói gì nhỉ? À, tôi đã kể về tiếng gõ cửa và mấy giấc mơ rồi.", "Đó cũng chỉ là những câu chuyện tôi bịa ra để trêu anh"],
+          "isExit": false
+        },
+        {
+          "playerText": "Chị có lời khuyên gì cho tôi không?",
+          "npcTexts": [ "Hãy luôn mỉm cười nhé", "Như tôi này giờ tôi không thể ngưng cho miệng tôi cười được",
+          "Haha, thử đi!"],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": [ "Nếu tối nay anh thấy tôi đứng ở cuối hành lang… đừng lại gần.", "Sẽ là một tiết mục xiếc hay đấy" ],
           "isExit": true
         }
       ]

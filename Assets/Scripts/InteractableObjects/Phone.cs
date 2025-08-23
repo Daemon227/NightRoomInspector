@@ -10,23 +10,15 @@ public class Phone : InteractableObject
             case 0:
                 if (GameManager.Instance.checkFullRoom)
                 {
-                    if (EndingManager.Instance.interactWithNpc)
+                    if (GameManager.Instance.reportToBoss == false)
                     {
-                        EventManager.ShowNotification("Khong ai nghe may");
+                        CallingPanel.SetActive(true);
+                        EventManager.StartCalling?.Invoke();
                     }
                     else
                     {
-                        if (GameManager.Instance.reportToBoss == false)
-                        {
-                            CallingPanel.SetActive(true);
-                            EventManager.StartCalling?.Invoke();
-                        }
-                        else
-                        {
-                            EventManager.ShowNotification("I reported");
-                        }
+                        EventManager.ShowNotification("I reported");
                     }
-                    
                 }
                 else
                 {

@@ -8,6 +8,7 @@ public class NPCData
     public int id;
     public string npcName;
     public string description;
+    public bool isMonster;
     public List<DialogueByDay> dialogueByDay;
 }
 

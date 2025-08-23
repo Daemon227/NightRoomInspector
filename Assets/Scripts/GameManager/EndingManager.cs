@@ -7,22 +7,13 @@ using UnityEngine.UI;
 
 public class EndingManager : MonoBehaviour
 {
-    public GameObject endingPanel;
-    public TextMeshProUGUI title;
-    public TextMeshProUGUI textUI;
-    public Image image;
-    public Button backButton;
-    public List<EndingData> endingDatas;
-
-     public int reportedIndex = 0;
-     public bool interactWithNpc = false;
-     public bool enteredHouse = false;
-     public int lookOutSideIndex = 0;
-
-    public int endingID = 0;
- 
     public static EndingManager Instance;
-
+    public bool canFireMove = true;
+    public int endingID = -1;
+    //set for first ending
+    [Header("First Ending")]
+    public GameObject firstEndingPanel;
+    public GameObject fireObject;
     private void OnEnable()
     {
         EventManager.OnActiveEnding += ShowEnding;
@@ -39,79 +30,51 @@ public class EndingManager : MonoBehaviour
             return;
         }
         Instance = this;
+       //backButton.onClick.AddListener(BackHome);
     }
     public void ShowEnding()
     {
-        if(reportedIndex >= 3)
+        // int[0]: tong so phong bi bao cao;   int[1]: so phong co quai bi bao cao
+        int[] result = GameManager.Instance.GetMonsterReportedIndex();
+        if (result[0] == 0)
         {
-            // sang ngayf moi => trong phong toan canh sat -> bi bat luon :))
-            Debug.Log("Ending 1");
+            Debug.Log("First ending event");
+            EventManager.ShowNotification?.Invoke("I can't open the door. What happen?");
+            fireObject.SetActive(true);
             endingID = 1;
         }
         else
         {
-            if (interactWithNpc)
+            if (result[1] < 4)
             {
-                if (enteredHouse)
-                {
-                    // sang ngay moi -> vao kiem tra toan rac -> khong con ai song
-                    // kiem tra xong cac phong -> quay lai thi bi 1 thang kill luon
-                    Debug.Log("Ending 2");
-                    endingID = 2;
-                }
-                else
-                {
-                    // ra ve -> bi kill luon tu phia sau
-                    Debug.Log("Ending 3");
-                    endingID = 3;
-                }
+                SecondEndingEvent();
+                endingID = 2;
             }
             else
             {
-                if(lookOutSideIndex == 3)
-                {
-                    //len mo check phong, mo cua so -> noi chuyen canh sat ->
-                    //chay ve && k tuon tac -> hien canh sat bat trum
-                    Debug.Log("Ending 4");
-                    endingID = 4;
-                }
-                else
-                {
-                    //khong mo cua, khong tuong tac -> ra ve -> bi kill tu phia sau.
-                    Debug.Log("Ending 5");
-                    endingID = 5;
-                }
+                ThirdEndingEvent();
+                endingID = 3;
             }
         }
-        endingPanel.SetActive(true);
-        StartCoroutine(ShowEndingText(endingDatas[endingID - 1]));
     }
 
-    public IEnumerator ShowEndingText(EndingData ending)
+    public void FirstEndingEvent()
     {
-        for(int i =0; i< ending.contents.Length; i++)
-        {
-            textUI.text = ending.contents[i];
-            if (i < ending.endingImgs.Count) image.sprite = ending.endingImgs[i];
-            yield return new WaitUntil(() => Input.GetMouseButton(0));
-        }
-        yield return new WaitUntil(() => Input.GetMouseButton(0));
-        textUI.gameObject.SetActive(false);
-        title.text = ending.title;
-        title.gameObject.SetActive(true);
-        backButton.gameObject.SetActive(true);
+        Debug.Log("Jump out the window");
+    }
+    public void SecondEndingEvent()
+    {
+        Debug.Log("Second ending event");
+        EventManager.ShowNotification?.Invoke("Fire?");
+    }
+    public void ThirdEndingEvent()
+    {
+        Debug.Log("Third ending event");
+        EventManager.ShowNotification?.Invoke("Everything end");
     }
 
     public void BackHome()
     {
         Debug.Log("Back home, end game");
     }
-}
-
-[System.Serializable]
-public class EndingData 
-{
-    public string title;
-    public string[] contents;
-    public List<Sprite> endingImgs;
 }

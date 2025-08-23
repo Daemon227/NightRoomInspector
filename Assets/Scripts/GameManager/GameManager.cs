@@ -1,5 +1,6 @@
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -8,14 +9,17 @@ public class GameManager : MonoBehaviour
     public List<GameObject> roomOnFloor1;
     public List<GameObject> roomOnFloor2;
 
+    //biến quản lý sự kiện game
     public bool turnOnLight = false;
     public bool checkFullRoom = false;
     public bool reportToBoss = false;
-
-    public bool reportedSomeone = false;
-    public static GameManager Instance;
-
+    public GameObject reportedRoom = null;
     public bool canMove = true;
+    //biến quản lý điều kiện ending
+
+
+    public static GameManager Instance;
+    private SpawnManager spawnManager;
     private void Awake()
     {
         if(Instance!= null && Instance != this)
@@ -24,6 +28,11 @@ public class GameManager : MonoBehaviour
             return;
         }
         Instance = this;
+    }
+
+    private void Start()
+    {
+        spawnManager = GetComponentInChildren<SpawnManager>();
     }
     private void OnEnable()
     {
@@ -38,11 +47,11 @@ public class GameManager : MonoBehaviour
         int total = 0;
         foreach(var room in roomOnFloor1)
         {
-            if (room.GetComponent<DoorManager>().canOpen) total += 1;
+            if (room.GetComponent<Door>().canOpen) total += 1;
         }
         foreach (var room in roomOnFloor2)
         {
-            if (room.GetComponent<DoorManager>().canOpen) total += 1;
+            if (room.GetComponent<Door>().canOpen) total += 1;
         }
         return total;
     }
@@ -57,10 +66,65 @@ public class GameManager : MonoBehaviour
     }
     public void ChangeDay()
     {
+        //event
+        spawnManager.SpawnObjectByDay();
+        //reset
+        if(reportedRoom!= null)
+        {
+            reportedRoom.GetComponent<Door>().canOpen = false;
+            reportedRoom = null;
+        }
         turnOnLight = false;
         checkFullRoom = false;
-        reportToBoss = false;
+        reportToBoss = false; 
         currentDay += 1;
     }
 
+    public Door GetRoomByID(int id)
+    {
+        Door door = null;
+        foreach(var room in roomOnFloor1)
+        {
+            if(room.GetComponent<Door>().roomIndex == id)
+            {
+                door = room.GetComponent<Door>();
+                break;
+            }
+        }
+        foreach (var room in roomOnFloor2)
+        {
+            if (room.GetComponent<Door>().roomIndex == id)
+            {
+                door = room.GetComponent<Door>();
+                break;
+            }
+        }
+        return door;
+    }
+
+    public int[] GetMonsterReportedIndex()
+    {
+        int roomReportedCount = 0;
+        int monsterReportdCount = 0;
+        foreach(var room in roomOnFloor1)
+        {
+            if(!room.GetComponent<Door>().canOpen)
+            {
+                roomReportedCount += 1;       
+                if(room.GetComponent<Door>().isMonster) monsterReportdCount += 1;
+            }
+        }
+        foreach (var room in roomOnFloor2)
+        {
+            if (!room.GetComponent<Door>().canOpen)
+            {
+                roomReportedCount += 1;       
+                if (room.GetComponent<Door>().isMonster) monsterReportdCount += 1;
+            }
+        }
+        int[] result = new int[2];
+        result[0] = roomReportedCount;
+        result[1] = monsterReportdCount;
+        return result;
+    }
 }

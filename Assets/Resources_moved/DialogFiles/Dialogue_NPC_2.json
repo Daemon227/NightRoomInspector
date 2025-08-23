@@ -1,29 +1,126 @@
 ﻿{
   "id": "2",
-  "npcName": "Phòng 204",
-  "description": "Một người đàn ông cao lớn, mặc áo khoác dày, mũ trùm che kín mặt.",
+  "npcName": "Phòng 102",
+  "description": "Người đàn ông trung niên với gương mặt méo mó, ánh mắt dữ dằn và khó gần. Giọng nói khàn khàn, ít biểu lộ cảm xúc, khiến người khác e dè.",
+  "isMonster": false,
   "dialogueByDay": [
     {
       "day": 1,
       "options": [
         {
-          "playerText": "Tối qua có ổn không?",
-          "npcTexts": [ "Tôi... không nhớ.", "Tôi ngủ sâu." ],
+          "playerText": "Anh sống ở đây đã lâu chưa?",
+          "npcTexts": [ "Lâu rồi. Hỏi làm gì?", "Tôi đâu có định dọn đi." ],
           "isExit": false
         },
         {
-          "playerText": "Anh tên là gì?",
-          "npcTexts": [ "Tên tôi không quan trọng.", "Tôi không nghĩ anh cần biết." ],
+          "playerText": "Anh có nhận thấy điều gì lạ không?",
+          "npcTexts": [ "Không. Nếu có thì cũng không phải việc của anh.", "Tôi mở ra thì không thấy ai…",
+          "Chắc ai đó muốn bị ăn đòn."],
           "isExit": false
         },
         {
-          "playerText": "Tôi nghe tiếng la từ phòng này.",
-          "npcTexts": [ "Anh nghe nhầm rồi.", "Ở đây không có tiếng gì cả." ],
+          "playerText": "Anh hiện đang làm nghề gì?",
+          "npcTexts": [ "Việc tay chân.", "Đủ sống. Không cần anh quan tâm." ],
           "isExit": false
         },
         {
-          "playerText": "Rời đi.",
+          "playerText": "Anh thường ra ngoài lúc nào?",
+          "npcTexts": [ "Khi cần. Không cần thì ở nhà.", "Hỏi lắm thế." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt.",
           "npcTexts": [ "Tốt.", "Hãy để tôi yên." ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "options": [
+        {
+          "playerText": "Anh ở khu trọ này bao lâu rồi?",
+          "npcTexts": [ "Năm năm. Hay sáu.", "Ai rảnh mà đếm?" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Anh thấy gì khác thường không?",
+          "npcTexts": [ "Có anh đứng đây hỏi vớ vẩn, thế thôi."],
+          "isExit": false
+        },
+        {
+          "playerText": "Anh hôm nay có đi làm không?",
+          "npcTexts": [ "Không. Ở nhà ngủ.", "Hỏi chán chưa?" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Anh có ra ngoài hôm nay không?",
+          "npcTexts": [ "Tôi ra ngoài hay không thì có ảnh hưởng đến anh không?", "Hỏi lắm thế." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt.",
+          "npcTexts": [ "Tốt.", "Đừng quay lại." ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "options": [
+        {
+          "playerText": "Anh ở khu trọ này bao lâu rồi?",
+          "npcTexts": [ "Đã nói rồi. Hỏi lại làm gì?", "Tai anh có vấn đề à?" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Đêm qua anh có nghe thấy gì lạ không?",
+          "npcTexts": [ "Nghe tiếng chân. Chắc ai đó đi đâu đó.", "Tôi không quan tâm. Nhưng nếu hắn làm ồn tôi sẽ đấm hắn."],
+          "isExit": false
+        },
+        {
+          "playerText": "Anh vẫn đi làm chứ?",
+          "npcTexts": [ "Không. Nghỉ rồi.", "Rảnh thì để yên cho tôi." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Anh có hay ra ngoài không?",
+          "npcTexts": [ "Tôi chuẩn bị ra ngoài cho cậu một trận đây.", "Đừng làm phiền tôi nữa" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt.",
+          "npcTexts": [ "Được.", "Đi khỏi cửa tôi ngay." ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "options": [
+        {
+          "playerText": "Anh ở đây từ khi nào?",
+          "npcTexts": [ "Lại là anh à.", "Khi nào thì anh mới thấy đủ." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Sáng nay anh có thấy gì lạ không?",
+          "npcTexts": [ "Có...", "Mấy câu hỏi của anh."],
+          "isExit": false
+        },
+        {
+          "playerText": "Anh vẫn đi làm chứ?",
+          "npcTexts": [ "Tôi không cần tiền nữa"],
+          "isExit": false
+        },
+        {
+          "playerText": "Anh có muốn đi ra ngoài không?",
+          "npcTexts": [ "Không. Ra ngoài để làm gì?", "Hít không khí bẩn à?" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt.",
+          "npcTexts": [ "Cút..", "Biến ngay trước khi tôi cho anh một trận" ],
           "isExit": true
         }
       ]

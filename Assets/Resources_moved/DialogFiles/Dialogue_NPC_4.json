@@ -1,29 +1,144 @@
 ﻿{
   "id": "4",
-  "npcName": "Phòng 204",
-  "description": "Một người đàn ông với đôi mắt lồi",
+  "npcName": "Phòng 104",
+  "description": "Một người phụ nữ với đôi mắt trừng không chớp. Rất đáng sợ nhưng giọng nói rất điềm đạm, mạch lạc",
+  "isMonster": true,
   "dialogueByDay": [
     {
       "day": 1,
       "options": [
         {
-          "playerText": "Tối qua có ổn không?",
-          "npcTexts": [ "Tôi... không nhớ.", "Tôi ngủ sâu." ],
+          "playerText": "Chào cô!",
+          "npcTexts": [ "Chào cậu.", "Đừng quá để ý đến đôi mắt tôi, từ nhỏ nó đã thế rồi.",
+          "Tôi vẫn nhìn mọi thứ rất rõ, thậm chí có khi còn rõ hơn người bình thường." ],
           "isExit": false
         },
         {
-          "playerText": "Anh tên là gì?",
-          "npcTexts": [ "Tên tôi không quan trọng.", "Tôi không nghĩ anh cần biết." ],
+          "playerText": "Cô sống ở đây lâu chưa?",
+          "npcTexts": [ "Tôi mới tới khoảng hai tháng.", "Chỗ này ồn ào vào ban đêm, nhưng tôi đã quen.",
+          "Với tôi, chỉ cần một cuốn sách và sự yên lặng là đủ rồi."],
           "isExit": false
         },
         {
-          "playerText": "Tôi nghe tiếng la từ phòng này.",
-          "npcTexts": [ "Anh nghe nhầm rồi.", "Ở đây không có tiếng gì cả." ],
+          "playerText": "Nghề nghiệp của cô là gì?",
+          "npcTexts": [ "Tôi là giáo viên văn học.", "Tôi tin ngôn từ có sức mạnh hơn cả vũ khí.",
+          "Dù ở đâu, tôi cũng luôn mang theo vài cuốn sách, như là người bạn đồng hành của mình."],
           "isExit": false
         },
         {
-          "playerText": "Rời đi.",
-          "npcTexts": [ "Tốt.", "Hãy để tôi yên." ],
+          "playerText": "Cô có gặp ai lạ quanh đây không?",
+          "npcTexts": [ "Tôi thấy vài gương mặt mới nhưng chẳng ai thực sự khiến tôi lo lắng.", "Con người vốn hay nghi ngờ nhau",
+          "Nhưng thường thì nỗi sợ lại do chính trí tưởng tượng của ta tạo ra."],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": [ "Chào cậu", "Hãy nhớ: Những gì ta sợ nhất, thường chỉ là bóng tối của chính mình." ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "options": [
+        {
+          "playerText": "Chào cô!",
+          "npcTexts": [ "Chào cậu.", "Tôi vừa dành cả buổi tối để soạn giáo án… hay là đọc sách nhỉ?",
+          "Tôi hay nhầm lẫn giữa công việc và thú vui." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Cô sống ở đây bao lâu rồi nhỉ?",
+          "npcTexts": [ "Ờm… hình như là một tháng rưỡi… hoặc lâu hơn.", 
+          "Khi dạy học, tôi cũng thường quên đi thời gian, cứ như mọi ngày nhập vào một dòng chảy.",
+          "Cậu có khi nào bị thế không?"],
+          "isExit": false
+        },
+        {
+          "playerText": "Cô thấy khu này có an toàn không?",
+          "npcTexts": [ "An toàn tương đối thôi", "Con người mới là điều khó đoán nhất.",
+          "Tôi từng dạy học sinh, nhìn vào mắt chúng là biết ngay ai đang nói dối."],
+          "isExit": false
+        },
+        {
+          "playerText": "Đêm qua cô có nghe gì lạ không?",
+          "npcTexts": [ "Tôi nghe thấy tiếng bước chân kéo dài ngoài hành lang.", "Nhưng đôi mắt tôi chẳng thấy ai",
+          "Tôi cho rằng đó chỉ là ảo giác thính giác thôi"],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": [ "Chào cậu", "Chúc cậu làm việc vui vẻ" ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "options": [
+        {
+          "playerText": "Chào cô!",
+          "npcTexts": [ "Cậu trông mệt mỏi hơn hôm qua. Tôi thì lại thấy… khỏe hơn nhiều.", 
+          "Có lẽ do tôi ăn uống đầy đủ, hoặc là do tôi học cách hấp thu… năng lượng từ bầu không khí này."],
+          "isExit": false
+        },
+        {
+          "playerText": "Cô còn thấy dạy học thú vị chứ?",
+          "npcTexts": [ "Tất nhiên rồi.", 
+          "Tôi thích lắng nghe tiếng học sinh run rẩy khi đọc thơ trước lớp.",
+          "Nó làm tôi thấy hứng thú một cách lạ thường."],
+          "isExit": false
+        },
+        {
+          "playerText": "Cô có thân ai ở khu trọ này không?",
+          "npcTexts": [ "Tôi giữ khoảng cách.", "Chờ người khác bộc lộ sơ hở, đó là lúc ta học được nhiều nhất về họ."],
+          "isExit": false
+        },
+        {
+          "playerText": "Hỏi về căn bệnh lạ đang lan truyền?",
+          "npcTexts": [ "Người ta gọi là bệnh, tôi gọi là sự thích nghi.", "Cơ thể con người luôn thay đổi theo môi trường.",
+          "Có lẽ chúng ta đang tiến hóa để trở nên hoàn thiện hơn"],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": [ "Ngủ ngon nhé", "Và nhớ… đừng để người khác nghe thấy nhịp tim của cậu quá rõ",
+          "Có những kẻ… sẽ bị thu hút bởi âm thanh ấy."],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "options": [
+        {
+          "playerText": "Chào cô!",
+          "npcTexts": [ "Ồ… đừng nhìn tôi như thể tôi đã thành quái vật.", 
+          "Đây chỉ là… giai đoạn cuối của một quá trình tiến hóa.",
+          "Tôi thấy mọi thứ sáng rõ hơn bao giờ hết"],
+          "isExit": false
+        },
+        {
+          "playerText": "Cô có thấy khỏe không?",
+          "npcTexts": [ "Tôi chưa từng cảm thấy mạnh mẽ thế này.", 
+          "Tôi không còn muốn ăn bánh mì hay thịt cá nữa."],
+          "isExit": false
+        },
+        {
+          "playerText": "Cô nhớ những gì đã kể không?",
+          "npcTexts": [ "Tất nhiên", "Tôi kể cho cậu về sách, cách dạy trẻ, lòng người",
+          "Tôi nhớ hết… vì ký ức ấy đang chảy trong từng mạch máu tôi."],
+          "isExit": false
+        },
+        {
+          "playerText": "Nếu có kẻ giả mạo cô sẽ làm gì?",
+          "npcTexts": [ "Tôi nghĩ kẻ giả mạo và con người có thể chung sống mà", "Con có kẻ xấu người tốt",
+          "Những kẻ giả mạo cũng vậy"],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": [ "Đi đi", "Nhưng nhớ rằng, nếu tim cậu đập nhanh quá… tôi sẽ nghe thấy"],
           "isExit": true
         }
       ]

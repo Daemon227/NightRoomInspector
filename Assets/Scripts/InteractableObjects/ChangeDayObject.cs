@@ -14,15 +14,16 @@ public class ChangeDayObject : InteractableObject
             case 0:
                 if (GameManager.Instance.CanChangeDay())
                 {
-                    if(GameManager.Instance.currentDay >= 3)
+                    if(GameManager.Instance.currentDay == 4)
                     {
+                        Debug.Log("End Game");
                         EventManager.OnActiveEnding?.Invoke();
                     }
                     else
                     {
                         StartCoroutine(ChangeDayUI());
                         EventManager.OnChangeDay?.Invoke();
-                    } 
+                    }             
                 }
                 else
                 {

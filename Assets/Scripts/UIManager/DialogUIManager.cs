@@ -17,10 +17,21 @@ public class DialogUIManager : MonoBehaviour
     public GameObject buttonPrefab;
     public GameObject buttonGroup;
 
+    [Header("Prepare for main option")]
+    // for scan option
+    public GameObject scanObject;
+    public Image scanImage;
+    public Button closeButton;
+    //for shoot option
+    public GameObject gunObject;
+    public Button closeShootOption;
+
     private NPCData currentNPCData;
     private NPCDataLoader npcDataLoader;
     private string dialogAddress = "DialogFiles/Dialogue_NPC_";
     private string avatarAddress = "CharacterImgs/";
+
+    private int currentRoom = 0;
 
     private void OnEnable()
     {
@@ -35,10 +46,13 @@ public class DialogUIManager : MonoBehaviour
     private void Start()
     {
         npcDataLoader = GetComponentInParent<NPCDataLoader>();
+        closeButton.onClick.AddListener(() => CloseScan());
+        closeShootOption.onClick.AddListener(() => CloseShootOption());
     }
     public void StartLoadNPCData(int roomIndex)
     {
-        //Load du lieu
+        currentRoom = roomIndex;
+        //Load dialog data
         string fullDialogAddress = dialogAddress + roomIndex;
         npcDataLoader.LoadDialog(fullDialogAddress, data => {
             if (data != null)
@@ -46,14 +60,21 @@ public class DialogUIManager : MonoBehaviour
                 currentNPCData = data;
                 // bat panel conversation
                 conversationPanel.SetActive(true);
+
+                //set ismonster vao door
+                if (GameManager.Instance.GetRoomByID(roomIndex) != null)
+                {
+                    GameManager.Instance.GetRoomByID(roomIndex).isMonster = currentNPCData.isMonster;
+                }
             }
             else Debug.Log("Data is null");
         });
 
-        ////CharacterImgs/NPC_Image_Id_1_day_1
+        //CharacterImgs/NPC_Image_Id_1_day_1
+        //Load avatar image
         int day = GameManager.Instance.currentDay;// fix here
         Debug.Log(roomIndex);
-        string fullAvatarAddress = $"{avatarAddress}NPC_Image_Id_{roomIndex}_day_{1}";
+        string fullAvatarAddress = $"{avatarAddress}NPC_Image_Id_{roomIndex}_day_{day}";
         npcDataLoader.LoadImage(fullAvatarAddress, newSprite =>
         {
             if(newSprite!= null)
@@ -65,7 +86,19 @@ public class DialogUIManager : MonoBehaviour
                 Debug.Log("sprite is null");
             }
         });
-        
+
+        string fullScanAvatarAddress = $"{avatarAddress}NPC_Image_Id_{roomIndex}_day_{1}";
+        npcDataLoader.LoadImage(fullScanAvatarAddress, newSprite =>
+        {
+            if (newSprite != null)
+            {
+                scanImage.sprite = newSprite;
+            }
+            else
+            {
+                Debug.Log("sprite is null");
+            }
+        });
     }
 
     public void HandleConversationAction()
@@ -76,19 +109,48 @@ public class DialogUIManager : MonoBehaviour
     {
         if(currentNPCData!= null)
         {
-            descriptionText.gameObject.SetActive(true);
+            descriptionText.transform.parent.gameObject.SetActive(true);
             descriptionText.text = currentNPCData.description;
             yield return new WaitUntil(()=> Input.GetMouseButton(0));
             int day = GameManager.Instance.currentDay;
-            ShowOption(day);
-            descriptionText.gameObject.SetActive(false);
+            ShowMainOption(day);
+            descriptionText.transform.parent.gameObject.SetActive(false);
         }    
     }
-
-    public void ShowOption(int currentDay)
+    public void ShowMainOption(int day)
     {
-        // set khong cho di chuyen
         GameManager.Instance.canMove = false;
+
+        GameObject b1 = Instantiate(buttonPrefab, buttonGroup.transform);
+        b1.GetComponentInChildren<TextMeshProUGUI>().text = "Chat";
+        b1.GetComponent<Button>().onClick.AddListener(() => ShowDialogueOption(day));
+
+        if(day >= 2)
+        {
+            GameObject b2 = Instantiate(buttonPrefab, buttonGroup.transform);
+            b2.GetComponentInChildren<TextMeshProUGUI>().text = "Scan";
+            b2.GetComponent<Button>().onClick.AddListener(Scan);
+        }
+
+        if (day >= 3)
+        {
+            GameObject b3 = Instantiate(buttonPrefab, buttonGroup.transform);
+            b3.GetComponentInChildren<TextMeshProUGUI>().text = "Shoot";
+            b3.GetComponent<Button>().onClick.AddListener(Shoot);
+        }
+
+        GameObject b4 = Instantiate(buttonPrefab, buttonGroup.transform);
+        b4.GetComponentInChildren<TextMeshProUGUI>().text = "Leave";
+        b4.GetComponent<Button>().onClick.AddListener(() =>
+        {
+            ClearOption();
+            conversationPanel.SetActive(false);
+            GameManager.Instance.canMove = true;
+        });
+    }
+    public void ShowDialogueOption(int currentDay)
+    { 
+        ClearOption();
         foreach (var dialog in currentNPCData.dialogueByDay)
         {
             if(dialog.day == currentDay)
@@ -123,23 +185,82 @@ public class DialogUIManager : MonoBehaviour
             ClearOption();
             npcDialog.transform.parent.gameObject.SetActive(true);
             npcDialog.text = text;
-            yield return new WaitUntil(() => Input.GetMouseButton(0));
+            yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
         }
         yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
         if (option.isExit)
         {
             npcDialog.transform.parent.gameObject.SetActive(false);
-            conversationPanel.SetActive(false);
-
-            GameManager.Instance.canMove = true;
+            ClearOption();
+            ShowMainOption(GameManager.Instance.currentDay);
         }
         else
         {  
             npcDialog.transform.parent.gameObject.SetActive(false);
             
-            ShowOption(GameManager.Instance.currentDay);
+            ShowDialogueOption(GameManager.Instance.currentDay);
         }
     }
 
-    
+    //code for scan and shoot option
+    public void Scan()
+    {
+        ClearOption();
+        if (scanObject != null)
+        {
+            scanObject.SetActive(true);         
+            GameManager.Instance.canMove = false;
+        }
+        else
+        {
+            Debug.Log("Scan object is not set");
+        }
+    }
+    public void CloseScan()
+    {
+        if (scanObject != null)
+        {
+            scanObject.SetActive(false);
+            GameManager.Instance.canMove = true;
+        }
+        else
+        {
+            Debug.Log("Scan object is not set");
+        }
+        ShowMainOption(GameManager.Instance.currentDay);
+    }
+
+    public void Shoot()
+    {
+        ClearOption();
+        if (gunObject != null)
+        {
+            gunObject.SetActive(true);
+            gunObject.GetComponentInChildren<GunAndShooting>().Shooting();
+        }
+        else
+        {
+            Debug.Log("Gun object is not set");
+        }
+    }
+    public void CloseShootOption()
+    {
+        if (gunObject != null)
+        {
+            gunObject.SetActive(false);  
+            closeShootOption.gameObject.SetActive(false);
+            if (GameManager.Instance.GetRoomByID(currentRoom)!= null)
+            {
+                GameManager.Instance.GetRoomByID(currentRoom).canOpen = false;
+            }
+            conversationPanel.SetActive(false);
+            GameManager.Instance.canMove = true;
+            ClearOption();
+        }
+        else
+        {
+            Debug.Log("Gun object is not set");
+        }
+    }
 }

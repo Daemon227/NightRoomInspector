@@ -94,9 +94,9 @@ public class CallingUIManager : MonoBehaviour
             // sinh ra button theo phong
             foreach (var room in rooms)
             {
-                if (room.GetComponent<DoorManager>().canOpen == false) continue;      
+                if (room.GetComponent<Door>().canOpen == false) continue;      
                 GameObject b = Instantiate(buttonPrefab, buttonGroup2.transform);
-                b.GetComponentInChildren<TextMeshProUGUI>().text = room.GetComponent<DoorManager>().roomName;
+                b.GetComponentInChildren<TextMeshProUGUI>().text = room.GetComponent<Door>().roomName;
                 b.GetComponent<Button>().onClick.AddListener(() => ReportSomeOne(room));
             }
             // sinh ra nut thoat
@@ -113,14 +113,12 @@ public class CallingUIManager : MonoBehaviour
     // Option1 - Bao cao ai do
     public void ReportSomeOne(GameObject room)
     {
-        room.GetComponent<DoorManager>().canOpen = false;
+        GameManager.Instance.reportedRoom = room;
 
         int day = GameManager.Instance.currentDay;
         var dialog = phoneDialogue.phonedialog.FirstOrDefault(a => a.day == day);
         StartCoroutine(ShowDialog(dialog.responseAffterReport));
         GameManager.Instance.reportToBoss = true;
-        GameManager.Instance.reportedSomeone = true;
-        EndingManager.Instance.reportedIndex += 1;
         EventManager.OnAllMissionComleted?.Invoke();
     }
     

@@ -1,29 +1,185 @@
 ﻿{
   "id": "6",
-  "npcName": "Phòng 204",
-  "description": "Một người có lẽ bị bệnh ngoài da phải băng bó hết người, không rõ nam hay nữ",
+  "npcName": "Phòng 202",
+  "description": "Một cô gái băng bó toàn thân chỉ để hở đôi mắt và miệng",
+  "isMonster": false,
   "dialogueByDay": [
     {
       "day": 1,
       "options": [
         {
-          "playerText": "Tối qua có ổn không?",
-          "npcTexts": [ "Tôi... không nhớ.", "Tôi ngủ sâu." ],
+          "playerText": "Cô ở đây bao lâu rồi?",
+          "npcTexts": [
+            "Ba năm rồi… tôi đến vào mùa đông, trời rét lắm.",
+            "Tôi vẫn nhớ cái lạnh ấy cứa vào da."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Anh tên là gì?",
-          "npcTexts": [ "Tên tôi không quan trọng.", "Tôi không nghĩ anh cần biết." ],
+          "playerText": "Vì sao phải quấn băng kín thế này?",
+          "npcTexts": [
+            "Da tôi mỏng, chỉ cần ánh sáng chiếu vào cũng đủ làm tôi bị bỏng",
+            "Bác sĩ bảo cứ băng lại, nếu không thì tôi chẳng còn sống nổi."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Tôi nghe tiếng la từ phòng này.",
-          "npcTexts": [ "Anh nghe nhầm rồi.", "Ở đây không có tiếng gì cả." ],
+          "playerText": "Có ai chăm sóc cho cô không?",
+          "npcTexts": [
+            "Em họ tôi thỉnh thoảng gửi quà",
+            "Nó tốt bụng, dù tôi chẳng dám cho nó thấy hình dạng mình"
+          ],
           "isExit": false
         },
         {
-          "playerText": "Rời đi.",
-          "npcTexts": [ "Tốt.", "Hãy để tôi yên." ],
+          "playerText": "Cô mong muốn điều gì nhất?",
+          "npcTexts": [
+            "Chỉ muốn một ngày được nhìn mình trong gương mà không thấy… quái vật.",
+            "Tôi đã phải sống với căn bệnh này từ khi còn nhỏ rồi"
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": [
+            "Cảm ơn vì đã nghe tôi, ít ai kiên nhẫn thế cả."
+          ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "options": [
+        {
+          "playerText": "Cô ở đây bao lâu rồi?",
+          "npcTexts": [
+            "À... thật ra chắc chỉ hai năm thôi.",
+            "Thời gian trôi trong 4 bức tường lúc nào cũng rất lâu"
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Có người nói cô tới đây vào mùa xuân?",
+          "npcTexts": [
+            "Ờ… cũng có thể… đầu xuân vẫn còn lạnh mà.",
+            "Tôi nhớ nhầm thôi, xin đừng nghĩ nhiều."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Em họ cô gửi quà gì gần đây?",
+          "npcTexts": [
+            "Một chiếc khăn tay. Tôi giữ trong ngăn kéo cạnh giường.",
+            "Tôi thích nó nhưng da tôi không cho phép tôi quàng thử"
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Trông cô hôm nay khác hẳn hôm qua?",
+          "npcTexts": [
+            "Không rõ tại sao da tôi hôm nay tốt hơn",
+            "Bác sĩ cho phép tôi tháo băng ở đầu. Có lẽ tôi không bệnh nặng như nghĩ."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": [
+            "Cậu thấy đấy… có khi tôi không tệ như vẻ ngoài ngày đầu."
+          ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "options": [
+        {
+          "playerText": "Vậy cô đã nhớ ở đây bao lâu?",
+          "npcTexts": [
+            "Hai năm rưỡi thì đúng hơn... tôi cứ tính nhầm mãi.",
+            "Ở đây một ngày dài như một năm vậy"
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Cô cất chiếc khăn tay ở đâu",
+          "npcTexts": [
+            "Trong ngăn kéo cạnh giường.",
+            "À… hôm trước tôi nói trong hộp gỗ nhỏ phải không?",
+            "Xin lỗi, trí nhớ tôi tệ thật."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Cô có vẻ trông khỏe hơn nhiều.",
+          "npcTexts": [
+            "Đúng vậy",
+            "Tôi đã được tháo gần hết băng rồi",
+            "Nhưng kỳ lạ là từng lớp băng rơi đi như mang theo cả ký ức."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Có ai gặp cô sau khi tháo băng chưa?",
+          "npcTexts": [
+            "Chưa, chỉ có cậu thôi. Tôi dự định sẽ gọi cho em gái vào ngày mai",
+            "Người khác thấy có lẽ sẽ không tin tôi từng bệnh thật."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": [
+            "Nếu cậu không phiền thì mai lại tới chơi nhé <3"
+          ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "options": [
+        {
+          "playerText": "Vậy cô đã nhớ ở đây bao lâu?",
+          "npcTexts": [
+            "Ba năm. Ừm… tôi chắc lần này đúng.",
+            "Nhưng nếu tôi lại nhầm thì… cũng chẳng lạ nhỉ?"
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Còn chiếc khăn em họ gửi, giờ đâu rồi?",
+          "npcTexts": [
+            "Trong ngăn kéo cạnh giường.",
+            "À… hôm trước tôi nói trong hộp gỗ nhỏ phải không?",
+            "Xin lỗi, trí nhớ tôi tệ thật."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Cô cảm thấy như thế nào rồi?",
+          "npcTexts": [
+            "Hôm nay tôi đẹp hơn bao giờ hết",
+            "Nhưng đôi khi tôi sợ… vẻ đẹp này không thuộc về tôi."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Cô đã thử ra khỏi nhà chưa?",
+          "npcTexts": [
+            "Ngày mai, tôi muốn ra ngoài đi dạo.",
+            "Để xem người khác nhìn tôi thế nào… liệu họ có nhận ra tôi không?",
+            "Mai anh có rảnh không? Đi chơi với tôi nhé."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": [
+            "Hẹn anh vào ngày mai"
+          ],
           "isExit": true
         }
       ]

@@ -4,27 +4,14 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject trash;
     public GameObject HidenNpc;
-
-    private void OnEnable()
-    {
-        EventManager.OnChangeDay += SpawnObjectByDay;
-    }
-    private void OnDisable()
-    {
-        EventManager.OnChangeDay -= SpawnObjectByDay;
-    }
+    public GameObject ObjectEding1;
 
     public void SpawnObjectByDay()
     {
-        int currentday = GameManager.Instance.currentDay;
-        if (GameManager.Instance.reportedSomeone)
+        GameObject room = GameManager.Instance.reportedRoom;
+        if ( room != null && !room.GetComponent<Door>().isMonster)
         {
             trash.SetActive(true);
-            GameManager.Instance.reportedSomeone = false;
-        }
-        if (currentday == 3)
-        {
-            HidenNpc.SetActive(true);
-        }
+        }       
     }
 }

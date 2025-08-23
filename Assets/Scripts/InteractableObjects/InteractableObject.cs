@@ -2,10 +2,11 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using static System.Net.Mime.MediaTypeNames;
 
-public class InteractableObject : MonoBehaviour
+public class InteractableObject : MonoBehaviour, IPointerClickHandler
 {
     public bool canInteract = false;
     public bool canShowOption = true;
@@ -17,7 +18,6 @@ public class InteractableObject : MonoBehaviour
     private GameObject player;
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E)) ShowOption();
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,8 +26,9 @@ public class InteractableObject : MonoBehaviour
         {
             player = collision.gameObject;
             canInteract = true;
-            InteractWithObject interact = collision.GetComponent<InteractWithObject>();
+            InteractWithObject interact = collision.GetComponentInParent<InteractWithObject>();
             if (interact != null) interact.TurnOnNotification();
+            ShowOption();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -35,7 +36,7 @@ public class InteractableObject : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             canInteract = false;
-            InteractWithObject interact = collision.GetComponent<InteractWithObject>();
+            InteractWithObject interact = collision.GetComponentInParent<InteractWithObject>();
             if (interact != null) interact.TurnOfNotification();
         }
     }
@@ -80,6 +81,11 @@ public class InteractableObject : MonoBehaviour
     }
 
     public virtual void HandleOption(int optionIndex) { }
-    
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Debug.Log("InteractableObject OnPointerClick");
+        ShowOption();
+    }
 }
 

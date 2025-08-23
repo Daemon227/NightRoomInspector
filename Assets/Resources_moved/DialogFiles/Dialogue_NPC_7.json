@@ -1,29 +1,134 @@
 ﻿{
   "id": "7",
-  "npcName": "Phòng 204",
-  "description": "Một người phụ nữ với đôi tai rất to.",
+  "npcName": "Phòng 203",
+  "description": "Một cô gái xinh đẹp, không có từ nào để chê.",
+  "isMonster": true,
   "dialogueByDay": [
     {
       "day": 1,
       "options": [
         {
-          "playerText": "Tối qua có ổn không?",
-          "npcTexts": [ "Tôi... không nhớ.", "Tôi ngủ sâu." ],
+          "playerText": "Cô làm nghề gì?",
+          "npcTexts": [ "Tôi là người mẫu.", "Công việc chủ yếu là cười, tạo dáng và… khiến người khác không thể rời mắt." ],
           "isExit": false
         },
         {
-          "playerText": "Anh tên là gì?",
-          "npcTexts": [ "Tên tôi không quan trọng.", "Tôi không nghĩ anh cần biết." ],
+          "playerText": "Tại sao cô lại ở đây?",
+          "npcTexts": [ "Đơn giản là vì công việc", "Tôi có vài buổi chụp hình với căn trọ cũ kỹ này"],
           "isExit": false
         },
         {
-          "playerText": "Tôi nghe tiếng la từ phòng này.",
-          "npcTexts": [ "Anh nghe nhầm rồi.", "Ở đây không có tiếng gì cả." ],
+          "playerText": "Cô có sợ điều gì không?",
+          "npcTexts": [ "Tôi không sợ bóng tối, không sợ máu.", "Tôi chỉ sợ… không còn ai ngắm nhìn mình nữa." ],
           "isExit": false
         },
         {
-          "playerText": "Rời đi.",
-          "npcTexts": [ "Tốt.", "Hãy để tôi yên." ],
+          "playerText": "Tôi thấy cô rất đẹp",
+          "npcTexts": [ "Tôi nghe câu đó nhiều rồi. Lời anh dễ thương đấy", 
+          "nhưng… tôi không để mình lung lay dễ vậy đâu." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": [ "Lần sau hãy chú ý ăn mặc một chút nhé.", "Dù gì trông cậu cũng không tồi" ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "options": [
+        {
+          "playerText": "Làm người mẫu có áp lực không?",
+          "npcTexts": [ "Áp lực ư?", "Không hề. Công việc này đem lại cho tôi rất nhiều tiền, tôi được nổi tiếng.",
+          "Tôi yêu nó"],
+          "isExit": false
+        },
+        {
+          "playerText": "Cô có hay cảm thấy cô đơn không?",
+          "npcTexts": [ "Ồ, tôi luôn có rất nhiều người hâm mộ", "Nhưng ở căn trọ này thì có vẻ như chưa ai nhận ra tôi."],
+          "isExit": false
+        },
+        {
+          "playerText": "Cô có sợ điều gì không?",
+          "npcTexts": [ "Tôi sợ một ngày mình sẽ già đi...", "Khi mà tôi không còn được đẹp như bây giờ nữa" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Tôi có thể mời cô đi ăn tối được không?",
+          "npcTexts": [ "Tôi nghĩ anh nên chọn một nơi có ánh sáng đẹp", 
+          "Vì anh biêt đấy một người mẫu như tôi thì luôn muốn mình được ngồi ở một nơi tương xứng." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": [ "Chào anh, tôi cần phải ngủ sớm cho buổi chụp hình vào sáng mai", "Nhưng biết đâu hôm nào đó tôi lại có thời gian dành cho anh"],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "options": [
+        {
+          "playerText": "Cô có yêu công việc của mình không?",
+          "npcTexts": [ "Tất nhiên rồi", "Nếu buộc phải bỏ nghề người mẫu có lẽ tôi sẽ làm diễn viên",
+          "Anh nhìn xem tôi đủ xinh đẹp mà"],
+          "isExit": false
+        },
+        {
+          "playerText": "Điều cô sợ nhất là gì?",
+          "npcTexts": [ "Tôi sợ bị mất đi vẻ đẹp này...", "Nhưng có lẽ tôi sẽ không bao giờ có thể xấu đi được." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Chế độ ăn uống của người mẫu?",
+          "npcTexts": [ "Tôi phải ăn kiêng để giữ dáng", "Nhưng bây giờ có lẽ là không cần thiết.",
+          "Tôi không còn cảm thấy đói nữa."],
+          "isExit": false
+        },     
+        {
+          "playerText": "Nếu tôi mời cô đi ăn tối thì sao?",
+          "npcTexts": [ "Nếu anh có lòng tốt thì hẹn anh tuần sau nhé.", 
+          "Vì thật sự bây giờ tôi không muốn ăn gì.", "Có lẽ tuần tới tôi sẽ thèm ăn gì đó đấy" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": [ "Đừng nói là tạm biệt, hãy nói là hẹn gặp lại", "Ở căn trọ cũ kỹ này có anh tới tâm sự mỗi tối cũng không tệ"],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "options": [
+        {
+          "playerText": "Công việc của cô hôm nay thế nào?",
+          "npcTexts": [ "Chụp hình cả ngày khiến tôi mệt mỏi", "Mọi người ai cũng trông thật kinh tởm",
+          "Chỉ có tôi là sẽ luôn luôn xinh đẹp"],
+          "isExit": false
+        },
+        {
+          "playerText": "Điều cô sợ nhất là gì?",
+          "npcTexts": [ "Tôi chẳng sợ gì nữa cả", "Tôi bây giờ là kẻ có vẻ đẹp vĩnh hằng rồi", "Anh có thích tôi chứ?" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Cô có muốn ăn gì không?",
+          "npcTexts": [ "Hôm nay tôi đã ăn nhiều đồ tươi sống...", "Ý tôi là các món như gỏi, sushi ấy",
+          "Mà nhìn anh cũng có vẻ ngon.... Tiếc là hôm nay tôi ăn no rồi."],
+          "isExit": false
+        },     
+        {
+          "playerText": "Thế còn buổi hẹn tuần sau thì sao?",
+          "npcTexts": [ "Tận tuần sau à?", 
+          "Ngay ngày mai được không", "Tôi mong rằng anh sẽ tới đón tôi...","...Và chúng ta sẽ có thể vui vẻ bên nhau." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Hẹn gặp lại",
+          "npcTexts": [ "Chào anh", "Tôi rất mong chờ ngày mai đấy, có vẻ tôi thích anh rồi"],
           "isExit": true
         }
       ]

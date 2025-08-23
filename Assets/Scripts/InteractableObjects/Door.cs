@@ -1,11 +1,13 @@
+﻿using System;
 using UnityEngine;
 
-public class DoorManager : InteractableObject
+public class Door : InteractableObject
 {
     public GameObject DoorUI;
     public int roomIndex;
-    public string roomName = "Ph�ng 1";
+    public string roomName = "Phòng 1";
     public bool canOpen = true;
+    public bool isMonster = false;
     public override void HandleOption(int optionIndex)
     {
         switch (optionIndex)
@@ -26,7 +28,7 @@ public class DoorManager : InteractableObject
                     else
                     {
                         Debug.Log("Phong nay lam gi co ai o");
-                        EventManager.ShowNotification?.Invoke("The room is null");
+                        EventManager.ShowNotification?.Invoke("Phòng này không có ai ở");
                     }
                 }     
                 ClearOption();

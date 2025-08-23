@@ -1,29 +1,39 @@
 ﻿{
   "id": 1,
-  "npcName": "Phòng 205",
-  "description": "Một cậu bé khoảng 10 tuổi, đi du lịch cùng mẹ.",
+  "npcName": "Phòng 101",
+  "description": "NPC này là một người phụ nữ lớn tuổi với gương mặt gầy gò, làn da tái nhợt và đôi mắt trũng sâu thiếu sức sống. Mái tóc bạc lưa thưa buộc hai bên, trông xơ xác và rối bời. Trang phục cũ kỹ, màu sắc phai mờ, tạo cảm giác mệt mỏi và ảm đạm ngay từ cái nhìn đầu tiên.",
+  "isMonster": true,
   "dialogueByDay": [
     {
       "day": 1,
       "options": [
         {
-          "playerText": "Cháu có vui không?",
-          "npcTexts": [ "Vui lắm!", "Cháu thích khách sạn này, có nhiều hành lang tối." ],
+          "playerText": "Bà sống ở đây lâu chưa?",
+          "npcTexts": [ "Tôi chuyển đến đây cũng khoảng 5 năm rồi.", "Lúc đó khu này còn yên tĩnh, chưa có nhiều người qua lại như bây giờ.",
+          "Mấy năm nay, mọi thứ vẫn ổn, trừ vài hôm có tiếng ồn lạ ban đêm."],
           "isExit": false
         },
         {
-          "playerText": "Cháu có nghe tiếng gì lạ không?",
-          "npcTexts": [ "Cháu nghe có ai nói chuyện trong gương.", "Nhưng mẹ bảo đừng kể với ai." ],
+          "playerText": "Ngày thường bà làm gì?",
+          "npcTexts": [ "Tôi nhận may vá thuê, khách gửi đồ rồi vài ngày sau quay lại lấy.", 
+          "Tôi thường làm vào buổi sáng và nghỉ chiều, tối thì đọc sách hoặc uống trà.",
+          "Nói chung cũng đủ sống."],
           "isExit": false
         },
         {
-          "playerText": "Mẹ cháu đâu?",
-          "npcTexts": [ "Mẹ đang ngủ.", "Nhưng mẹ không giống như mọi ngày..." ],
+          "playerText": "Bà quen nhiều người trong khu này không?",
+          "npcTexts": [ "Không, tôi chỉ xã giao thôi.", "Ở đây ai cũng bận, chẳng ai để ý ai mấy." ],
           "isExit": false
         },
         {
-          "playerText": "Chào cháu.",
-          "npcTexts": [ "Bye chú!", "Nếu thấy bóng đen, đừng nói chuyện với nó nhé." ],
+          "playerText": "Bà có nuôi thú cưng không?",
+          "npcTexts": [ "Không, tôi chưa từng nuôi.", "Tôi nghĩ thú cưng cần nhiều thời gian chăm sóc, mà tôi thì muốn yên tĩnh.", 
+          "Thế nên phòng tôi luôn trống trải."],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": ["Ừ, chào cậu nhé. Đi lại cẩn thận vào ban đêm."],
           "isExit": true
         }
       ]
@@ -32,23 +42,107 @@
       "day": 2,
       "options": [
         {
-          "playerText": "Cháu có vui không?",
-          "npcTexts": [ "Không", "Cháu sợ ma, có nhiều hành lang tối." ],
+          "playerText": "Bà sống ở đây lâu chưa?",
+          "npcTexts": [ "Tính ra cũng hơn 6 năm rồi đấy", "Hồi đó, chưa có mấy phòng mở cửa đèn sáng vào buổi tối.",
+          "Giờ thì người đông hơn, nhưng tôi vẫn giữ thói quen đóng cửa sớm."],
           "isExit": false
         },
         {
-          "playerText": "Cháu có nghe tiếng gì lạ không?",
-          "npcTexts": [ "Cháu không", "Nhưng mẹ bảo cháu ngủ sớm." ],
+          "playerText": "Ngày thường bà làm gì?",
+          "npcTexts": [ "Tôi vẫn may vá, nhưng khách giờ thưa dần.", 
+          "Buổi tối tôi thường nghe radio để đỡ trống trải.",
+          "Có khi tôi ngủ sớm, có khi lại thức tới khuya để hoàn thành một món đồ."],
           "isExit": false
         },
         {
-          "playerText": "Mẹ cháu đâu?",
-          "npcTexts": [ "Mẹ đang ngủ.", "Nhưng mẹ không giống như mọi ngày..." ],
+          "playerText": "Bà quen nhiều người trong khu này không?",
+          "npcTexts": [ "Tôi biết mặt một vài người, có người hay ghé qua hỏi chuyện.", 
+          "Nhưng tôi không nhớ rõ tên họ, chỉ nhớ quần áo hoặc giọng nói.", 
+          "Có người mới chuyển đến, có người đã đi, thay đổi suốt"],
           "isExit": false
         },
         {
-          "playerText": "Chào cháu.",
-          "npcTexts": [ "Bye chú!", "Mai chú lại tới nhé." ],
+          "playerText": "Bà có nuôi thú cưng không?",
+          "npcTexts": [ "Tôi chưa từng nuôi.", "Tôi già rồi không có thời gian chăm sóc chúng", 
+          "Thế nên phòng tôi luôn trống trải."],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": ["Đi đường nhớ để ý phía sau lưng, đêm nay gió lớn đấy."],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "options": [
+        {
+          "playerText": "Bà sống ở đây lâu chưa?",
+          "npcTexts": [ "Tôi ở đây lâu đến mức… không rõ là bao lâu nữa.", "Có lúc tôi nhớ rõ từng ngày trôi qua, nhưng có lúc mọi thứ nhập lại thành một đêm dài.",
+          "Aizzz đầu tôi đau quá, mắt tôi... mắt tôi..."],
+          "isExit": false
+        },
+        {
+          "playerText": "Ngày thường bà làm gì?",
+          "npcTexts": [ "Tôi vẫn khâu vá… nhưng không chỉ là quần áo.", 
+          "Tôi thích chắp nối những thứ đã bị xé rời. Đôi khi là vải, đôi khi là… thứ khác.",
+          "Tiếng kim xuyên qua từng lớp vật liệu nghe rất dễ chịu."],
+          "isExit": false
+        },
+        {
+          "playerText": "Bà quen nhiều người trong khu này không?",
+          "npcTexts": [ "Tất nhiên, tôi quen tất cả. Ai rồi cũng phải ghé qua phòng tôi một lần.", 
+          "Họ có thể không nhớ, nhưng tôi thì nhớ rõ mùi của từng người. Nhất là khi họ đứng rất gần."],
+          "isExit": false
+        },
+        {
+          "playerText": "Bà có nuôi thú cưng không?",
+          "npcTexts": [ "Tôi nuôi vài thứ, nhưng chúng không còn nguyên hình dạng như trước nữa.", 
+          "Chúng im lặng, ngoan ngoãn… và không bao giờ bỏ đi.", 
+          "Cậu có muốn gặp không?"],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": ["Lần tới… đừng vội rời đi. Tôi sẽ cho cậu xem thứ tôi mới khâu xong."],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "options": [
+        {
+          "playerText": "Bà sống ở đây lâu chưa?",
+          "npcTexts": [ "Tôi ở đây trước cả khi căn nhà này được dựng lên.", "Những bức tường này biết tôi, từng viên gạch đều đã uống máu ấm.",
+          "Thời gian chỉ là trò lừa, nơi này không thay đổi, chỉ những người đến rồi đi."],
+          "isExit": false
+        },
+        {
+          "playerText": "Ngày thường bà làm gì?",
+          "npcTexts": [ "Tôi khâu những lớp da để chúng vừa khít, không còn khe hở.", 
+          "Có lúc là da của khách, có lúc là của chính tôi.",
+          "Kim chỉ biết đường đi, nó không bao giờ sai, còn tôi thì chỉ nghe theo."],
+          "isExit": false
+        },
+        {
+          "playerText": "Bà quen nhiều người trong khu này không?",
+          "npcTexts": [ "Tất cả đều ở đây, bên trong tôi.", 
+          "Họ không nói nhiều nữa, nhưng tôi nghe thấy tiếng họ mỗi khi đêm xuống.",
+          "Cậu sẽ hiểu thôi, khi cửa phòng đóng lại."],
+          "isExit": false
+        },
+        {
+          "playerText": "Bà có nuôi thú cưng không?",
+          "npcTexts": [ "Có… nhưng chúng không còn giống như trước.", 
+          "Chúng bò sát đất, phát ra tiếng cào… và chỉ im khi tôi chạm vào.", 
+          "Cậu sẽ thấy chúng khi trời tắt đèn."],
+          "isExit": false
+        },
+        {
+          "playerText": "Tạm biệt",
+          "npcTexts": ["Ở lại đi… để tôi không phải tìm kiếm nữa."],
           "isExit": true
         }
       ]
