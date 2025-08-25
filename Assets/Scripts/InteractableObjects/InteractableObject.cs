@@ -16,10 +16,7 @@ public class InteractableObject : MonoBehaviour, IPointerClickHandler
     public GameObject buttonGroup;
 
     private GameObject player;
-    private void Update()
-    {
 
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -28,7 +25,10 @@ public class InteractableObject : MonoBehaviour, IPointerClickHandler
             canInteract = true;
             InteractWithObject interact = collision.GetComponentInParent<InteractWithObject>();
             if (interact != null) interact.TurnOnNotification();
-            ShowOption();
+            if(GameManager.Instance.canInteract)
+            {
+                ShowOption();
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

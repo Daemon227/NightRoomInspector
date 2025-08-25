@@ -2,7 +2,7 @@
   "id": "8",
   "npcName": "Phòng 204",
   "description": "Một cô gái trông không có chút sức sống nào, giọng nói thì giống như một người đàn ông.",
-  "isMonster": false,
+  "isMonster": true,
   "dialogueByDay": [
     {
       "day": 1,

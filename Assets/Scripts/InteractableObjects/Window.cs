@@ -82,7 +82,7 @@ public class Window : InteractableObject
         GameManager.Instance.canMove = false;
         EndingManager.Instance.canFireMove = false;
         windowPanel.SetActive(false);
-        EndingManager.Instance.FirstEndingEvent();
+        EndingManager.Instance.StartEnding();
     }
 
 }

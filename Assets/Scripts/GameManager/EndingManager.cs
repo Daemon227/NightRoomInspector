@@ -10,10 +10,21 @@ public class EndingManager : MonoBehaviour
     public static EndingManager Instance;
     public bool canFireMove = true;
     public int endingID = -1;
-    //set for first ending
-    [Header("First Ending")]
-    public GameObject firstEndingPanel;
+
+    [Header("Ending objects")]
     public GameObject fireObject;
+    public GameObject monster;
+
+    [Header("Ending Elements")]
+    public List<EndingData> endingDatas;
+    public GameObject endingPanel;
+    public TextMeshProUGUI descriptionText;
+    public Image endingImage;
+
+    [Header("Result Elements")]
+    public GameObject resultPanel;
+    public Button backButton;
+    public TextMeshProUGUI resultText;
     private void OnEnable()
     {
         EventManager.OnActiveEnding += ShowEnding;
@@ -47,34 +58,63 @@ public class EndingManager : MonoBehaviour
         {
             if (result[1] < 4)
             {
-                SecondEndingEvent();
+                monster.SetActive(true);
+                GameManager.Instance.canInteract = false;
                 endingID = 2;
+                EventManager.ShowNotification?.Invoke("Wait, Somthing wrong?");
             }
             else
-            {
-                ThirdEndingEvent();
+            {   
                 endingID = 3;
+                GameManager.Instance.canInteract = false;
+                StartEnding();
             }
         }
     }
-
-    public void FirstEndingEvent()
+    public void StartEnding()
     {
-        Debug.Log("Jump out the window");
+        StartCoroutine(StartEndingUI(endingID));
     }
-    public void SecondEndingEvent()
-    {
-        Debug.Log("Second ending event");
-        EventManager.ShowNotification?.Invoke("Fire?");
-    }
-    public void ThirdEndingEvent()
-    {
-        Debug.Log("Third ending event");
-        EventManager.ShowNotification?.Invoke("Everything end");
-    }
-
+    
     public void BackHome()
     {
         Debug.Log("Back home, end game");
     }
+
+    public IEnumerator StartEndingUI(int endingId)
+    {
+        EndingData endingData = endingDatas.Find(e => e.endingID == endingId);
+        if (endingData == null)
+        {
+            Debug.LogError("Ending data not found for ending ID: " + endingId);
+        }
+        else
+        {
+            endingPanel.SetActive(true);
+            for (int i = 0; i < endingData.descriptions.Length; i++)
+            {
+                descriptionText.text = "";
+                descriptionText.text += endingData.descriptions[i] + "\n";
+                endingImage.sprite = endingData.endingImages[i];
+                yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
+                yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+            }
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+            endingPanel.SetActive(false);
+
+            resultPanel.SetActive(true);
+            int[] result = GameManager.Instance.GetMonsterReportedIndex();
+            resultText.text = $"You have reported {result[0]} rooms, in which {result[1]} rooms had monsters.";
+        }
+
+    }
+}
+
+[System.Serializable]
+public class EndingData
+{
+    public int endingID;
+    public string endingName;
+    public string[] descriptions;
+    public Sprite[] endingImages;
 }

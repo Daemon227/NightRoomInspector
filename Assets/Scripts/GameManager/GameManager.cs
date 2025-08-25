@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public bool reportToBoss = false;
     public GameObject reportedRoom = null;
     public bool canMove = true;
+    public bool canInteract = true;
     //biến quản lý điều kiện ending
 
 
