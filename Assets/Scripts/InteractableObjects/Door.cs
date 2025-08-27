@@ -7,9 +7,12 @@ public class Door : InteractableObject
     public int roomIndex;
     public string roomName = "Phòng 1";
     public bool canOpen = true;
+    public bool hasChecked = false;
     public bool isMonster = false;
+
     public override void HandleOption(int optionIndex)
     {
+        hasChecked = true;
         switch (optionIndex)
         {
             case 0:
@@ -23,7 +26,6 @@ public class Door : InteractableObject
                     {
                         DoorUI.SetActive(true);
                         EventManager.OpenTheDoor?.Invoke(roomIndex);
-                        EventManager.OnRoomChecked?.Invoke(this.gameObject);
                     }
                     else
                     {
@@ -39,5 +41,18 @@ public class Door : InteractableObject
                 GameManager.Instance.canMove = true;
                 break;
         }
-    }  
+    }
+
+    private void OnEnable()
+    {
+        EventManager.OnChangeDay += Reset;
+    }
+    private void OnDisable()
+    {
+        EventManager.OnChangeDay -= Reset;
+    }
+    public void Reset()
+    {
+        hasChecked = false;
+    }
 }

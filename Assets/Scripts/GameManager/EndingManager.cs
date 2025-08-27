@@ -16,7 +16,7 @@ public class EndingManager : MonoBehaviour
     public GameObject monster;
 
     [Header("Ending Elements")]
-    public List<EndingData> endingDatas;
+    public List<CutSceneData> endingDatas;
     public GameObject endingPanel;
     public TextMeshProUGUI descriptionText;
     public Image endingImage;
@@ -83,7 +83,7 @@ public class EndingManager : MonoBehaviour
 
     public IEnumerator StartEndingUI(int endingId)
     {
-        EndingData endingData = endingDatas.Find(e => e.endingID == endingId);
+        CutSceneData endingData = endingDatas.Find(e => e.cutSceneID == endingId);
         if (endingData == null)
         {
             Debug.LogError("Ending data not found for ending ID: " + endingId);
@@ -95,7 +95,7 @@ public class EndingManager : MonoBehaviour
             {
                 descriptionText.text = "";
                 descriptionText.text += endingData.descriptions[i] + "\n";
-                endingImage.sprite = endingData.endingImages[i];
+                endingImage.sprite = endingData.images[i];
                 yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
                 yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
             }
@@ -111,10 +111,10 @@ public class EndingManager : MonoBehaviour
 }
 
 [System.Serializable]
-public class EndingData
+public class CutSceneData
 {
-    public int endingID;
-    public string endingName;
+    public int cutSceneID;
+    public string cutSceneName;
     public string[] descriptions;
-    public Sprite[] endingImages;
+    public Sprite[] images;
 }

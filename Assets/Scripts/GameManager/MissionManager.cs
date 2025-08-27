@@ -1,60 +1,77 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class MissionManager : MonoBehaviour
 {
     public TextMeshProUGUI missionText;
 
-    private List<GameObject> checkedRooms = new List<GameObject>();
+    //private List<GameObject> checkedRooms = new List<GameObject>();
     private int totalRoom;
+    private int hasCheckedRooms = 0;
+
+    private bool checkedAllRooms = false;
+    private bool reportedToBoss = false;
 
     private void Start()
     {
-        totalRoom = GameManager.Instance.GetTotalRoomNeedToCheck();
-        missionText.text = $"Rooms need to check: 0/{totalRoom}";
+        ChangeMission();
     }
 
     private void OnEnable()
     {
-        EventManager.OnRoomChecked += CheckRoom;
+        EventManager.OpenTheDoor += CheckRoom;
         EventManager.OnChangeDay += ChangeNextDay;
         EventManager.OnAllMissionComleted += ChangeMission;
     }
 
     private void OnDisable()
     {
-        EventManager.OnRoomChecked -= CheckRoom;
+        EventManager.OpenTheDoor -= CheckRoom;
         EventManager.OnChangeDay -= ChangeNextDay;
         EventManager.OnAllMissionComleted -= ChangeMission;
     }
-    public void CheckRoom(GameObject room)
+    public void CheckRoom(int id)
     {
-        if (!checkedRooms.Contains(room))
+        hasCheckedRooms += 1;
+        missionText.text = $"Rooms need to check: {hasCheckedRooms}/{totalRoom}";     
+        if (hasCheckedRooms >= totalRoom)
         {
-            checkedRooms.Add(room);
-            totalRoom = GameManager.Instance.GetTotalRoomNeedToCheck();
-            missionText.text = $"Rooms need to check: {checkedRooms.Count}/{totalRoom}";
-            Debug.Log("Total room need to check" + totalRoom);
-            Debug.Log("Room Checked " + checkedRooms.Count);
-            if(checkedRooms.Count == totalRoom)
-            {
-                GameManager.Instance.checkFullRoom = true;
-                missionText.text = "Report to boss";               
-            }
+            checkedAllRooms = true;
+            GameManager.Instance.checkFullRoom = true;
+            ChangeMission();
         }
     }
 
     public void ChangeMission()
     {
-        missionText.text = "Go home";
+        reportedToBoss = GameManager.Instance.reportToBoss;
+        if (!checkedAllRooms)
+        {
+            totalRoom = GameManager.Instance.GetTotalRoomNeedToCheck();
+            hasCheckedRooms = GameManager.Instance.GetRoomCheckedCount();
+            missionText.text = $"Rooms need to check: {hasCheckedRooms}/{totalRoom}";
+
+        }
+        else
+        {
+            if (!reportedToBoss)
+            {
+                missionText.text = "Report to boss";
+            }
+            else
+            {
+                missionText.text = "Go home";
+            } 
+        }
     }
 
     public void ChangeNextDay()
     {
-        checkedRooms.Clear();
-        totalRoom = GameManager.Instance.GetTotalRoomNeedToCheck();
-        missionText.text = $"Rooms need to check: 0/{totalRoom}";
+        checkedAllRooms = false;
+        reportedToBoss = false;
+        ChangeMission();
     }
 }

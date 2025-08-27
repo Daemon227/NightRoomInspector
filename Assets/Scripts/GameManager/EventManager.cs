@@ -13,7 +13,6 @@ public static class EventManager
 
     //event when complete a  mission
     public static Action OnAllRoomChecked;
-    public static Action<GameObject> OnRoomChecked;
     public static Action OnAllMissionComleted;
 
     //event when have a notification
@@ -24,4 +23,7 @@ public static class EventManager
 
     //event to active ending
     public static Action OnActiveEnding;
+
+    //event to update UI
+    public static Action OnChangeLanguage;
 }

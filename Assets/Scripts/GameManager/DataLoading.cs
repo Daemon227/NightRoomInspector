@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.IO;
@@ -7,6 +8,8 @@ using UnityEngine;
 public class DataLoading : MonoBehaviour
 {
     public static DataLoading Instance;
+    public GameData currentGameData;
+    public GameData[] gameDataList;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -16,30 +19,38 @@ public class DataLoading : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        gameDataList = LoadGameData();
+        if (gameDataList == null)
+        {
+            gameDataList = new GameData[5];
+        }
     }
 
-    public GameData[] gameDataList = new GameData[4];
-    public void SaveGameData(GameManager gameManager, int saveIndex)
+    public void SaveGameData(int saveIndex)
     {
-        GameData newGameData = new GameData(gameManager);
-        if (saveIndex <= gameDataList.Length)
+        GameData newGameData = new GameData();
+        if (saveIndex < gameDataList.Length)
         {
-            gameDataList[saveIndex - 1] = newGameData;
+            newGameData.FillFullData();
+            gameDataList[saveIndex] = newGameData;
         }
+        SaveDataWrapper saveDataWrapper = new SaveDataWrapper(gameDataList);
 
-        string json = JsonUtility.ToJson(newGameData, true);
+        string json = JsonUtility.ToJson(saveDataWrapper, true);
         File.WriteAllText(Application.persistentDataPath + "/savegame" + ".json", json);
         Debug.Log("Game data saved to " + Application.persistentDataPath + "/savegame" + ".json");
     }
 
-    public GameData LoadGameData(int loadIndex)
+    public GameData[] LoadGameData()
     {
         if (File.Exists(Application.persistentDataPath + "/savegame" + ".json"))
         {
             string json = File.ReadAllText(Application.persistentDataPath + "/savegame" + ".json");
-            GameData loadedData = JsonUtility.FromJson<GameData>(json);
+            SaveDataWrapper loadedData = JsonUtility.FromJson<SaveDataWrapper>(json);
             Debug.Log("Game data loaded from " + Application.persistentDataPath + "/savegame" + ".json");
-            return loadedData;
+            gameDataList = loadedData.gameDataArray;
+            return gameDataList;
         }
         else
         {
@@ -51,20 +62,53 @@ public class DataLoading : MonoBehaviour
 }
 
 [System.Serializable]
+public class SaveDataWrapper
+{
+    public GameData[] gameDataArray;
+    public SaveDataWrapper(GameData[] gameDataArray)
+    {
+        this.gameDataArray = gameDataArray;
+    }
+}
+
+[System.Serializable]
 public class GameData
 {
+    public string name;
     public int currentDay;
     public bool checkFullRoom;
     public bool reportToBoss;
+    public bool[] roomsCanOpenFloor1 = new bool[4];
+    public bool[] roomsCanOpenFloor2 = new bool[4];
+    public bool[] roomsHasCheckedF1 = new bool[4];
+    public bool[] roomsHasCheckedF2 = new bool[4];
     public int reportedRoomID;
     public bool canMove;
     public bool canInteract;
-    public GameData(GameManager gameManager)
+
+    public void FillFullData()
     {
-        currentDay = gameManager.currentDay;
-        checkFullRoom = gameManager.checkFullRoom;
-        reportToBoss = gameManager.reportToBoss;
-        reportedRoomID = gameManager.reportedRoom != null ? gameManager.reportedRoom.GetComponent<Door>().roomIndex : -1;
-        canInteract = gameManager.canInteract;
+        if(GameManager.Instance == null) return;
+        name = "Save Day " + System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+        currentDay = GameManager.Instance.currentDay;
+        checkFullRoom = GameManager.Instance.checkFullRoom;
+        reportToBoss = GameManager.Instance.reportToBoss;
+        reportedRoomID = GameManager.Instance.reportedRoom != null ? GameManager.Instance.reportedRoom.GetComponent<Door>().roomIndex : -1;
+        canInteract = GameManager.Instance.canInteract;
+
+        int i = 0;
+        foreach (var room in GameManager.Instance.roomOnFloor1)
+        {      
+            roomsCanOpenFloor1[i] = room.GetComponent<Door>().canOpen;
+            roomsHasCheckedF1[i] = room.GetComponent<Door>().hasChecked;
+            i++;
+        }
+        i = 0;
+        foreach (var room in GameManager.Instance.roomOnFloor2)
+        {
+            roomsCanOpenFloor2[i] = room.GetComponent<Door>().canOpen;
+            roomsHasCheckedF2[i] = room.GetComponent<Door>().hasChecked;
+            i++;
+        }
     }
 }

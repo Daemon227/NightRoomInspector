@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
             return;
         }
         Instance = this;
+
+        GameData data = DataLoading.Instance.currentGameData;
+        LoadGame(data);
     }
 
     private void Start()
@@ -57,6 +60,19 @@ public class GameManager : MonoBehaviour
         return total;
     }
 
+    public int GetRoomCheckedCount()
+    {
+        int checkedCount = 0;
+        foreach (var room in roomOnFloor1)
+        {
+            if (room.GetComponent<Door>().canOpen && room.GetComponent<Door>().hasChecked) checkedCount += 1;
+        }
+        foreach (var room in roomOnFloor2)
+        {
+            if (room.GetComponent<Door>().canOpen && room.GetComponent<Door>().hasChecked) checkedCount += 1;
+        }
+        return checkedCount;
+    }
     public bool CanChangeDay()
     {
         if (checkFullRoom && reportToBoss)
@@ -127,5 +143,52 @@ public class GameManager : MonoBehaviour
         result[0] = roomReportedCount;
         result[1] = monsterReportdCount;
         return result;
+    }
+
+    public void ResetGame()
+    {
+        currentDay = 1;
+        turnOnLight = false;
+        checkFullRoom = false;
+        reportToBoss = false;
+        reportedRoom = null;
+        canMove = true;
+        canInteract = true;
+        foreach(var room in roomOnFloor1)
+        {
+            room.GetComponent<Door>().canOpen = true;
+            room.GetComponent<Door>().isMonster = false;
+        }
+        foreach (var room in roomOnFloor2)
+        {
+            room.GetComponent<Door>().canOpen = true;
+            room.GetComponent<Door>().isMonster = false;
+        }
+        spawnManager.SpawnObjectByDay();
+    }
+
+    public void LoadGame(GameData data)
+    {
+        if(data == null) return;
+        currentDay = data.currentDay;
+        checkFullRoom = data.checkFullRoom;
+        reportToBoss = data.reportToBoss;
+        canMove = true;
+        canInteract = data.canInteract;
+        if(data.reportedRoomID != -1)
+        {
+            reportedRoom = GetRoomByID(data.reportedRoomID).gameObject;
+        }
+        else
+        {
+            reportedRoom = null;
+        }
+        for (int i =0; i<4; i++)
+        {
+            roomOnFloor1[i].GetComponent<Door>().canOpen = data.roomsCanOpenFloor1[i];
+            roomOnFloor2[i].GetComponent<Door>().canOpen = data.roomsCanOpenFloor2[i];
+            roomOnFloor1[i].GetComponent<Door>().hasChecked = data.roomsHasCheckedF1[i];
+            roomOnFloor2[i].GetComponent<Door>().hasChecked = data.roomsHasCheckedF2[i];
+        }
     }
 }
