@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,13 +23,25 @@ public class Window : InteractableObject
         backButton.onClick.AddListener(() => StartCoroutine(CloseWindow()));
         jumpButton.onClick.AddListener(JumpOut);
     }
-
+    public override void SetButtonLanguage(TextMeshProUGUI text, int optionIndex)
+    {
+        switch (optionIndex)
+        {
+            case 0:
+                text.text = MultiLanguageManager.Instance.GetText("Open_Window");
+                break;
+            case 1:
+                text.text = MultiLanguageManager.Instance.GetText("Leave");
+                break;
+        }
+    }
     public override void HandleOption(int optionIndex)
     {
         switch (optionIndex)
         {
             case 0:
                 OpenWindow();
+                SetLanguage();
                 ClearOption();
                 break;
             case 1:
@@ -85,4 +98,9 @@ public class Window : InteractableObject
         EndingManager.Instance.StartEnding();
     }
 
+    public void SetLanguage()
+    {
+        backButton.GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Button_Back");
+        jumpButton.GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Jump");
+    }
 }

@@ -19,7 +19,7 @@ public class CallingUIManager : MonoBehaviour
     public TextMeshProUGUI dialogText;
 
     private PhoneDialogue phoneDialogue;
-    private string filename = "PhoneDialogues/PhoneDialogue";
+    private string filename = "PhoneDialogues/";
   
     private void OnEnable()
     {
@@ -36,6 +36,12 @@ public class CallingUIManager : MonoBehaviour
     }
     public void FirstOptionsSettup()
     {
+        //set text cho button
+        buttons[0].GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Report_Floor_1");
+        buttons[1].GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Report_Floor_2");
+        buttons[2].GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("No_Report");
+        buttons[3].GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Wrong_Call");
+
         List<GameObject> rooms1 = GameManager.Instance.roomOnFloor1;
         List<GameObject> rooms2 = GameManager.Instance.roomOnFloor2;
         buttons[0].onClick.AddListener(() => ShowRoomOnFloor(rooms1));
@@ -45,7 +51,8 @@ public class CallingUIManager : MonoBehaviour
     }
     public void LoadingHanle()
     {
-        LoadPhoneDialog(filename);
+        string fullFilename = filename + MultiLanguageManager.Instance.currentLanguage + "PhoneDialogue";
+        LoadPhoneDialog(fullFilename);
         StartCoroutine(RingThePhone());
     }
     public IEnumerator RingThePhone()
@@ -101,7 +108,8 @@ public class CallingUIManager : MonoBehaviour
             }
             // sinh ra nut thoat
             GameObject backButton = Instantiate(buttonPrefab, buttonGroup2.transform);
-            backButton.GetComponentInChildren<TextMeshProUGUI>().text = "Khoan da toi nham";
+            string backText = MultiLanguageManager.Instance.GetText("ReThink");
+            backButton.GetComponentInChildren<TextMeshProUGUI>().text = backText;
             backButton.GetComponent<Button>().onClick.AddListener(() =>
             {
                 buttonGroup1.SetActive(true);

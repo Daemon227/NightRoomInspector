@@ -1,8 +1,22 @@
+using TMPro;
 using UnityEngine;
 
 public class Phone : InteractableObject
 {
     public GameObject CallingPanel;
+
+    public override void SetButtonLanguage(TextMeshProUGUI text, int optionIndex)
+    {
+        switch (optionIndex)
+        {
+            case 0:
+                text.text = MultiLanguageManager.Instance.GetText("Call");
+                break;
+            case 1:
+                text.text = MultiLanguageManager.Instance.GetText("Leave");
+                break;    
+        }
+    }
     public override void HandleOption(int optionIndex)
     {
         switch (optionIndex)
@@ -12,17 +26,29 @@ public class Phone : InteractableObject
                 {
                     if (GameManager.Instance.reportToBoss == false)
                     {
-                        CallingPanel.SetActive(true);
-                        EventManager.StartCalling?.Invoke();
+                        if(GameManager.Instance.currentDay == 4)
+                        {
+                            string notification = MultiLanguageManager.Instance.GetText("N_NoOne_Answer");
+                            EventManager.ShowNotification(notification);
+                            GameManager.Instance.reportToBoss = true;
+                        }
+                        else
+                        {
+                            CallingPanel.SetActive(true);
+                            EventManager.StartCalling?.Invoke();
+                        }
+                        
                     }
                     else
                     {
-                        EventManager.ShowNotification("I reported");
+                        string notification = MultiLanguageManager.Instance.GetText("N_Has_Reported");
+                        EventManager.ShowNotification(notification);
                     }
                 }
                 else
                 {
-                    EventManager.ShowNotification("I must check all rooms first");
+                    string notification = MultiLanguageManager.Instance.GetText("N_Not_Checked_All_Room");
+                    EventManager.ShowNotification(notification);
                 }
                 ClearOption();
                 break;

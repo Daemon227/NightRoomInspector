@@ -189,6 +189,8 @@ public class GameManager : MonoBehaviour
             roomOnFloor2[i].GetComponent<Door>().canOpen = data.roomsCanOpenFloor2[i];
             roomOnFloor1[i].GetComponent<Door>().hasChecked = data.roomsHasCheckedF1[i];
             roomOnFloor2[i].GetComponent<Door>().hasChecked = data.roomsHasCheckedF2[i];
+            roomOnFloor1[i].GetComponent<Door>().isMonster = data.roomIsMonsterF1[i];
+            roomOnFloor2[i].GetComponent<Door>().isMonster = data.roomIsMonsterF2[i];
         }
     }
 }

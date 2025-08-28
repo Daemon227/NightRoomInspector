@@ -5,8 +5,14 @@
             "Menu_Continue": "Continue",
             "Menu_Setting": "Settings",
             "Menu_About": "About",
+            "Menu_Loading": "Loading...",
+            "Menu_Instruction_ClickToContinue": "Click to continue",
+            "Button_BackToMenu": "Back to Menu",
+
+            //button
             "Exit": "Exit",
             "Select_Saved_File":"Please select a saved file",
+            "Select_Slot_To_Save":"Please select a slot to save",
             "Leave": "Leave",
             "Knock": "Knock",
             "Chat": "Chat",
@@ -19,14 +25,56 @@
             "Call": "Call",
             "Jump": "Jump",
             "Clean": "Clean",
+            "Button_GoHome":"Go Home",
+            "Button_Load": "Load",
+            "Button_Back": "< Back",
+            "Button_Close":"Close",
+            "Button_Wait":"Wait a moment",
+            "Button_Save":"Save",
+            "Button_View":"View",
+
+
+            "Mission_CheckRoom":"Room Checked:",
+            "Mission_Report":"Report to Boss",
+            "Mission_Back":"Go Home",
+
+            //notiffication
+            "N_Turn_On_Light":"I must turn on the light first",
+            "N_Empty_Room":"This room is empty",
+            "N_Cannot_Open_Door":"I can't open the door, why is there a fire outside?",
+            "N_Hear_Sound":"Wait, I hear a strange sound in the house",
+            "N_Mission_Not_Completed":"I haven't completed the daily mission yet",
+            "N_Has_Reported":"I have reported to boss, go home now",
+            "N_Not_Checked_All_Room":"I haven't checked all the rooms yet",
+            "N_NoOne_Answer":"No one answers the phone",
+
+            //Result
+            "Result_Title":"Result",
+            "Result_Reported":"You killed:",
+            "Result_Mistaken":"Mistakenly killed:",
+            
+            //normal Text
+            "Day":"Day:",
+            "Empty_File":"Empty File",
+            "Wrong_Call":"Wrong Call",
+            "Report_Floor_1": "On the 1st floor",
+            "Report_Floor_2": "On the 2nd floor",
+            "No_Report":"No one is abnormal",
+            "ReThink":"ReThink",
+            
         },
         "vn": {
             "Menu_New_Game": "Chơi mới",
             "Menu_Continue": "Tiếp tục",
             "Menu_Setting": "Cài đặt",
             "Menu_About": "Về chúng tôi",
+            "Menu_Loading": "Đang tải...",
+            "Menu_Instruction_ClickToContinue": "Nhấp để tiếp tục",
+            "Button_BackToMenu": "Quay lại menu",
+
             "Exit": "Thoát",
             "Select_Saved_File":"Hãy chọn một file lưu game",
+            "Select_Slot_To_Save":"Hãy chọn một ô để lưu",
             "Leave": "Rời đi",
             "Knock": "Gõ cửa",
             "Chat": "Trò chuyện",
@@ -39,6 +87,43 @@
             "Call": "Gọi điện",
             "Jump": "Nhảy",
             "Clean": "Dọn dẹp",
+            "Button_GoHome":"Về nhà",
+            "Button_Load": "Tải",
+            "Button_Back": "< Quay lại",
+            "Button_Close":"Đóng",
+            "Button_Wait":"Chờ chút",
+            "Button_Save":"Lưu",
+            "Button_View":"Xem",
+
+
+            "Mission_CheckRoom":"Phòng đã kiểm tra:",
+            "Mission_Report":"Báo cáo sếp",
+            "Mission_Back":"Về nhà",
+            
+
+            //notiffication
+            "N_Turn_On_Light":"Phải bật đèn trước đã",
+            "N_Empty_Room":"Phòng này không còn ai ở nữa",
+            "N_Cannot_Open_Door":"Mình không thể mở cửa, tại sao bên ngoài lại có cháy?",
+            "N_Hear_Sound":"Khoan đã, mình nghe thấy âm thanh kỳ lạ trong nhà",
+            "N_Mission_Not_Completed":"Mình chưa hoàn thành nhiệm vụ hàng ngày",
+            "N_Has_Reported":"Mình đã báo cáo với sếp, về nhà thôi",
+            "N_Not_Checked_All_Room":"Mình chưa kiểm tra hết các phòng",
+            "N_NoOne_Answer":"Không ai nghe máy cả",
+
+            //Result
+            "Result_Title":"Kết quả",
+            "Result_Reported":"Bạn đã giết:",
+            "Result_Mistaken":"Giết nhầm:",
+            
+            //normal Text
+            "Day":"Ngày:",
+            "Empty_File":"File trống",
+            "Wrong_Call":"Gọi nhầm",
+            "Report_Floor_1": "Ở tầng 1",
+            "Report_Floor_2": "Ở tầng 2",
+            "No_Report":"Không thấy ai bất thường",
+            "ReThink":"Suy nghĩ lại",
         }
     }
 }

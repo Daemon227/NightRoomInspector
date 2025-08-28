@@ -82,6 +82,8 @@ public class GameData
     public bool[] roomsCanOpenFloor2 = new bool[4];
     public bool[] roomsHasCheckedF1 = new bool[4];
     public bool[] roomsHasCheckedF2 = new bool[4];
+    public bool[] roomIsMonsterF1 = new bool[4];
+    public bool[] roomIsMonsterF2 = new bool[4];
     public int reportedRoomID;
     public bool canMove;
     public bool canInteract;
@@ -89,7 +91,7 @@ public class GameData
     public void FillFullData()
     {
         if(GameManager.Instance == null) return;
-        name = "Save Day " + System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+        name = "Save Time " + System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
         currentDay = GameManager.Instance.currentDay;
         checkFullRoom = GameManager.Instance.checkFullRoom;
         reportToBoss = GameManager.Instance.reportToBoss;
@@ -101,6 +103,7 @@ public class GameData
         {      
             roomsCanOpenFloor1[i] = room.GetComponent<Door>().canOpen;
             roomsHasCheckedF1[i] = room.GetComponent<Door>().hasChecked;
+            roomIsMonsterF1[i] = room.GetComponent<Door>().isMonster;
             i++;
         }
         i = 0;
@@ -108,6 +111,7 @@ public class GameData
         {
             roomsCanOpenFloor2[i] = room.GetComponent<Door>().canOpen;
             roomsHasCheckedF2[i] = room.GetComponent<Door>().hasChecked;
+            roomIsMonsterF2[i] = room.GetComponent<Door>().isMonster;
             i++;
         }
     }

@@ -46,6 +46,7 @@ public class DialogUIManager : MonoBehaviour
     private void Start()
     {
         npcDataLoader = GetComponentInParent<NPCDataLoader>();
+        closeButton.GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Button_Close");
         closeButton.onClick.AddListener(() => CloseScan());
         closeShootOption.onClick.AddListener(() => CloseShootOption());
     }
@@ -53,7 +54,8 @@ public class DialogUIManager : MonoBehaviour
     {
         currentRoom = roomIndex;
         //Load dialog data
-        string fullDialogAddress = dialogAddress + roomIndex;
+        string languageCode = MultiLanguageManager.Instance.currentLanguage;
+        string fullDialogAddress = languageCode + dialogAddress + roomIndex;
         npcDataLoader.LoadDialog(fullDialogAddress, data => {
             if (data != null)
             {
@@ -87,7 +89,8 @@ public class DialogUIManager : MonoBehaviour
             }
         });
 
-        string fullScanAvatarAddress = $"{avatarAddress}NPC_Image_Id_{roomIndex}_day_{1}";
+        if (day <= 2) return;
+        string fullScanAvatarAddress = $"{avatarAddress}NPC_Image_Id_{roomIndex}_day_{day}";// fix here
         npcDataLoader.LoadImage(fullScanAvatarAddress, newSprite =>
         {
             if (newSprite != null)
@@ -122,25 +125,29 @@ public class DialogUIManager : MonoBehaviour
         GameManager.Instance.canMove = false;
 
         GameObject b1 = Instantiate(buttonPrefab, buttonGroup.transform);
-        b1.GetComponentInChildren<TextMeshProUGUI>().text = "Chat";
+        string chatText = MultiLanguageManager.Instance.GetText("Chat");
+        b1.GetComponentInChildren<TextMeshProUGUI>().text = chatText;
         b1.GetComponent<Button>().onClick.AddListener(() => ShowDialogueOption(day));
 
-        if(day >= 2)
+        if(day > 2)
         {
             GameObject b2 = Instantiate(buttonPrefab, buttonGroup.transform);
-            b2.GetComponentInChildren<TextMeshProUGUI>().text = "Scan";
+            string scanText = MultiLanguageManager.Instance.GetText("Scan");
+            b2.GetComponentInChildren<TextMeshProUGUI>().text = scanText;
             b2.GetComponent<Button>().onClick.AddListener(Scan);
         }
 
-        if (day >= 3)
+        if (day > 3)
         {
             GameObject b3 = Instantiate(buttonPrefab, buttonGroup.transform);
-            b3.GetComponentInChildren<TextMeshProUGUI>().text = "Shoot";
+            string shootText = MultiLanguageManager.Instance.GetText("Shoot");
+            b3.GetComponentInChildren<TextMeshProUGUI>().text = shootText;
             b3.GetComponent<Button>().onClick.AddListener(Shoot);
         }
 
         GameObject b4 = Instantiate(buttonPrefab, buttonGroup.transform);
-        b4.GetComponentInChildren<TextMeshProUGUI>().text = "Leave";
+        string leaveText = MultiLanguageManager.Instance.GetText("Leave");
+        b4.GetComponentInChildren<TextMeshProUGUI>().text = leaveText;
         b4.GetComponent<Button>().onClick.AddListener(() =>
         {
             ClearOption();

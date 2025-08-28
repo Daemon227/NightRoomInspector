@@ -25,6 +25,7 @@ public class MissionManager : MonoBehaviour
         EventManager.OpenTheDoor += CheckRoom;
         EventManager.OnChangeDay += ChangeNextDay;
         EventManager.OnAllMissionComleted += ChangeMission;
+        EventManager.OnChangeLanguage += ChangeMission;
     }
 
     private void OnDisable()
@@ -32,11 +33,12 @@ public class MissionManager : MonoBehaviour
         EventManager.OpenTheDoor -= CheckRoom;
         EventManager.OnChangeDay -= ChangeNextDay;
         EventManager.OnAllMissionComleted -= ChangeMission;
+        EventManager.OnChangeLanguage -= ChangeMission;
     }
     public void CheckRoom(int id)
     {
         hasCheckedRooms += 1;
-        missionText.text = $"Rooms need to check: {hasCheckedRooms}/{totalRoom}";     
+        missionText.text = $"{MultiLanguageManager.Instance.GetText("Mission_CheckRoom")} {hasCheckedRooms}/{totalRoom}";     
         if (hasCheckedRooms >= totalRoom)
         {
             checkedAllRooms = true;
@@ -52,18 +54,18 @@ public class MissionManager : MonoBehaviour
         {
             totalRoom = GameManager.Instance.GetTotalRoomNeedToCheck();
             hasCheckedRooms = GameManager.Instance.GetRoomCheckedCount();
-            missionText.text = $"Rooms need to check: {hasCheckedRooms}/{totalRoom}";
+            missionText.text = $"{MultiLanguageManager.Instance.GetText("Mission_CheckRoom")} {hasCheckedRooms}/{totalRoom}";
 
         }
         else
         {
             if (!reportedToBoss)
             {
-                missionText.text = "Report to boss";
+                missionText.text = MultiLanguageManager.Instance.GetText("Mission_Report");
             }
             else
             {
-                missionText.text = "Go home";
+                missionText.text = MultiLanguageManager.Instance.GetText("Mission_Back");
             } 
         }
     }

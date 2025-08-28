@@ -1,0 +1,128 @@
+﻿{
+  "id": "2",
+  "npcName": "Room 102",
+  "description": "A middle-aged man with a twisted face, fierce eyes, and an unfriendly look. His hoarse voice and lack of expression make others uneasy.",
+  "isMonster": false,
+  "dialogueByDay": [
+    {
+      "day": 1,
+      "options": [
+        {
+          "playerText": "Have you lived here long?",
+          "npcTexts": [ "Long enough. Why ask?", "I’m not planning to move." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Have you noticed anything strange?",
+          "npcTexts": [ "No. And if I did, it’s none of your business.", "I opened the door but saw no one…", "Someone must be asking for a beating."],
+          "isExit": false
+        },
+        {
+          "playerText": "What do you do for work?",
+          "npcTexts": [ "Manual labor.", "Enough to live. Not your concern." ],
+          "isExit": false
+        },
+        {
+          "playerText": "When do you usually go out?",
+          "npcTexts": [ "When I need to. Otherwise, I stay home.", "You ask too much." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye.",
+          "npcTexts": [ "Good.", "Leave me alone." ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "options": [
+        {
+          "playerText": "How long have you stayed here?",
+          "npcTexts": [ "Five years. Or six.", "Who bothers to count?" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Did you notice anything unusual?",
+          "npcTexts": [ "Yeah. You standing here asking nonsense."],
+          "isExit": false
+        },
+        {
+          "playerText": "Did you work today?",
+          "npcTexts": [ "No. Slept at home.", "Had enough questions yet?" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Did you go out today?",
+          "npcTexts": [ "Does it matter to you whether I go out or not?", "Stop asking so much." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye.",
+          "npcTexts": [ "Good.", "Don’t come back." ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "options": [
+        {
+          "playerText": "How long have you lived here?",
+          "npcTexts": [ "Already told you. Why ask again?", "What’s wrong with your ears?" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Did you hear anything strange last night?",
+          "npcTexts": [ "Heard footsteps. Probably someone passing by.", "I don’t care. But if he makes noise, I’ll punch him."],
+          "isExit": false
+        },
+        {
+          "playerText": "Are you still working?",
+          "npcTexts": [ "No. Quit already.", "If you’re free, leave me alone." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you often go out?",
+          "npcTexts": [ "I’m about to go out and deal with you.", "Stop bothering me." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye.",
+          "npcTexts": [ "Fine.", "Get away from my door." ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "options": [
+        {
+          "playerText": "Since when have you been here?",
+          "npcTexts": [ "You again.", "When will you have enough?" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Did you see anything strange this morning?",
+          "npcTexts": [ "Yes...", "Your questions."],
+          "isExit": false
+        },
+        {
+          "playerText": "Are you still working?",
+          "npcTexts": [ "I don’t need money anymore."],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you want to go out?",
+          "npcTexts": [ "No. What for?", "To breathe dirty air?" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye.",
+          "npcTexts": [ "Get lost...", "Leave before I beat you up." ],
+          "isExit": true
+        }
+      ]
+    }
+  ]
+}

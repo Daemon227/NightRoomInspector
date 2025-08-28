@@ -1,7 +1,7 @@
 ﻿{
   "id": "5",
   "npcName": "Phòng 201",
-  "description": "Một nhà khoa học trông có vẻ rất điên",
+  "description": "Một nhà khoa học trông có vẻ không được bình thường",
   "isMonster": false,
   "dialogueByDay": [
     {

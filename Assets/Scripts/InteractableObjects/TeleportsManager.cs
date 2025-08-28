@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class TeleportsManager : MonoBehaviour
@@ -10,6 +11,7 @@ public class TeleportsManager : MonoBehaviour
     {
         GameManager.Instance.canMove = false;
         loadingPanel.SetActive(true);
+        loadingPanel.GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Menu_Loading");
         yield return new WaitForSeconds(1f);
         loadingPanel.SetActive(false);
         GameManager.Instance.canMove = true;

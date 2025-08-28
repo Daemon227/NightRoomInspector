@@ -1,7 +1,7 @@
 ﻿{
   "id": 1,
   "npcName": "Phòng 101",
-  "description": "NPC này là một người phụ nữ lớn tuổi với gương mặt gầy gò, làn da tái nhợt và đôi mắt trũng sâu thiếu sức sống. Mái tóc bạc lưa thưa buộc hai bên, trông xơ xác và rối bời. Trang phục cũ kỹ, màu sắc phai mờ, tạo cảm giác mệt mỏi và ảm đạm ngay từ cái nhìn đầu tiên.",
+  "description": "NPC này là một người phụ nữ khoảng 60 đến 70 tuổi",
   "isMonster": true,
   "dialogueByDay": [
     {
@@ -21,7 +21,7 @@
           "isExit": false
         },
         {
-          "playerText": "Bà quen nhiều người trong khu này không?",
+          "playerText": "Bà quen ai ở đây không?",
           "npcTexts": [ "Không, tôi chỉ xã giao thôi.", "Ở đây ai cũng bận, chẳng ai để ý ai mấy." ],
           "isExit": false
         },
@@ -55,7 +55,7 @@
           "isExit": false
         },
         {
-          "playerText": "Bà quen nhiều người trong khu này không?",
+          "playerText": "Bà quen ai ở đây không?",
           "npcTexts": [ "Tôi biết mặt một vài người, có người hay ghé qua hỏi chuyện.", 
           "Nhưng tôi không nhớ rõ tên họ, chỉ nhớ quần áo hoặc giọng nói.", 
           "Có người mới chuyển đến, có người đã đi, thay đổi suốt"],
@@ -91,7 +91,7 @@
           "isExit": false
         },
         {
-          "playerText": "Bà quen nhiều người trong khu này không?",
+          "playerText": "Bà quen ai ở đây không?",
           "npcTexts": [ "Tất nhiên, tôi quen tất cả. Ai rồi cũng phải ghé qua phòng tôi một lần.", 
           "Họ có thể không nhớ, nhưng tôi thì nhớ rõ mùi của từng người. Nhất là khi họ đứng rất gần."],
           "isExit": false
@@ -127,7 +127,7 @@
           "isExit": false
         },
         {
-          "playerText": "Bà quen nhiều người trong khu này không?",
+          "playerText": "Bà quen ai ở đây không?",
           "npcTexts": [ "Tất cả đều ở đây, bên trong tôi.", 
           "Họ không nói nhiều nữa, nhưng tôi nghe thấy tiếng họ mỗi khi đêm xuống.",
           "Cậu sẽ hiểu thôi, khi cửa phòng đóng lại."],

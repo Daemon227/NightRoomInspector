@@ -1,0 +1,128 @@
+﻿{
+  "id": "3",
+  "npcName": "Room 103",
+  "description": "A woman about 30 to 40 years old, heavily made-up, with a disturbingly wide smile",
+  "isMonster": false,
+  "dialogueByDay": [
+    {
+      "day": 1,
+      "options": [
+        {
+          "playerText": "Good evening.",
+          "npcTexts": [ "Oh! Are you the new night guard?", "Keep your eyes open tonight… at my circus, someone once lost an entire… fake head!", "Hahaha, just kidding, don’t look at me like that!" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Have you lived here long?",
+          "npcTexts": [ "Just moved in last week, but I already know every creak in these halls.", "At night it feels like the building is breathing… like a giant beast, you know?", "Oh, I’m just talking nonsense, it’s not real!" ],
+          "isExit": false
+        },
+        {
+          "playerText": "What’s your job?",
+          "npcTexts": [ "I’m a comedian… no, a circus performer!", "Sometimes I even play a man-eating impostor.", "Don’t worry, I’ve never… eaten anyone for real." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Have you met anyone strange here?",
+          "npcTexts": [ "Hmm… last night I saw someone standing outside my door for an hour.", "But when I opened it… no one was there." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye.",
+          "npcTexts": [ "If you hear laughter in the hall tonight… that’s probably just me.", "Or… maybe someone else. Hehe, sleep well!" ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "options": [
+        {
+          "playerText": "Good evening.",
+          "npcTexts": [ "Oh, hello night guard!", "Do you know what I dreamed of yesterday?", "I dreamed everyone here looked exactly the same hahaha" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Have you lived here long?",
+          "npcTexts": [ "I told you, just over a week. Or… was it two?", "Oh, my memory is always a mess.", "At the circus I even forgot my own birthday once!" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you often go out at night?",
+          "npcTexts": [ "Of course! Night is when the stage lights are most beautiful.", "I work at the circus, after all." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Have you met anyone strange here?",
+          "npcTexts": [ "Hmm, no one strange. Everyone here feels familiar.", "But if someone new comes, maybe they just want to see the circus hahaha" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye.",
+          "npcTexts": [ "If you hear applause tonight, remember to clap back.", "At the circus, that’s basic manners." ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "options": [
+        {
+          "playerText": "Good evening.",
+          "npcTexts": [ "Oh, doing well today?", "Last night I had that same dream again.", "Everyone looked alike and I had to tell them apart by their voices." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Are you comfortable living here?",
+          "npcTexts": [ "Comfortable?", "Well, I’ve been here not even two weeks yet.", "But for me, anywhere can be comfortable." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you have many friends here?",
+          "npcTexts": [ "Of course! Everyone smiles at me.", "But the smiles are stiff… like statues." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Have you seen anyone suspicious?",
+          "npcTexts": [ "Everyone looks suspicious if you stare long enough.", "But if you stare at me too long… you might find me suspicious too.", "Haha, try it!" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye.",
+          "npcTexts": [ "Enjoy your shift.", "And remember… if someone knocks three times, don’t open. Unless it’s me, of course!" ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "options": [
+        {
+          "playerText": "Good evening.",
+          "npcTexts": [ "Hello! Don’t panic, I just… look a little different today.", "In the circus, we change appearances all the time.", "But I swear, this isn’t makeup… at least not today." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Are you alright?",
+          "npcTexts": [ "Alright! Just… sleeping less.", "Sometimes I crave a little raw meat.", "And you’re looking pretty tasty right now…" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you remember what you told me?",
+          "npcTexts": [ "Hmm… what did I say? Oh yes, I mentioned the knocking and the dreams.", "But those were just stories I made up to tease you." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you have any advice for me?",
+          "npcTexts": [ "Always keep smiling.", "Like me—I can’t stop smiling at all.", "Haha, give it a try!" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye.",
+          "npcTexts": [ "If you see me standing at the end of the hall tonight… don’t come closer.", "It’ll be a great circus act." ],
+          "isExit": true
+        }
+      ]
+    }
+  ]
+}

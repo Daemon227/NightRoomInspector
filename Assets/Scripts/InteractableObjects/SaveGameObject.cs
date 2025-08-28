@@ -7,17 +7,32 @@ using UnityEngine.UI;
 public class SaveGameObject : InteractableObject
 {
     public GameObject savePanel;
+    public TextMeshProUGUI titleText;
     public List<Button> saveButtons;
     public List<TextMeshProUGUI> saveTexts;
     public Button closeButton;
 
+
+    public override void SetButtonLanguage(TextMeshProUGUI text, int optionIndex)
+    {
+        switch (optionIndex)
+        {
+            case 0:
+                text.text = MultiLanguageManager.Instance.GetText("Button_Save");
+                break;
+            case 1:
+                text.text = MultiLanguageManager.Instance.GetText("Leave");
+                break;
+        }
+    }
     public override void HandleOption(int optionIndex)
     {
+        closeButton.GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Button_Back");
         if (optionIndex == 0) 
         { 
             savePanel.SetActive(true);
             ClearOption();
-            FirstSettup();
+            FirstSettup();      
             closeButton.onClick.AddListener(() => 
             {
                 savePanel.SetActive(false);
@@ -25,10 +40,17 @@ public class SaveGameObject : InteractableObject
                 GameManager.Instance.canMove = true;
             });
         }
+        else if (optionIndex == 1) 
+        { 
+            ClearOption();
+            // set di chuyen
+            GameManager.Instance.canMove = true;
+        }
     }
 
     public void FirstSettup()
     {
+        titleText.text = MultiLanguageManager.Instance.GetText("Select_Slot_To_Save");
         GameData[] gameDataList = DataLoading.Instance.gameDataList;
         for (int i = 0; i < saveButtons.Count; i++)
         {
@@ -38,10 +60,12 @@ public class SaveGameObject : InteractableObject
             }
             else
             {
-                saveTexts[i].text = "Save " + (i + 1) + ": Empty Slot";
+                string emptySlot = MultiLanguageManager.Instance.GetText("Empty_File");
+                saveTexts[i].text = "Save " + (i + 1) + ": "+ emptySlot;
             }
             int index = i; // Capture the current value of i
             //gan chuc nang cho nut
+            saveButtons[index].GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Button_Save");
             saveButtons[i].onClick.RemoveAllListeners();
             saveButtons[i].onClick.AddListener(() =>
             {

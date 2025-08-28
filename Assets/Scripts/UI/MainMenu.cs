@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
     public CutSceneData cutSceneData;
     public Image image;
     public TextMeshProUGUI descriptionText;
-
+    public TextMeshProUGUI instructionText;
     private void OnEnable()
     {
         EventManager.OnChangeLanguage += SettupButtonLanguage;
@@ -44,22 +44,30 @@ public class MainMenu : MonoBehaviour
 
     public IEnumerator PlayNewGame()
     {
+        //bat tat loading
         loadingPanel.SetActive(true);
+        loadingPanel.GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Menu_Loading");
         DataLoading.Instance.currentGameData = null;
         yield return new WaitForSeconds(1f);
         loadingPanel.SetActive(false);
         cutScenePanel.SetActive(true);
-
-        for (int i = 0; i < cutSceneData.descriptions.Length; i++)
+        //play cutscene
+        for (int i = 0; i < cutSceneData.enDescriptions.Length; i++)
         {
             image.sprite = cutSceneData.images[i];
             descriptionText.text = "";
-            descriptionText.text = cutSceneData.descriptions[i];
+            if (MultiLanguageManager.Instance.currentLanguage.Equals("vn")){
+                descriptionText.text = cutSceneData.vnDescriptions[i];
+            }
+            else descriptionText.text = cutSceneData.enDescriptions[i];
+
+            instructionText.text = MultiLanguageManager.Instance.GetText("Menu_Instruction_ClickToContinue");
             yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
         }
         yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
 
+        //load game scene
         cutScenePanel.SetActive(false);
         loadingPanel.SetActive(true);
         yield return new WaitForSeconds(1f);

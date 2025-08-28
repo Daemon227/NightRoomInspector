@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EndingManager : MonoBehaviour
@@ -50,7 +51,8 @@ public class EndingManager : MonoBehaviour
         if (result[0] == 0)
         {
             Debug.Log("First ending event");
-            EventManager.ShowNotification?.Invoke("I can't open the door. What happen?");
+            string notification = MultiLanguageManager.Instance.GetText("N_Cannot_Open_Door");
+            EventManager.ShowNotification?.Invoke(notification);
             fireObject.SetActive(true);
             endingID = 1;
         }
@@ -61,7 +63,8 @@ public class EndingManager : MonoBehaviour
                 monster.SetActive(true);
                 GameManager.Instance.canInteract = false;
                 endingID = 2;
-                EventManager.ShowNotification?.Invoke("Wait, Somthing wrong?");
+                string notification = MultiLanguageManager.Instance.GetText("N_Hear_Sound");
+                EventManager.ShowNotification?.Invoke(notification);
             }
             else
             {   
@@ -75,11 +78,6 @@ public class EndingManager : MonoBehaviour
     {
         StartCoroutine(StartEndingUI(endingID));
     }
-    
-    public void BackHome()
-    {
-        Debug.Log("Back home, end game");
-    }
 
     public IEnumerator StartEndingUI(int endingId)
     {
@@ -91,10 +89,10 @@ public class EndingManager : MonoBehaviour
         else
         {
             endingPanel.SetActive(true);
-            for (int i = 0; i < endingData.descriptions.Length; i++)
+            for (int i = 0; i < endingData.enDescriptions.Length; i++)
             {
                 descriptionText.text = "";
-                descriptionText.text += endingData.descriptions[i] + "\n";
+                descriptionText.text += endingData.enDescriptions[i] + "\n";
                 endingImage.sprite = endingData.images[i];
                 yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
                 yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
@@ -104,7 +102,14 @@ public class EndingManager : MonoBehaviour
 
             resultPanel.SetActive(true);
             int[] result = GameManager.Instance.GetMonsterReportedIndex();
-            resultText.text = $"You have reported {result[0]} rooms, in which {result[1]} rooms had monsters.";
+            string killCount = MultiLanguageManager.Instance.GetText("Result_Reported");
+            string mistakeCount = MultiLanguageManager.Instance.GetText("Result_Mistaken");
+            resultText.text = $"{killCount} {result[0]} \n" + $"{mistakeCount} {result[0] - result[1]}";
+            backButton.GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Button_BackToMenu");
+            backButton.onClick.AddListener(() =>
+            {
+                SceneManager.LoadScene("MenuScene");
+            });
         }
 
     }
@@ -115,6 +120,7 @@ public class CutSceneData
 {
     public int cutSceneID;
     public string cutSceneName;
-    public string[] descriptions;
+    public string[] enDescriptions;
+    public string[] vnDescriptions;
     public Sprite[] images;
 }

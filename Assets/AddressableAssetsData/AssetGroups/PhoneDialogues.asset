@@ -16,7 +16,12 @@ MonoBehaviour:
   m_GUID: 13292572bd86ee445b2d5c52cdcf0605
   m_SerializeEntries:
   - m_GUID: 323c1fdc587be5d479d8ac492da4c245
-    m_Address: PhoneDialogues/PhoneDialogue
+    m_Address: PhoneDialogues/vnPhoneDialogue
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f5d38f2e1f8b9ac4bb2de0f98308b0ce
+    m_Address: PhoneDialogues/enPhoneDialogue
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

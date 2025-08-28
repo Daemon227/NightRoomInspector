@@ -1,9 +1,25 @@
+using TMPro;
 using UnityEngine;
 
 public class LightSwitch : InteractableObject
 {
     public GameObject lights;
-    public GameObject ghost;
+
+    public override void SetButtonLanguage(TextMeshProUGUI text, int optionIndex)
+    {
+        switch (optionIndex)
+        {
+            case 0:
+                text.text = MultiLanguageManager.Instance.GetText("Turn_Light_On");
+                break;
+            case 1:
+                text.text = MultiLanguageManager.Instance.GetText("Turn_Light_Off");
+                break;
+            case 2:
+                text.text = MultiLanguageManager.Instance.GetText("Leave");
+                break;
+        }
+    }
     public override void HandleOption(int optionIndex)
     {
         switch (optionIndex)
@@ -13,7 +29,6 @@ public class LightSwitch : InteractableObject
                 {
                     GameManager.Instance.turnOnLight = true;
                     lights.SetActive(true);
-                    ghost.SetActive(false);
                 }
                 // set di chuyen
                 GameManager.Instance.canMove = true;
@@ -24,7 +39,6 @@ public class LightSwitch : InteractableObject
                 {
                     GameManager.Instance.turnOnLight = false;
                     lights.SetActive(false);
-                    ghost.SetActive(true);
                 }
                 // set di chuyen
                 GameManager.Instance.canMove = true;

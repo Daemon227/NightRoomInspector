@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,8 +6,21 @@ public class WallImage : InteractableObject
 {
     public GameObject panel;
     public Button closeButton;
+    public override void SetButtonLanguage(TextMeshProUGUI text, int optionIndex)
+    {
+        switch (optionIndex)
+        {
+            case 0:
+                text.text = MultiLanguageManager.Instance.GetText("Button_View");
+                break;
+            case 1:
+                text.text = MultiLanguageManager.Instance.GetText("Leave");
+                break;
+        }
+    }
     public override void HandleOption(int optionIndex)
     {
+        SetUpLanguage();
         switch (optionIndex) 
         {
             case 0:
@@ -21,7 +35,10 @@ public class WallImage : InteractableObject
                 break;
         }    
     }
-
+    public void SetUpLanguage()
+    {
+        closeButton.GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Button_Back");
+    }
     public void ClosePanel()
     {
         panel.SetActive(false);

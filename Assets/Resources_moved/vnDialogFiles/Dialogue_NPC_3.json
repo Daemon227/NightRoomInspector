@@ -1,7 +1,7 @@
 ﻿{
   "id": "3",
   "npcName": "Phòng 103",
-  "description": "Một cô gái trẻ với ánh mắt long lanh, nụ cười rộng đến mức đáng sợ. Trang điểm đậm, môi đỏ chói, luôn tràn đầy năng lượng nhưng lời nói thì khó đoán, đôi khi rợn gáy.",
+  "description": "Một cô gái tầm 30 đến 40 tuổi.Trang điểm đậm với nụ cười rộng đến mức đáng sợ.",
   "isMonster": false,
   "dialogueByDay": [
     {

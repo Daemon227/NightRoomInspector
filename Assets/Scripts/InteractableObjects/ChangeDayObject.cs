@@ -7,6 +7,20 @@ public class ChangeDayObject : InteractableObject
 {
     public GameObject changeDayPanel;
     public TextMeshProUGUI tmp;
+
+    public override void SetButtonLanguage(TextMeshProUGUI text, int optionIndex)
+    {
+        switch (optionIndex)
+        {
+            case 0:
+                text.text = MultiLanguageManager.Instance.GetText("Button_GoHome");
+                break;
+            case 1:
+                text.text = MultiLanguageManager.Instance.GetText("Button_Wait");
+                break;
+        }
+    }
+
     public override void HandleOption(int optionIndex)
     {
         switch (optionIndex)
@@ -27,7 +41,8 @@ public class ChangeDayObject : InteractableObject
                 }
                 else
                 {
-                    EventManager.ShowNotification?.Invoke("I must finish daily task first");
+                    string notification = MultiLanguageManager.Instance.GetText("N_Mission_Not_Completed");
+                    EventManager.ShowNotification?.Invoke(notification);
                 }
                 ClearOption();
                 break;
@@ -42,8 +57,9 @@ public class ChangeDayObject : InteractableObject
     public IEnumerator ChangeDayUI()
     {
         changeDayPanel.SetActive(true);
-        tmp.text = $"Day: {GameManager.Instance.currentDay + 1}";
-        yield return new WaitForSeconds(1.5f);
+        string dayText = MultiLanguageManager.Instance.GetText("Day");
+        tmp.text = $"{dayText} {GameManager.Instance.currentDay + 1}";
+        yield return new WaitForSeconds(2f);
         changeDayPanel.SetActive(false);
 
         // set di chuyen

@@ -11,7 +11,8 @@ public class InteractableObject : MonoBehaviour, IPointerClickHandler
     public bool canInteract = false;
     public bool canShowOption = true;
 
-    public List<string> optionText;
+    //public List<string> optionText;// fix here
+    public int buttonAmount = 3;
     public GameObject buttonPrefab;
     public GameObject buttonGroup;
 
@@ -46,22 +47,15 @@ public class InteractableObject : MonoBehaviour, IPointerClickHandler
         if(canInteract && canShowOption)
         {
             int index = 0;
-            foreach(var s in optionText)
+            for(int i = 0; i < buttonAmount; i++)
             {
                 GameObject a = Instantiate(buttonPrefab, buttonGroup.transform);
-
                 //set text
-                TextMeshProUGUI option =  a.GetComponentInChildren<TextMeshProUGUI>();
-                if(option != null)
-                {
-                    option.text = s;
-                }
-                else
-                {
-                    Debug.Log("Khong co TMP");
-                }
+                TextMeshProUGUI option = a.GetComponentInChildren<TextMeshProUGUI>();
+                
                 //set script for button
                 int currentOption = index;
+                SetButtonLanguage(option,currentOption);
                 a.GetComponent<Button>().onClick.AddListener(() => HandleOption(currentOption));
                 index++;
             }
@@ -79,7 +73,7 @@ public class InteractableObject : MonoBehaviour, IPointerClickHandler
         }
         canShowOption = true;
     }
-
+    public virtual void SetButtonLanguage(TextMeshProUGUI text,int optionIndex) { }
     public virtual void HandleOption(int optionIndex) { }
 
     public void OnPointerClick(PointerEventData eventData)

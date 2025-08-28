@@ -1,0 +1,68 @@
+﻿{
+  "phonedialog": [
+    {
+      "day": 1,
+      "greetings": [
+        "Xin chào. Ngày đầu làm việc của cậu ổn chứ?",
+        "Nếu cậu thấy có kẻ nào khả nghi trong ngôi nhà không?"
+      ],
+      "responseAffterReport": [
+        "Ngay ngày đầu mà đã có kẻ để lộ nhiều sơ hở rồi à.",
+        "Tốt lắm.",
+        "Đêm nay người của chúng tôi sẽ tới xử lý mọi chuyện",
+        "Cảm ơn cậu!"
+      ],
+      "responseAffterNoReport": [
+        "Ngày đầu có vẻ chúng chưa để lộ sơ hở.",
+        "Được rồi hãy cố gắng vào ngày mai.",
+        "Chúng rất nguy hiểm, cần phải tìm ra sớm",
+        "Hãy ghi nhớ những lời nói của mọi người trong ngày hôm nay"
+      ],
+      "signOff": [
+        "Hmm.",
+        "Chào."
+      ]
+    },
+    {
+      "day": 2,
+      "greetings": [
+        "Xin chào. Cậu có tìm được kẻ nào bất thường không?",
+        "Hy vọng cậu làm tốt nhiệm vụ hôm nay."
+      ],
+      "responseAffterReport": [
+        "Làm tốt lắm, chúng tôi sẽ tiến hành xử lý hắn đêm nay",
+        "Tiếp tục phát huy vào ngày mai nhé"
+      ],
+      "responseAffterNoReport": [
+        "Thật sự không tìm thấy kẻ nào bất thường sao?",
+        "Ngày mai hãy để ý hơn, chúng thật sự rất nguy hiểm",
+        "Hãy để ý đến những kẻ có lời nói không ăn khớp hoặc lời nói không có nhân tính",
+        "Chào cậu"
+      ],
+      "signOff": [
+        "Được rồi, quay trở lại công việc đi",
+        "Nhớ báo cáo lại cho tôi khi hết ca"
+      ]
+    },
+    {
+      "day": 3,
+      "greetings": [
+        "Alo, Tôi rất mong chờ cuộc gọi của cậu đấy",
+        "Có tìm thấy kẻ nào bất thường không?"
+      ],
+      "responseAffterReport": [
+        "Làm tốt lắm.",
+        "Có vẻ phóng xạ do lũ đó tạo ra đã làm biến đổi mọi người",
+        "Từ giờ mọi thứ sẽ khó khăn hơn để tìm ra chúng."
+      ],
+      "responseAffterNoReport": [
+        "Cậu có thật sự làm việc nghiêm túc không thế?",
+        "Đừng có che giấu sự thật đấy.",
+        "Mọi người đã bị chúng làm cho biến đổi rồi, chúng thực sự rất nguy hiểm"
+      ],
+      "signOff": [
+        "Đừng sao nhãng công việc đấy"
+      ]
+    }
+  ]
+}

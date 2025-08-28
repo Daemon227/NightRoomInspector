@@ -11,6 +11,7 @@ public class MultiLanguageManager : MonoBehaviour
     public string currentLanguage = "en";
     public Dictionary<string, string> localizedText;
 
+
     private void Awake()
     {
         if (Instance == null)
@@ -25,7 +26,6 @@ public class MultiLanguageManager : MonoBehaviour
         }
         LoadLangue(currentLanguage);
     }
-
     public void LoadLangue(string currentLangue)
     {
         string filePath = Path.Combine(Application.streamingAssetsPath, "language.json");

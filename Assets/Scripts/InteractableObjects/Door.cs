@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 
 public class Door : InteractableObject
@@ -9,6 +10,18 @@ public class Door : InteractableObject
     public bool canOpen = true;
     public bool hasChecked = false;
     public bool isMonster = false;
+    public override void SetButtonLanguage(TextMeshProUGUI text,int optionIndex)
+    {
+        switch (optionIndex)
+        {
+            case 0:
+                text.text = MultiLanguageManager.Instance.GetText("Knock");
+                break;
+            case 1:
+                text.text = MultiLanguageManager.Instance.GetText("Leave");
+                break;
+        }
+    }
 
     public override void HandleOption(int optionIndex)
     {
@@ -18,7 +31,8 @@ public class Door : InteractableObject
             case 0:
                 if (!GameManager.Instance.turnOnLight)
                 {
-                    EventManager.ShowNotification?.Invoke("I must turn on the light first");
+                    string notification = MultiLanguageManager.Instance.GetText("N_Turn_On_Light");
+                    EventManager.ShowNotification?.Invoke(notification);
                 }
                 else
                 {
@@ -29,8 +43,8 @@ public class Door : InteractableObject
                     }
                     else
                     {
-                        Debug.Log("Phong nay lam gi co ai o");
-                        EventManager.ShowNotification?.Invoke("Phòng này không có ai ở");
+                        string notification = MultiLanguageManager.Instance.GetText("N_Empty_Room");
+                        EventManager.ShowNotification?.Invoke(notification);
                     }
                 }     
                 ClearOption();
