@@ -44,6 +44,7 @@ public class LoadFileSaveMenu: MonoBehaviour,IMenu
                 int index = i; // Capture the current value of i     
                 LoadButtons[index].onClick.AddListener(() => {
                     DataLoading.Instance.currentGameData = gameDataList[index];
+
                     StartCoroutine(LoadGame());
                 });
             }
@@ -64,6 +65,7 @@ public class LoadFileSaveMenu: MonoBehaviour,IMenu
     {
         loadingPanel.SetActive(true);
         loadingPanel.GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Menu_Loading");
+        AudioManager.Instance.PlayInGameMusic();
         yield return new WaitForSeconds(1f);
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
     }

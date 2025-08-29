@@ -108,6 +108,7 @@ public class EndingManager : MonoBehaviour
             backButton.GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Button_BackToMenu");
             backButton.onClick.AddListener(() =>
             {
+                AudioManager.Instance.PlayThemeMusic();
                 SceneManager.LoadScene("MenuScene");
             });
         }

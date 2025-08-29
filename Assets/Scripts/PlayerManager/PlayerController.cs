@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
 
     private string lastMoveAxis = "Horizontal"; // Mặc định ưu tiên ngang
 
+    public AudioSource audioSource;
+    public AudioClip clip;
+
     private void OnEnable()
     {
         EventManager.OnChangeDay += ChangePosByDay;
@@ -47,6 +50,8 @@ public class PlayerController : MonoBehaviour
         if (moveVector == Vector3.zero || !GameManager.Instance.canMove)
         {
             playerAnim.SetBool("IsMoving", false);
+            audioSource.loop = false;
+            audioSource.Stop();
             return;
         }
 
@@ -54,10 +59,17 @@ public class PlayerController : MonoBehaviour
         playerAnim.SetFloat("xValue", x);
         playerAnim.SetFloat("yValue", y);
         transform.Translate(moveVector * speed * Time.deltaTime);
+        // Xử lý âm thanh bước chân
+        if (!audioSource.isPlaying) // chỉ play nếu chưa phát
+        {
+            audioSource.clip = clip;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
 
         if (moveVector != Vector3.zero)
         {
-            targetPoint.transform.position = moveVector.normalized + transform.position;
+            targetPoint.transform.position = moveVector.normalized + transform.position;        
         }
     }
 

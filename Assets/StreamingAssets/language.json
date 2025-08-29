@@ -7,7 +7,8 @@
             "Menu_About": "About",
             "Menu_Loading": "Loading...",
             "Menu_Instruction_ClickToContinue": "Click to continue",
-            "Button_BackToMenu": "Back to Menu",
+            "Menu_Exit_Title": "Are you sure you want to exit?",
+            "Menu_Exit": "Exit",
 
             //button
             "Exit": "Exit",
@@ -32,6 +33,10 @@
             "Button_Wait":"Wait a moment",
             "Button_Save":"Save",
             "Button_View":"View",
+            "Button_SaveAndExit": "Save and Exit",
+            "Button_Exit_Yes":"Yes",
+            "Button_Exit_No":"No",
+            "Button_BackToMenu": "Back to Menu",
 
 
             "Mission_CheckRoom":"Room Checked:",
@@ -61,6 +66,13 @@
             "Report_Floor_2": "On the 2nd floor",
             "No_Report":"No one is abnormal",
             "ReThink":"ReThink",
+
+            //setting ui
+            "Setting_Title":"Settings",
+            "Setting_Music":"Music",
+            "Setting_SFX":"SFX",
+            "Setting_Language":"Language",
+            "Setting_Resolution":"Resolution",
             
         },
         "vn": {
@@ -70,7 +82,8 @@
             "Menu_About": "Về chúng tôi",
             "Menu_Loading": "Đang tải...",
             "Menu_Instruction_ClickToContinue": "Nhấp để tiếp tục",
-            "Button_BackToMenu": "Quay lại menu",
+            "Menu_Exit_Title": "Bạn có chắc muốn thoát không?",
+            "Menu_Exit": "Thoát",
 
             "Exit": "Thoát",
             "Select_Saved_File":"Hãy chọn một file lưu game",
@@ -94,6 +107,10 @@
             "Button_Wait":"Chờ chút",
             "Button_Save":"Lưu",
             "Button_View":"Xem",
+            "Button_SaveAndExit": "Lưu và thoát",
+            "Button_Exit_Yes":"Có",
+            "Button_Exit_No":"Không",
+            "Button_BackToMenu": "Quay lại menu",
 
 
             "Mission_CheckRoom":"Phòng đã kiểm tra:",
@@ -124,6 +141,13 @@
             "Report_Floor_2": "Ở tầng 2",
             "No_Report":"Không thấy ai bất thường",
             "ReThink":"Suy nghĩ lại",
+
+            //setting ui
+            "Setting_Title":"Cài đặt",
+            "Setting_Music":"Nhạc",
+            "Setting_SFX":"Âm thanh",
+            "Setting_Language":"Ngôn ngữ",
+            "Setting_Resolution":"Độ phân giải",
         }
     }
 }

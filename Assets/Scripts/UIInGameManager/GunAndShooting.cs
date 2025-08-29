@@ -13,6 +13,9 @@ public class GunAndShooting : MonoBehaviour
     public GameObject bloodObject;
 
     Animator animatior;
+
+    public AudioSource audioSource;
+    public AudioClip shootSound;
     private void Start()
     {
         animatior = GetComponent<Animator>();
@@ -35,6 +38,7 @@ public class GunAndShooting : MonoBehaviour
         }
         animatior.SetTrigger("Shoot");
         yield return new WaitForSeconds(0.5f);
+        audioSource.PlayOneShot(shootSound);
         bloodObject.SetActive(true);
         closeButton.gameObject.SetActive(true);  
         rectTransform.anchoredPosition = startPos;

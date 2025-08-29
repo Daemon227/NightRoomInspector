@@ -11,11 +11,15 @@ public class Fire : MonoBehaviour
     private Vector2 originPlayerPos;
 
     public GameObject player;
+    
+    public AudioSource audioSource;
+    public AudioClip fireSound;
     private void Start()
     {
         originFirePos = gameObject.transform.position;
         originPlayerPos = new Vector2(3, -13);
         backButton.onClick.AddListener(TryAgain);
+        PlayFireSound();
     }
     private void Update()
     {
@@ -46,5 +50,12 @@ public class Fire : MonoBehaviour
         gameObject.transform.position = originFirePos;
         EndingManager.Instance.canFireMove = true;
         GameManager.Instance.canMove = true;
+    }
+
+    public void PlayFireSound()
+    {
+        audioSource.clip = fireSound;
+        audioSource.Play();
+        audioSource.loop = true;
     }
 }

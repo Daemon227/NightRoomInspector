@@ -3,7 +3,9 @@ using UnityEngine;
 public class KnockTheDoor : MonoBehaviour
 {
     private Animator animator;
-
+    public AudioSource audioSource;
+    public AudioClip knockSound;
+    public AudioClip doorOpenSound;
     private void OnEnable()
     {
         EventManager.OpenTheDoor += Knock;
@@ -18,6 +20,7 @@ public class KnockTheDoor : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         animator.SetTrigger("Open");
+        //PlayKnockSound();
     }
     
     public void EndAnimation()
@@ -26,4 +29,15 @@ public class KnockTheDoor : MonoBehaviour
         EventManager.OnConversation?.Invoke();
     }
 
+    public void PlayKnockSound()
+    {
+        audioSource.clip = knockSound;
+        audioSource.Play();
+    }
+    public void PlayDoorOpenSound()
+    {
+        audioSource.Stop();
+        audioSource.clip = doorOpenSound;
+        audioSource.Play();
+    }
 }

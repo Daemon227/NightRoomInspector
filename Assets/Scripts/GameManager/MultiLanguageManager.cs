@@ -11,7 +11,6 @@ public class MultiLanguageManager : MonoBehaviour
     public string currentLanguage = "en";
     public Dictionary<string, string> localizedText;
 
-
     private void Awake()
     {
         if (Instance == null)
@@ -52,12 +51,19 @@ public class MultiLanguageManager : MonoBehaviour
             {
                 localizedText[entry.Key] = entry.Value;
             }
-        }
+        }      
     }
 
     public string GetText(string key)
     {
         return localizedText.ContainsKey(key) ? localizedText[key] : "this key is null";
+    }
+
+    public void ChangeLanguage(string newLanguage)
+    {
+        currentLanguage = newLanguage;
+        LoadLangue(currentLanguage);
+        EventManager.OnChangeLanguage?.Invoke();
     }
 }
 

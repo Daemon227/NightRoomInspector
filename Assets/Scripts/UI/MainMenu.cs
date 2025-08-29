@@ -38,8 +38,11 @@ public class MainMenu : MonoBehaviour
     public void OpenPanel(int i)
     {
         panels[i].SetActive(true);
-        panels[i].GetComponent<IMenu>().ActiveEvent();
-        menuPanel.SetActive(false);
+        if(panels[i].GetComponent<IMenu>() != null)
+        {
+            panels[i].GetComponent<IMenu>().ActiveEvent();
+        }   
+        //menuPanel.SetActive(false);
     }
 
     public IEnumerator PlayNewGame()
@@ -70,6 +73,8 @@ public class MainMenu : MonoBehaviour
         //load game scene
         cutScenePanel.SetActive(false);
         loadingPanel.SetActive(true);
+        //bat nhac
+        AudioManager.Instance.PlayInGameMusic();
         yield return new WaitForSeconds(1f);
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
     }
@@ -80,6 +85,7 @@ public class MainMenu : MonoBehaviour
         menuButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Menu_Continue");
         menuButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Menu_Setting");
         menuButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Menu_About");
+        menuButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Menu_Exit");
     }
 }
 

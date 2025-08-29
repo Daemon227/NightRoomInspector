@@ -5,6 +5,9 @@ public class Monster : MonoBehaviour
 {
     public float delayTime = 5f;
 
+    public AudioSource monsterAudioSource;
+    public AudioClip walkSound;
+    public AudioClip monsterSound;
     private void Start()
     {
         StartCoroutine(AttackPlayer());
@@ -14,9 +17,12 @@ public class Monster : MonoBehaviour
         Collider2D hit = Physics2D.OverlapCircle(transform.position, 10f, LayerMask.GetMask("Player"));
         if(hit != null)
         {
-            
+            monsterAudioSource.clip = walkSound;
+            monsterAudioSource.Play();
+            monsterAudioSource.loop = true;
             Debug.Log("Monster is watting to attack the player!");
             yield return new WaitForSeconds(delayTime);
+            PlayMonsterSound();
             transform.position = hit.transform.position;
             GameManager.Instance.canMove = false;
             yield return new WaitForSeconds(1f);
@@ -30,5 +36,13 @@ public class Monster : MonoBehaviour
         {
             GameManager.Instance.canMove = false;
         }
+    }
+
+    public void PlayMonsterSound()
+    {
+        monsterAudioSource.Stop();
+        monsterAudioSource.clip = monsterSound;
+        monsterAudioSource.Play();
+        monsterAudioSource.loop = false;
     }
 }

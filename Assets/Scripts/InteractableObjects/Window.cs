@@ -13,6 +13,9 @@ public class Window : InteractableObject
     public Button backButton;
     public Button jumpButton;
 
+    public AudioSource audioSource;
+    public AudioClip windowSound;
+
     private Vector3 originPos;
     private RectTransform rectTranform;
 
@@ -64,6 +67,7 @@ public class Window : InteractableObject
     }
     IEnumerator MoveWindow(RectTransform rt, Vector3 endPos)
     {
+        PlayWindowSound();
         EndingManager.Instance.canFireMove = false;
         while (Vector2.Distance(rt.anchoredPosition, endPos) > 0.01f)
         {
@@ -79,6 +83,7 @@ public class Window : InteractableObject
 
     public IEnumerator CloseWindow()
     {
+        PlayWindowSound();
         yield return MoveWindow(rectTranform, originPos);
         yield return new WaitForSeconds(1);
         windowPanel.SetActive(false);
@@ -102,5 +107,10 @@ public class Window : InteractableObject
     {
         backButton.GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Button_Back");
         jumpButton.GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Jump");
+    }
+
+    public void PlayWindowSound()
+    {
+        audioSource.PlayOneShot(windowSound);
     }
 }
