@@ -20,12 +20,13 @@ public class Monster : MonoBehaviour
             monsterAudioSource.clip = walkSound;
             monsterAudioSource.Play();
             monsterAudioSource.loop = true;
-            Debug.Log("Monster is watting to attack the player!");
-            yield return new WaitForSeconds(delayTime);
+            yield return new WaitForSeconds(2f);
             PlayMonsterSound();
+            Debug.Log("Monster is watting to attack the player!");
+            yield return new WaitForSeconds(delayTime - 2f);  
             transform.position = hit.transform.position;
             GameManager.Instance.canMove = false;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
             EndingManager.Instance.StartEnding();   
         }
     }

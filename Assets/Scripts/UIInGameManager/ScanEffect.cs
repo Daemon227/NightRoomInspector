@@ -4,7 +4,7 @@ using UnityEngine;
 public class ScanSystem : MonoBehaviour
 {
     public RectTransform scanCircle;  // Vòng quét
-    public float scanRadius = 100f;   // Bán kính vòng quét
+    public float scanRadius = 2f;   // Bán kính vòng quét
     public RectTransform brainPoint;
     public RectTransform heartPoint;
 

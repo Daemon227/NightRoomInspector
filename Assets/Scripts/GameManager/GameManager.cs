@@ -16,7 +16,9 @@ public class GameManager : MonoBehaviour
     public GameObject reportedRoom = null;
     public bool canMove = true;
     public bool canInteract = true;
-    //biến quản lý điều kiện ending
+    //biến quản lý điều kiện game
+    public bool canScan = false;
+    public bool canShoot = false;
 
 
     public static GameManager Instance;

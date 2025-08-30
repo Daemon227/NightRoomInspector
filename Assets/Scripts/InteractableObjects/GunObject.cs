@@ -1,17 +1,15 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class WallImage : InteractableObject
+public class GunObject : InteractableObject
 {
-    public GameObject panel;
-    public Button closeButton;
+    public GameObject messagePanel;
     public override void SetButtonLanguage(TextMeshProUGUI text, int optionIndex)
     {
         switch (optionIndex)
         {
             case 0:
-                text.text = MultiLanguageManager.Instance.GetText("Button_View");
+                text.text = MultiLanguageManager.Instance.GetText("Button_Pickup");
                 break;
             case 1:
                 text.text = MultiLanguageManager.Instance.GetText("Leave");
@@ -20,25 +18,20 @@ public class WallImage : InteractableObject
     }
     public override void HandleOption(int optionIndex)
     {
-        switch (optionIndex) 
+        switch (optionIndex)
         {
             case 0:
-                panel.SetActive(true);
-                panel.GetComponent<IMenu>().ActiveEvent();
-                closeButton.onClick.AddListener(ClosePanel);
+                GameManager.Instance.canShoot = true;
+                messagePanel.SetActive(true);
+                messagePanel.GetComponent<MessagePanel>().SetUIContent(1);
                 ClearOption();
+                this.gameObject.SetActive(false);
                 break;
             case 1:
                 ClearOption();
                 // set di chuyen
                 GameManager.Instance.canMove = true;
                 break;
-        }    
-    }
-    public void ClosePanel()
-    {
-        panel.SetActive(false);
-        // set di chuyen
-        GameManager.Instance.canMove = true;
+        }
     }
 }

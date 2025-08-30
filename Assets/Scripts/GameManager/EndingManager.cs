@@ -100,7 +100,7 @@ public class EndingManager : MonoBehaviour
             }
             else
             {
-                endingNameText.text = endingDatas[endingID].cutSceneEngName;
+                endingNameText.text = endingDatas[endingID-1].cutSceneEngName;
                 description= endingData.enDescriptions;
             }
             for (int i = 0; i < description.Length; i++)
