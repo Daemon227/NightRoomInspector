@@ -19,8 +19,10 @@ public class EndingManager : MonoBehaviour
     [Header("Ending Elements")]
     public List<CutSceneData> endingDatas;
     public GameObject endingPanel;
+    public TextMeshProUGUI endingNameText;
     public TextMeshProUGUI descriptionText;
     public Image endingImage;
+    public TextMeshProUGUI instructionText;
 
     [Header("Result Elements")]
     public GameObject resultPanel;
@@ -89,10 +91,22 @@ public class EndingManager : MonoBehaviour
         else
         {
             endingPanel.SetActive(true);
-            for (int i = 0; i < endingData.enDescriptions.Length; i++)
+            instructionText.text = MultiLanguageManager.Instance.GetText("Instruction_Click_To_Continue");
+            string[] description;
+            if (MultiLanguageManager.Instance.currentLanguage.Equals("vn"))
+            {
+                endingNameText.text = endingDatas[endingID].cutSceneVnName;                
+                description = endingData.vnDescriptions;
+            }
+            else
+            {
+                endingNameText.text = endingDatas[endingID].cutSceneEngName;
+                description= endingData.enDescriptions;
+            }
+            for (int i = 0; i < description.Length; i++)
             {
                 descriptionText.text = "";
-                descriptionText.text += endingData.enDescriptions[i] + "\n";
+                descriptionText.text += description[i] + "\n";
                 endingImage.sprite = endingData.images[i];
                 yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
                 yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
@@ -120,7 +134,8 @@ public class EndingManager : MonoBehaviour
 public class CutSceneData
 {
     public int cutSceneID;
-    public string cutSceneName;
+    public string cutSceneEngName;
+    public string cutSceneVnName;
     public string[] enDescriptions;
     public string[] vnDescriptions;
     public Sprite[] images;

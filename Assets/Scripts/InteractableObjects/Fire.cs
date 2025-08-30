@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ public class Fire : MonoBehaviour
     public float fireSpeed = 5f;
     public GameObject notifficationPanel;
     public Button backButton;
+    public TextMeshProUGUI title;
     private Vector2 originFirePos;
     private Vector2 originPlayerPos;
 
@@ -39,7 +41,8 @@ public class Fire : MonoBehaviour
         {
             GameManager.Instance.canMove = false;
             EndingManager.Instance.canFireMove = false;
-            notifficationPanel.SetActive(true);            
+            notifficationPanel.SetActive(true);
+            UpdateUI();
         }
     }
 
@@ -57,5 +60,11 @@ public class Fire : MonoBehaviour
         audioSource.clip = fireSound;
         audioSource.Play();
         audioSource.loop = true;
+    }
+
+    public void UpdateUI()
+    {
+        backButton.GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Button_Try_Again");
+        title.text = MultiLanguageManager.Instance.GetText("You_Died");
     }
 }

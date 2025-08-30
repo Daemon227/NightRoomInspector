@@ -37,6 +37,7 @@
             "Button_Exit_Yes":"Yes",
             "Button_Exit_No":"No",
             "Button_BackToMenu": "Back to Menu",
+            "Button_Try_Again": "Try again",
 
 
             "Mission_CheckRoom":"Room Checked:",
@@ -66,6 +67,11 @@
             "Report_Floor_2": "On the 2nd floor",
             "No_Report":"No one is abnormal",
             "ReThink":"ReThink",
+            "You_Died": "You died",
+
+            //Instruction Text
+            "Instruction_Scan": "Move the mouse over the area to scan",
+            "Instruction_Click_To_Continue":"Click anywhere to continue",
 
             //setting ui
             "Setting_Title":"Settings",
@@ -111,6 +117,7 @@
             "Button_Exit_Yes":"Có",
             "Button_Exit_No":"Không",
             "Button_BackToMenu": "Quay lại menu",
+            "Button_Try_Again": "Thử lại",
 
 
             "Mission_CheckRoom":"Phòng đã kiểm tra:",
@@ -141,6 +148,11 @@
             "Report_Floor_2": "Ở tầng 2",
             "No_Report":"Không thấy ai bất thường",
             "ReThink":"Suy nghĩ lại",
+            "You_Died": "Bạn đã chết",
+            
+            //Instruction Text
+            "Instruction_Scan":"Di chuyển chuột tới vị trí cần quét",
+            "Instruction_Click_To_Continue": "Click vào nơi bất kỳ để chuyển",
 
             //setting ui
             "Setting_Title":"Cài đặt",

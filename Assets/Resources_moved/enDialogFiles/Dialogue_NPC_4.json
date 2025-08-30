@@ -3,6 +3,8 @@
   "npcName": "Room 104",
   "description": "A woman with unblinking, glaring eyes. Terrifying, yet her voice is calm and articulate.",
   "isMonster": true,
+  "scanShowDay3":[true, true],
+  "scanShowDay4":[true, false],
   "dialogueByDay": [
     {
       "day": 1,

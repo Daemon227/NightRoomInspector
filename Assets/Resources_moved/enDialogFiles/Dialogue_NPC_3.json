@@ -3,6 +3,8 @@
   "npcName": "Room 103",
   "description": "A woman about 30 to 40 years old, heavily made-up, with a disturbingly wide smile",
   "isMonster": false,
+  "scanShowDay3":[true, true],
+  "scanShowDay4":[true, true],
   "dialogueByDay": [
     {
       "day": 1,

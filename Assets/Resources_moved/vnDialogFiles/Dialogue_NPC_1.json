@@ -1,8 +1,10 @@
 ﻿{
   "id": 1,
   "npcName": "Phòng 101",
-  "description": "NPC này là một người phụ nữ khoảng 60 đến 70 tuổi",
+  "description": "Một người phụ nữ khoảng 60 đến 70 tuổi",
   "isMonster": true,
+  "scanShowDay3":[false, true],
+  "scanShowDay4":[false, false],
   "dialogueByDay": [
     {
       "day": 1,

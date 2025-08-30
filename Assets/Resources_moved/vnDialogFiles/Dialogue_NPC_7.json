@@ -3,6 +3,8 @@
   "npcName": "Phòng 203",
   "description": "Một cô gái xinh đẹp, không có từ nào để diễn tả vẻ đẹp đó.",
   "isMonster": true,
+  "scanShowDay3":[true, true],
+  "scanShowDay4":[true, false],
   "dialogueByDay": [
     {
       "day": 1,

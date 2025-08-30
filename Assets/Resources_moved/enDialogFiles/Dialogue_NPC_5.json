@@ -3,6 +3,8 @@
   "npcName": "Room 201",
   "description": "A scientist who doesn’t seem quite normal.",
   "isMonster": false,
+  "scanShowDay3":[true, true],
+  "scanShowDay4":[true, true],
   "dialogueByDay": [
     {
       "day": 1,

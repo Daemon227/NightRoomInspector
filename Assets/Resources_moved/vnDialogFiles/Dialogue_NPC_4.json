@@ -3,6 +3,8 @@
   "npcName": "Phòng 104",
   "description": "Một người phụ nữ với đôi mắt trừng không chớp. Rất đáng sợ nhưng giọng nói rất điềm đạm, mạch lạc",
   "isMonster": true,
+  "scanShowDay3":[true, true],
+  "scanShowDay4":[true, false],
   "dialogueByDay": [
     {
       "day": 1,

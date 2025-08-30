@@ -3,6 +3,8 @@
   "npcName": "Room 102",
   "description": "A middle-aged man with a twisted face, fierce eyes, and an unfriendly look. His hoarse voice and lack of expression make others uneasy.",
   "isMonster": false,
+  "scanShowDay3":[true, true],
+  "scanShowDay4":[true, true],
   "dialogueByDay": [
     {
       "day": 1,

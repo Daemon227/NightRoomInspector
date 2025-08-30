@@ -3,6 +3,8 @@
   "npcName": "Phòng 201",
   "description": "Một nhà khoa học trông có vẻ không được bình thường",
   "isMonster": false,
+  "scanShowDay3":[true, true],
+  "scanShowDay4":[true, true],
   "dialogueByDay": [
     {
       "day": 1,

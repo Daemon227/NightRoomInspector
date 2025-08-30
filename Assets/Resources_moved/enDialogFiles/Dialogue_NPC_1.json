@@ -1,8 +1,10 @@
 ﻿{
   "id": 1,
   "npcName": "Room 101",
-  "description": "This NPC is a woman around 60 to 70 years old.",
+  "description": "A woman around 60 to 70 years old.",
   "isMonster": true,
+  "scanShowDay3":[false, true],
+  "scanShowDay4":[false, false],
   "dialogueByDay": [
     {
       "day": 1,

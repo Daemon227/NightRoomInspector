@@ -3,6 +3,8 @@
   "npcName": "Phòng 102",
   "description": "Người đàn ông trung niên với gương mặt méo mó, ánh mắt dữ dằn và khó gần. Giọng nói khàn khàn, ít biểu lộ cảm xúc, khiến người khác e dè.",
   "isMonster": false,
+  "scanShowDay3":[true, true],
+  "scanShowDay4":[true, true],
   "dialogueByDay": [
     {
       "day": 1,

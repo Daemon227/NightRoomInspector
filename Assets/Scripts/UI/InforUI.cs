@@ -32,6 +32,6 @@ public class InforUI : MonoBehaviour
 
     public void UpdateUI()
     {
-        title.text = MultiLanguageManager.Instance.GetText("Day") + ": "+ GameManager.Instance.currentDay;
+        title.text = MultiLanguageManager.Instance.GetText("Day") + " "+ GameManager.Instance.currentDay;
     }
 }

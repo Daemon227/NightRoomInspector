@@ -216,8 +216,12 @@ public class DialogUIManager : MonoBehaviour
         ClearOption();
         if (scanObject != null)
         {
-            scanObject.SetActive(true);         
-            GameManager.Instance.canMove = false;
+            scanObject.GetComponentInChildren<ScanSystem>().scanShowDay3 = currentNPCData.scanShowDay3;
+            scanObject.GetComponentInChildren<ScanSystem>().scanShowDay4 = currentNPCData.scanShowDay4;
+            scanObject.GetComponentInChildren<ScanSystem>().UpdateUI();
+            scanObject.SetActive(true);
+            closeButton.GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Button_Close");
+            GameManager.Instance.canMove = false;          
         }
         else
         {

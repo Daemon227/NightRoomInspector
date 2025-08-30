@@ -3,6 +3,8 @@
   "npcName": "Room 203",
   "description": "A beautiful girl, so stunning that no words can describe her beauty.",
   "isMonster": true,
+  "scanShowDay3":[true, true],
+  "scanShowDay4":[true, false],
   "dialogueByDay": [
     {
       "day": 1,

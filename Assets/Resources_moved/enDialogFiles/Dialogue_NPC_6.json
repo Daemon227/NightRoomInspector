@@ -3,6 +3,8 @@
   "npcName": "Room 202",
   "description": "A girl wrapped in bandages from head to toe, leaving only her eyes and mouth exposed.",
   "isMonster": false,
+  "scanShowDay3":[true, true],
+  "scanShowDay4":[true, true],
   "dialogueByDay": [
     {
       "day": 1,

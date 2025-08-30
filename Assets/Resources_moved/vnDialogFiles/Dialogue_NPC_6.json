@@ -3,6 +3,8 @@
   "npcName": "Phòng 202",
   "description": "Một cô gái băng bó toàn thân chỉ để hở đôi mắt và miệng",
   "isMonster": false,
+  "scanShowDay3":[true, true],
+  "scanShowDay4":[true, true],
   "dialogueByDay": [
     {
       "day": 1,

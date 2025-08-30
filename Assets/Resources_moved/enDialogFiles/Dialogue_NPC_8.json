@@ -3,6 +3,8 @@
   "npcName": "Room 204",
   "description": "A girl who looks lifeless, her voice sounding like a man’s.",
   "isMonster": true,
+  "scanShowDay3":[false, false],
+  "scanShowDay4":[false, false],
   "dialogueByDay": [
     {
       "day": 1,

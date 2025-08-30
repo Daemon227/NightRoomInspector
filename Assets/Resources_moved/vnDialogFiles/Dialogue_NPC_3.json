@@ -3,6 +3,8 @@
   "npcName": "Phòng 103",
   "description": "Một cô gái tầm 30 đến 40 tuổi.Trang điểm đậm với nụ cười rộng đến mức đáng sợ.",
   "isMonster": false,
+  "scanShowDay3":[true, true],
+  "scanShowDay4":[true, true],
   "dialogueByDay": [
     {
       "day": 1,

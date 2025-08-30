@@ -509,7 +509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.30569097, g: 0.9644001, b: 0.29680458, a: 1}
+  m_Color: {r: 1, g: 0.18814534, b: 0.18814534, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -584,7 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.30569097, g: 0.9644001, b: 0.29680458, a: 1}
+  m_Color: {r: 1, g: 0.18814534, b: 0.18814534, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2258,7 +2258,8 @@ MonoBehaviour:
   cutScenePanel: {fileID: 20483057}
   cutSceneData:
     cutSceneID: 10
-    cutSceneName: hehehe
+    cutSceneEngName: 
+    cutSceneVnName: 
     enDescriptions:
     - I'm a superman
     - do you know me?
@@ -7688,7 +7689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.11854756, g: 0.11650073, b: 0.11650073, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9676,7 +9677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.11854756, g: 0.11650073, b: 0.11650073, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

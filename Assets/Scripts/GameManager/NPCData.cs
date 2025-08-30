@@ -9,6 +9,8 @@ public class NPCData
     public string npcName;
     public string description;
     public bool isMonster;
+    public bool[] scanShowDay3;// brain, heart;
+    public bool[] scanShowDay4;// brain, heart;
     public List<DialogueByDay> dialogueByDay;
 }
 
