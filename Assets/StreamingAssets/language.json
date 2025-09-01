@@ -9,8 +9,10 @@
             "Menu_Instruction_ClickToContinue": "Click to continue",
             "Menu_Exit_Title": "Are you sure you want to exit?",
             "Menu_Exit": "Exit",
+            "Menu_Tutorial":"How to play",
 
             //button
+            "Room":"Room",
             "Message": "Message",
             "Exit": "Exit",
             "Select_Saved_File":"Please select a saved file",
@@ -93,7 +95,8 @@
             "Note_First_Mission": "1. Turn on the light if it’s off, clean up if it’s dirty.",
             "Note_Second_Mission": "2. Check all rooms with guests staying.",
             "Note_Third_Mission": "3. Report before leaving.",
-            "Note_Mission": "Pay attention to tenants who speak strangely, say things inconsistent with previous days, or talk in a way that doesn’t sound human."
+            "Note_Mission": "Pay attention to tenants who speak strangely, say things inconsistent with previous days, or talk in a way that doesn’t sound human.",
+            "Save_Note":"Daily auto-save file",
 
             
         },
@@ -106,7 +109,9 @@
             "Menu_Instruction_ClickToContinue": "Nhấp để tiếp tục",
             "Menu_Exit_Title": "Bạn có chắc muốn thoát không?",
             "Menu_Exit": "Thoát",
+            "Menu_Tutorial":"Hướng dẫn chơi",
 
+            "Room":"Phòng",
             "Message":"Lời nhắn",
             "Exit": "Thoát",
             "Select_Saved_File":"Hãy chọn một file lưu game",
@@ -191,6 +196,7 @@
             "Note_Second_Mission":"2. Kiểm tra tất cả các phòng có khách ở.",
             "Note_Third_Mission":"3. Báo cáo trước khi ra về.",
             "Note_Mission":"Để ý những người thuê phòng ăn nói kỳ lạ, không ăn khớp với ngày trước hoặc nói chuyện không giống con người.",
+            "Save_Note":"File tự lưu hàng ngày",
         }
     }
 }

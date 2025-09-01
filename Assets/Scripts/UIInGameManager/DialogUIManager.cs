@@ -13,6 +13,7 @@ public class DialogUIManager : MonoBehaviour
     public TextMeshProUGUI descriptionText;
     public TextMeshProUGUI npcDialog;
     public Image npcAvatar;
+    public TextMeshProUGUI roomNameText;
 
     public GameObject buttonPrefab;
     public GameObject buttonGroup;
@@ -112,6 +113,8 @@ public class DialogUIManager : MonoBehaviour
     {
         if(currentNPCData!= null)
         {
+            roomNameText.text = currentNPCData.npcName;
+            //set description Text.
             descriptionText.transform.parent.gameObject.SetActive(true);
             descriptionText.text = currentNPCData.description;
             yield return new WaitUntil(()=> Input.GetMouseButton(0));
@@ -129,7 +132,7 @@ public class DialogUIManager : MonoBehaviour
         b1.GetComponentInChildren<TextMeshProUGUI>().text = chatText;
         b1.GetComponent<Button>().onClick.AddListener(() => ShowDialogueOption(day));
 
-        if(day > 2)
+        if(day > 2 && GameManager.Instance.canScan)
         {
             GameObject b2 = Instantiate(buttonPrefab, buttonGroup.transform);
             string scanText = MultiLanguageManager.Instance.GetText("Scan");
@@ -137,7 +140,7 @@ public class DialogUIManager : MonoBehaviour
             b2.GetComponent<Button>().onClick.AddListener(Scan);
         }
 
-        if (day > 3)
+        if (day > 3 && GameManager.Instance.canShoot)
         {
             GameObject b3 = Instantiate(buttonPrefab, buttonGroup.transform);
             string shootText = MultiLanguageManager.Instance.GetText("Shoot");
@@ -264,6 +267,7 @@ public class DialogUIManager : MonoBehaviour
             if (GameManager.Instance.GetRoomByID(currentRoom)!= null)
             {
                 GameManager.Instance.GetRoomByID(currentRoom).canOpen = false;
+                GameManager.Instance.GetRoomByID(currentRoom).SetDoorSprite();
             }
             conversationPanel.SetActive(false);
             GameManager.Instance.canMove = true;

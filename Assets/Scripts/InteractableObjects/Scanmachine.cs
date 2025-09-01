@@ -25,7 +25,7 @@ public class Scanmachine : InteractableObject
                 messagePanel.SetActive(true);
                 messagePanel.GetComponent<MessagePanel>().SetUIContent(0);
                 ClearOption();
-                this.gameObject.SetActive(false);
+                transform.parent.gameObject.SetActive(false);
                 break;
             case 1:
                 ClearOption();

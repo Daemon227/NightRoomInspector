@@ -25,7 +25,7 @@ public class GunObject : InteractableObject
                 messagePanel.SetActive(true);
                 messagePanel.GetComponent<MessagePanel>().SetUIContent(1);
                 ClearOption();
-                this.gameObject.SetActive(false);
+                transform.parent.gameObject.SetActive(false);
                 break;
             case 1:
                 ClearOption();

@@ -20,10 +20,17 @@ public class SettingManager : MonoBehaviour
     public TextMeshProUGUI languageText;
     public Button close;
 
+    public TutorialPanel tutorialPanel;
+    public Button showTutorialButton;
+
     public Button saveAndExitButton;
     private void Start()
     {
         close.onClick.AddListener(CloseSetting);
+        if(showTutorialButton != null)
+        {
+            showTutorialButton.onClick.AddListener(OpenTutorial);
+        }
         musicSlider.onValueChanged.AddListener(MusicSetting);
         sfxSlider.onValueChanged.AddListener(SFXSetting);
         resolutionSetting.onValueChanged.AddListener(ResolutionSetting);
@@ -102,7 +109,11 @@ public class SettingManager : MonoBehaviour
 
         if(saveAndExitButton!= null)
         {
-            saveAndExitButton.GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Button_SaveAndExit");
+            saveAndExitButton.GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Button_BackToMenu");
+        }
+        if(showTutorialButton!= null)
+        {
+            showTutorialButton.GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Menu_Tutorial");
         }
         resolutionSetting.value = SettingDataLoader.Instance.resolutionIndex;
         int langIndex = MultiLanguageManager.Instance.currentLanguage == "en" ? 0 : 1;
@@ -115,7 +126,15 @@ public class SettingManager : MonoBehaviour
         close.transform.parent.gameObject.SetActive(false);
         Time.timeScale = 1f; // Resume the game
     }
-
+    public void OpenTutorial()
+    {
+        if(tutorialPanel != null)
+        {
+            tutorialPanel.gameObject.SetActive(true);
+            tutorialPanel.ActiveEvent();
+            this.CloseSetting();
+        }
+    }
     public void SaveAndExitGame()
     {
         DataLoading.Instance.SaveGameData(0);

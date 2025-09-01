@@ -16,14 +16,23 @@ public class ScanSystem : MonoBehaviour
     public bool[] scanShowDay3;// brain, heart;
     public bool[] scanShowDay4;// brain, heart;
 
+    public AudioSource scanAudio;
+    public AudioClip scanAudioClip;
+
     public TextMeshProUGUI textMeshProUGUI;
 
     private void Start()
     {
         UpdateUI();
+        scanAudio.clip = scanAudioClip;
+        scanAudio.Play();
     }
     void Update()
     {
+        if (!scanAudio.isPlaying)
+        {
+            scanAudio.Play();
+        }       
         MoveScanUI();
         CheckScan();
     }

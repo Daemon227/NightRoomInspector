@@ -10,6 +10,12 @@ public class Door : InteractableObject
     public bool canOpen = true;
     public bool hasChecked = false;
     public bool isMonster = false;
+    public Sprite normalDoorSprite;
+    public Sprite emptyDoorSprite;
+    private void Start()
+    {
+        SetDoorSprite();
+    }
     public override void SetButtonLanguage(TextMeshProUGUI text,int optionIndex)
     {
         switch (optionIndex)
@@ -25,7 +31,6 @@ public class Door : InteractableObject
 
     public override void HandleOption(int optionIndex)
     {
-        hasChecked = true;
         switch (optionIndex)
         {
             case 0:
@@ -39,6 +44,11 @@ public class Door : InteractableObject
                     if (canOpen)
                     {
                         DoorUI.SetActive(true);
+                        if (!hasChecked)
+                        {
+                            hasChecked = true;
+                            Debug.Log("Has checked");
+                        }
                         EventManager.OpenTheDoor?.Invoke(roomIndex);
                     }
                     else
@@ -68,5 +78,18 @@ public class Door : InteractableObject
     public void Reset()
     {
         hasChecked = false;
+    }
+
+    public void SetDoorSprite()
+    {
+        if(this.gameObject.GetComponent<SpriteRenderer>() == null) return;
+        if(!canOpen)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = emptyDoorSprite;
+        }
+        else
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = normalDoorSprite;
+        }
     }
 }

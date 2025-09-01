@@ -12,12 +12,12 @@ public class InforUI : MonoBehaviour
     private void OnEnable()
     {
         EventManager.OnChangeLanguage += UpdateUI;
-        EventManager.OnChangeDay += UpdateUI;
+        EventManager.OnChangeDay += UpdateUIByDay;
     }
     private void OnDisable()
     {
         EventManager.OnChangeLanguage -= UpdateUI;
-        EventManager.OnChangeDay -= UpdateUI;
+        EventManager.OnChangeDay -= UpdateUIByDay;
     }
     private void Start()
     {
@@ -33,5 +33,9 @@ public class InforUI : MonoBehaviour
     public void UpdateUI()
     {
         title.text = MultiLanguageManager.Instance.GetText("Day") + " "+ GameManager.Instance.currentDay;
+    }
+    public void UpdateUIByDay()
+    {
+        title.text = MultiLanguageManager.Instance.GetText("Day") + " " + GameManager.Instance.currentDay + 1;
     }
 }

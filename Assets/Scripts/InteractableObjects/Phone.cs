@@ -24,20 +24,18 @@ public class Phone : InteractableObject
             case 0:
                 if (GameManager.Instance.checkFullRoom)
                 {
+                    if (GameManager.Instance.currentDay == 4)
+                    {
+                        string notification = MultiLanguageManager.Instance.GetText("N_NoOne_Answer");
+                        EventManager.ShowNotification(notification);
+                        GameManager.Instance.reportToBoss = true;
+                        ClearOption();
+                        return;
+                    }
                     if (GameManager.Instance.reportToBoss == false)
                     {
-                        if(GameManager.Instance.currentDay == 4)
-                        {
-                            string notification = MultiLanguageManager.Instance.GetText("N_NoOne_Answer");
-                            EventManager.ShowNotification(notification);
-                            GameManager.Instance.reportToBoss = true;
-                        }
-                        else
-                        {
-                            CallingPanel.SetActive(true);
-                            EventManager.StartCalling?.Invoke();
-                        }
-                        
+                        CallingPanel.SetActive(true);
+                        EventManager.StartCalling?.Invoke();
                     }
                     else
                     {

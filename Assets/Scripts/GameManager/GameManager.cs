@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour
 
 
     public static GameManager Instance;
-    private SpawnManager spawnManager;
     private void Awake()
     {
         if(Instance!= null && Instance != this)
@@ -36,10 +35,6 @@ public class GameManager : MonoBehaviour
         LoadGame(data);
     }
 
-    private void Start()
-    {
-        spawnManager = GetComponentInChildren<SpawnManager>();
-    }
     private void OnEnable()
     {
         EventManager.OnChangeDay += ChangeDay;
@@ -48,20 +43,20 @@ public class GameManager : MonoBehaviour
     {
         EventManager.OnChangeDay -= ChangeDay;
     }
-    public int GetTotalRoomNeedToCheck()
+
+    public int GetTotalRoomNeedCheck()
     {
-        int total = 0;
-        foreach(var room in roomOnFloor1)
+        int totalRoom = 0;
+        foreach (var room in roomOnFloor1)
         {
-            if (room.GetComponent<Door>().canOpen) total += 1;
+            if (room.GetComponent<Door>().canOpen) totalRoom += 1;
         }
         foreach (var room in roomOnFloor2)
         {
-            if (room.GetComponent<Door>().canOpen) total += 1;
+            if (room.GetComponent<Door>().canOpen) totalRoom += 1;
         }
-        return total;
+        return totalRoom;
     }
-
     public int GetRoomCheckedCount()
     {
         int checkedCount = 0;
@@ -85,12 +80,12 @@ public class GameManager : MonoBehaviour
     }
     public void ChangeDay()
     {
-        //event
-        spawnManager.SpawnObjectByDay();
         //reset
         if(reportedRoom!= null)
         {
-            reportedRoom.GetComponent<Door>().canOpen = false;
+            Door door = reportedRoom.GetComponent<Door>();
+            door.canOpen = false;
+            door.SetDoorSprite();
             reportedRoom = null;
         }
         turnOnLight = false;
@@ -147,28 +142,6 @@ public class GameManager : MonoBehaviour
         return result;
     }
 
-    public void ResetGame()
-    {
-        currentDay = 1;
-        turnOnLight = false;
-        checkFullRoom = false;
-        reportToBoss = false;
-        reportedRoom = null;
-        canMove = true;
-        canInteract = true;
-        foreach(var room in roomOnFloor1)
-        {
-            room.GetComponent<Door>().canOpen = true;
-            room.GetComponent<Door>().isMonster = false;
-        }
-        foreach (var room in roomOnFloor2)
-        {
-            room.GetComponent<Door>().canOpen = true;
-            room.GetComponent<Door>().isMonster = false;
-        }
-        spawnManager.SpawnObjectByDay();
-    }
-
     public void LoadGame(GameData data)
     {
         if(data == null) return;
@@ -194,5 +167,7 @@ public class GameManager : MonoBehaviour
             roomOnFloor1[i].GetComponent<Door>().isMonster = data.roomIsMonsterF1[i];
             roomOnFloor2[i].GetComponent<Door>().isMonster = data.roomIsMonsterF2[i];
         }
+        canScan = data.canScan;
+        canShoot = data.canShoot;
     }
 }

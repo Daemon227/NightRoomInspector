@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -10,8 +11,17 @@ public class SaveGameObject : InteractableObject
     public TextMeshProUGUI titleText;
     public List<Button> saveButtons;
     public List<TextMeshProUGUI> saveTexts;
+    public TextMeshProUGUI saveNote;
     public Button closeButton;
 
+    private void OnEnable()
+    {
+        EventManager.OnChangeDay += AutoSaveFile;
+    }
+    private void OnDisable()
+    {
+        EventManager.OnChangeDay -= AutoSaveFile;
+    }
 
     public override void SetButtonLanguage(TextMeshProUGUI text, int optionIndex)
     {
@@ -51,6 +61,7 @@ public class SaveGameObject : InteractableObject
     public void FirstSettup()
     {
         titleText.text = MultiLanguageManager.Instance.GetText("Select_Slot_To_Save");
+        saveNote.text = MultiLanguageManager.Instance.GetText("Save_Note");
         GameData[] gameDataList = DataLoading.Instance.gameDataList;
         for (int i = 0; i < saveButtons.Count; i++)
         {
@@ -73,5 +84,11 @@ public class SaveGameObject : InteractableObject
                 saveTexts[index].text = "Save " + (index) + ": " + System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
             });
         }
+    }
+
+    public void AutoSaveFile()
+    {
+        DataLoading.Instance.SaveGameData(0);
+        saveTexts[0].text = "Save " + (0) + ": " + System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
     }
 }

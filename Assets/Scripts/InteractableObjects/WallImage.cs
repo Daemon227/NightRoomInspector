@@ -24,7 +24,10 @@ public class WallImage : InteractableObject
         {
             case 0:
                 panel.SetActive(true);
-                panel.GetComponent<IMenu>().ActiveEvent();
+                if(panel.GetComponent<IMenu>() != null)
+                {
+                    panel.GetComponent<IMenu>().ActiveEvent();
+                }         
                 closeButton.onClick.AddListener(ClosePanel);
                 ClearOption();
                 break;

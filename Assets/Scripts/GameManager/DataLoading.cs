@@ -87,6 +87,8 @@ public class GameData
     public int reportedRoomID;
     public bool canMove;
     public bool canInteract;
+    public bool canScan;
+    public bool canShoot;
 
     public void FillFullData()
     {
@@ -114,5 +116,7 @@ public class GameData
             roomIsMonsterF2[i] = room.GetComponent<Door>().isMonster;
             i++;
         }
+        canScan = GameManager.Instance.canScan;
+        canShoot = GameManager.Instance.canShoot;
     }
 }

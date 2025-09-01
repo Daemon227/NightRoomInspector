@@ -17,6 +17,8 @@ public class MainMenu : MonoBehaviour
     public Image image;
     public TextMeshProUGUI descriptionText;
     public TextMeshProUGUI instructionText;
+
+    public TutorialPanel tutorialPanel;
     private void OnEnable()
     {
         EventManager.OnChangeLanguage += SettupButtonLanguage;
@@ -76,6 +78,8 @@ public class MainMenu : MonoBehaviour
         //bat nhac
         AudioManager.Instance.PlayInGameMusic();
         yield return new WaitForSeconds(1f);
+        tutorialPanel.gameObject.SetActive(true);
+        yield return tutorialPanel.ShowTutorial();
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
     }
 

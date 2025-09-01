@@ -8,6 +8,11 @@ public class ChangeDayObject : InteractableObject
     public GameObject changeDayPanel;
     public TextMeshProUGUI tmp;
 
+    private void Start()
+    {
+        StartCoroutine(ShowFirstDayUI());
+        Debug.Log("play UI");
+    }
     public override void SetButtonLanguage(TextMeshProUGUI text, int optionIndex)
     {
         switch (optionIndex)
@@ -65,4 +70,17 @@ public class ChangeDayObject : InteractableObject
         // set di chuyen
         GameManager.Instance.canMove = true;
     }
+
+    public IEnumerator ShowFirstDayUI()
+    {
+        changeDayPanel.SetActive(true);
+        string dayText = MultiLanguageManager.Instance.GetText("Day");
+        tmp.text = $"{dayText} {GameManager.Instance.currentDay}";
+        yield return new WaitForSeconds(2f);
+        changeDayPanel.SetActive(false);
+
+        // set di chuyen
+        GameManager.Instance.canMove = true;
+    }
+
 }

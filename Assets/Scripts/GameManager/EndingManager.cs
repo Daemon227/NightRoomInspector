@@ -95,7 +95,7 @@ public class EndingManager : MonoBehaviour
             string[] description;
             if (MultiLanguageManager.Instance.currentLanguage.Equals("vn"))
             {
-                endingNameText.text = endingDatas[endingID].cutSceneVnName;                
+                endingNameText.text = endingDatas[endingID-1].cutSceneVnName;                
                 description = endingData.vnDescriptions;
             }
             else
