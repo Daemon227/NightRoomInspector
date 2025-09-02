@@ -11,7 +11,7 @@
       "options": [
         {
           "playerText": "Chào buổi tối.",
-          "npcTexts": [ "Ồ! Anh là nhân viên ca đêm mới hả?", "Đêm nay nhớ để mắt nhé… ở rạp xiếc của tôi, có người từng mất nguyên… cái đầu giả đấy!",
+          "npcTexts": [ "Ồ! Anh là nhân viên ca đêm mới hả?", "Đêm nay nhớ để mắt nhé… ở rạp xiếc của tôi, có người từng mất nguyên… cái đầu đấy!",
           "Hahaha, đùa thôi mà, đừng nhìn tôi kiểu đó!"],
           "isExit": false
         },
@@ -30,7 +30,7 @@
         },
         {
           "playerText": "Chị có gặp ai lạ ở khu này không?",
-          "npcTexts": [ "Ờm… đêm qua tôi thấy một người đứng ngoài cửa phòng tôi cả tiếng.", "Nhưng khi tôi mở cửa thì… chẳng có ai cả."],
+          "npcTexts": [ "Ờm… đêm qua tôi ngó ra thì thấy một người đứng ngoài cửa phòng tôi cả tiếng.", "Nhưng khi tôi mở cửa thì… chẳng có ai cả."],
           "isExit": false
         },
         {
@@ -57,7 +57,7 @@
           "isExit": false
         },
         {
-          "playerText": "Chị thường ra ngoài vào ban đêm không?",
+          "playerText": "Chị có ra ngoài vào ban đêm không?",
           "npcTexts": [ "Có chứ! Đêm là lúc ánh đèn sân khấu đẹp nhất.", "Tôi là nhân viên rạp xiếc mà"],
           "isExit": false
         },
@@ -90,7 +90,7 @@
           "isExit": false
         },
         {
-          "playerText": "Chị có nhiều bạn trong khu này không?",
+          "playerText": "Chị có bạn trong khu này không?",
           "npcTexts": [ "Có chứ! Ai thấy tôi cũng cười hết", "Một nụ cười cứng đờ luôn. Cứ như là tượng vậy"],
           "isExit": false
         },

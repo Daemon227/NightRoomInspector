@@ -2,7 +2,6 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class MultiLanguageManager : MonoBehaviour

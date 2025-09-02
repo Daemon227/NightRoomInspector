@@ -1,37 +1,54 @@
 ﻿{
   "id": "8",
   "npcName": "Room 204",
-  "description": "A girl who looks lifeless, her voice sounding like a man’s.",
+  "description": "A lifeless girl, voice deep like a man.",
   "isMonster": true,
-  "scanShowDay3":[false, false],
-  "scanShowDay4":[false, false],
+  "scanShowDay3": [false, false],
+  "scanShowDay4": [false, false],
   "dialogueByDay": [
     {
       "day": 1,
       "options": [
         {
-          "playerText": "You don’t look well.",
-          "npcTexts": [ "Sorry, there’s something I need to say...", "...I’m not human...", "...Please don’t report me to the government.", "I swear I’m different from the others." ],
+          "playerText": "You look unwell.",
+          "npcTexts": [
+            "Sorry, I must confess...",
+            "...I’m not human.",
+            "...Please don’t report me.",
+            "I swear I’m different from the rest."
+          ],
           "isExit": false
         },
         {
-          "playerText": "What do you mean?",
-          "npcTexts": [ "I’m an imposter, but I still have reason.", "I want to coexist with humans." ],
+          "playerText": "Not human?",
+          "npcTexts": [
+            "They call me an 'impostor,' but I have reason.",
+            "I want to live with humans."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Do you intend to harm me?",
-          "npcTexts": [ "I don’t attack humans...", "...I don’t eat flesh." ],
+          "playerText": "Will you harm me?",
+          "npcTexts": [
+            "I don’t attack humans...",
+            "...I don’t eat flesh."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Why should I trust you?",
-          "npcTexts": [ "Well, there’s no reason really.", "But if you choose to kill me, you’ll never know the truth." ],
+          "playerText": "Why trust you?",
+          "npcTexts": [
+            "No reason at all.",
+            "But if you kill me, you’ll never know the truth."
+          ],
           "isExit": false
         },
         {
           "playerText": "Leave.",
-          "npcTexts": [ "If you want to know the truth...", "...you can come back." ],
+          "npcTexts": [
+            "If you want the truth...",
+            "...you can come back."
+          ],
           "isExit": true
         }
       ]
@@ -40,28 +57,47 @@
       "day": 2,
       "options": [
         {
-          "playerText": "Why are you living here?",
-          "npcTexts": [ "While wandering, I found this girl’s corpse.", "I swear I didn’t kill her...", "I parasitized her body, and somehow gained her memories." ],
+          "playerText": "Why stay here?",
+          "npcTexts": [
+            "While wandering I found this girl’s corpse.",
+            "I swear I didn’t kill her...",
+            "I took her body… and her memories."
+          ],
           "isExit": false
         },
         {
-          "playerText": "What’s your origin?",
-          "npcTexts": [ "We were created in a laboratory.", "But the experiment failed, and we escaped.", "We were just cells with the ability to divide extremely fast.", "Perhaps my kind has already spread throughout this city." ],
+          "playerText": "Your origin?",
+          "npcTexts": [
+            "We were born in a lab.",
+            "But we escaped as failures.",
+            "We are cells that divide insanely fast.",
+            "Maybe my kind already spread across the city."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Why don’t you kill me?",
-          "npcTexts": [ "I told you—I’m not like the others.", "I have reason... There are two main types of us:", "One type rational and intelligent, and one without reason." ],
+          "playerText": "Why not kill me?",
+          "npcTexts": [
+            "I told you—I’m different.",
+            "I have reason… Two main types exist:",
+            "One rational and one mindless."
+          ],
           "isExit": false
         },
         {
-          "playerText": "How do you survive?",
-          "npcTexts": [ "The fastest way to maintain energy is raw flesh.", "We’re drawn to humans.", "But my cells can also synthesize energy on their own." ],
+          "playerText": "How do you live?",
+          "npcTexts": [
+            "Fastest way is raw flesh.",
+            "We’re drawn to humans.",
+            "But my cells can make energy on their own."
+          ],
           "isExit": false
         },
         {
           "playerText": "Leave.",
-          "npcTexts": [ "Goodbye. I know you still doubt me." ],
+          "npcTexts": [
+            "Goodbye. I know you still doubt me."
+          ],
           "isExit": true
         }
       ]
@@ -70,28 +106,44 @@
       "day": 3,
       "options": [
         {
-          "playerText": "What do you desire?",
-          "npcTexts": [ "I want to exist.", "To experience life as a human." ],
+          "playerText": "Your wish?",
+          "npcTexts": [
+            "I want to exist.",
+            "To live life like a human."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Are there other imposters in this house?",
-          "npcTexts": [ "Yes, but I can’t recognize them.", "Not unless they slip up." ],
+          "playerText": "Any impostors here?",
+          "npcTexts": [
+            "Yes, but I can’t tell them apart.",
+            "Unless they slip up."
+          ],
           "isExit": false
         },
         {
-          "playerText": "How can one kill an imposter?",
-          "npcTexts": [ "Ordinary weapons won’t work.", "You see, we’re supercells...", "We divide rapidly—in other words, super regeneration." ],
+          "playerText": "How to kill one?",
+          "npcTexts": [
+            "Normal weapons won’t work.",
+            "We are super cells...",
+            "Splitting, healing too fast.",
+            "Unless you have government weapons."
+          ],
           "isExit": false
         },
         {
-          "playerText": "What do you want from me?",
-          "npcTexts": [ "A chance. That’s all.", "I want to prove to you not all of us are monsters." ],
+          "playerText": "What do you want?",
+          "npcTexts": [
+            "A chance. That’s all.",
+            "Not every impostor is a monster."
+          ],
           "isExit": false
         },
         {
           "playerText": "Leave.",
-          "npcTexts": [ "Thank you for trusting me." ],
+          "npcTexts": [
+            "Thank you for trusting me."
+          ],
           "isExit": true
         }
       ]
@@ -100,28 +152,46 @@
       "day": 4,
       "options": [
         {
-          "playerText": "What if I shoot you?",
-          "npcTexts": [ "If that’s what you want...", "I won’t resist." ],
+          "playerText": "If I shoot you?",
+          "npcTexts": [
+            "If that’s what you want...",
+            "I won’t resist."
+          ],
           "isExit": false
         },
         {
-          "playerText": "What happens to those I report?",
-          "npcTexts": [ "If you report the right imposter, they’ll take it away.", "If you’re wrong, you’ll just see some garbage bags downstairs.", "That’s all that’s left." ],
+          "playerText": "Where do reports go?",
+          "npcTexts": [
+            "If right, they take the impostor.",
+            "If wrong, you’ll see trash bags downstairs.",
+            "That’s what’s left behind."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Does the government still want to study you?",
-          "npcTexts": [ "I don’t know...", "But maybe they want to create something.", "Like a cloned army of perfect soldiers." ],
+          "playerText": "What does gov want?",
+          "npcTexts": [
+            "I’m not sure...",
+            "Maybe they wanted to create something.",
+            "A cloned army, perhaps."
+          ],
           "isExit": false
         },
         {
-          "playerText": "What if humans lived alongside your kind?",
-          "npcTexts": [ "It wouldn’t be much different.", "Humans have both good and evil too.", "Life is only good when evil no longer exists." ],
+          "playerText": "Live with humans?",
+          "npcTexts": [
+            "Not much different from normal life.",
+            "Humans too have good and evil.",
+            "Life is better without evil."
+          ],
           "isExit": false
         },
         {
           "playerText": "Leave.",
-          "npcTexts": [ "Someday, I hope we meet again...", "After tonight, I’ll be gone from here." ],
+          "npcTexts": [
+            "Someday I hope to see you again...",
+            "After tonight, I’ll be gone."
+          ],
           "isExit": true
         }
       ]

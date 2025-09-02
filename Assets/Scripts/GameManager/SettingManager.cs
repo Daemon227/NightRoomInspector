@@ -65,17 +65,17 @@ public class SettingManager : MonoBehaviour
                 SettingDataLoader.Instance.resolutionIndex = 0;
                 break;;
             case 1:
-                Screen.SetResolution(1280, 720, true);
+                Screen.SetResolution(1280, 720, false);
                 Debug.Log("Set to 1280x720");
                 SettingDataLoader.Instance.resolutionIndex = 1;
                 break;
             case 2:
-                Screen.SetResolution(1024, 576, true);
+                Screen.SetResolution(1024, 576, false);
                 Debug.Log("Set to 1024x576");
                 SettingDataLoader.Instance.resolutionIndex = 2;
                 break;
             case 3:
-                Screen.SetResolution(640, 360, true);
+                Screen.SetResolution(640, 360, false);
                 Debug.Log("Set to 640x360");
                 SettingDataLoader.Instance.resolutionIndex = 3;
                 break;
@@ -137,6 +137,7 @@ public class SettingManager : MonoBehaviour
     }
     public void SaveAndExitGame()
     {
+        Time.timeScale = 1f;
         DataLoading.Instance.SaveGameData(0);
         SceneManager.LoadScene("MenuScene");
     }

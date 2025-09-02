@@ -10,18 +10,18 @@
       "day": 1,
       "options": [
         {
-          "playerText": "Gần đây ông có nghiên cứu gì không?",
+          "playerText": "Nghiên cứu gần đây của ông?",
           "npcTexts": [ "Ồ, tất nhiên! Tôi đang mày mò về mô tế bào", "Chúng tan rã rất nhanh","Kỳ lạ thật, phải không?"],
           "isExit": false
         },
         {
-          "playerText": "Ông thường làm việc với ai?",
+          "playerText": "Ông làm việc với ai?",
           "npcTexts": [ "Tôi từng làm trong một phòng thí nghiệm của chính phủ", "nhưng họ bảo nghiên cứu của tôi đi quá xa.",
           "Nực cười, chỉ vì tôi thử cấy một vài… mẫu vật đặc biệt thôi."],
           "isExit": false
         },
         {
-          "playerText": "Ông có sở thích gì ngoài nghiên cứu không?",
+          "playerText": "Sở thích ngoài nghiên cứu của ông?",
           "npcTexts": [ "Ăn uống, ngủ nghỉ… đều chỉ là sự lãng phí thời gian.", "Tôi thích quan sát cách cơ thể phân hủy hơn.",
           "Nó… đẹp, theo một nghĩa nào đó."],
           "isExit": false
@@ -49,19 +49,19 @@
           "isExit": false
         },
         {
-          "playerText": "Ông làm việc ở chính phủ về lĩnh vực gì?",
+          "playerText": "Ông làm việc về lĩnh vực gì?",
           "npcTexts": [ "Chỉ là mấy thứ lặt vặt thôi", "Sinh học nhân tạo, mô phỏng trí nhớ, tạo bản sao cơ thể.",
           "À, mà… cậu đừng ghi lại nhé, mấy thứ này tuyệt mật đấy."],
           "isExit": false
         },
         {
-          "playerText": "Ông có bạn bè hay người thân không?",
+          "playerText": "Ông có ai thân thiết không?",
           "npcTexts": [ "Bạn bè? Người thân? Tất cả đều… tan biến hết rồi.", "Giờ tôi chỉ có những cái lọ thủy tinh chứa mẫu.",
           "Chúng yên lặng, ngoan ngoãn, không cãi lời."],
           "isExit": false
         },
         {
-          "playerText": "Ông ngủ có ngon giấc không?",
+          "playerText": "Ông ngủ có ngon không?",
           "npcTexts": [ "Giấc ngủ chỉ làm cơ thể yếu đi.", 
           "Tôi thích quan sát ban đêm hơn."],
           "isExit": false
@@ -131,9 +131,9 @@
           "isExit": false
         },
         {
-          "playerText": "Những kẻ giả mạo là do chính phủ tạo ra?",
+          "playerText": "Những 'kẻ giả mạo' là do chính phủ tạo ra?",
           "npcTexts": [ "Tôi có thể tạo ra các tế bào nhân bản.", 
-          "Chính phủ thì có hàng trăm... à không hàng nghìn kẻ như tôi."],
+          "Chính phủ thì có hàng trăm... à không hàng nghìn kẻ giỏi hơn tôi."],
           "isExit": false
         },  
         {

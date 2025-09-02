@@ -17,17 +17,17 @@
           "isExit": false
         },
         {
-          "playerText": "Ý cô là sao?",
-          "npcTexts": [ "Tôi là một kẻ giả mạo, nhưng tôi vẫn có lý trí.", "Tôi muốn chung sống với con người." ],
+          "playerText": "Cô không phải con người?",
+          "npcTexts": [ "Tôi được gọi là 'kẻ giả mạo', nhưng tôi vẫn có lý trí.", "Tôi muốn chung sống với con người." ],
           "isExit": false
         },
         {
-          "playerText": "Vậy cô có định làm hại tôi?",
+          "playerText": "Cô có định làm hại tôi?",
           "npcTexts": [ "Tôi không tấn công con người...", "...Tôi không ăn thịt" ],
           "isExit": false
         },
         {
-          "playerText": "Tại sao tôi phải tin cô",
+          "playerText": "Tại sao tôi phải tin cô?",
           "npcTexts": [ "Ừm không có lý do nào cả", "Nhưng nếu anh chọn giết tôi thì anh sẽ không bao giờ biết sự thật" ],
           "isExit": false
         },
@@ -82,14 +82,15 @@
           "isExit": false
         },
         {
-          "playerText": "Trong nhà này có kẻ giả mạo không?",
+          "playerText": "Trong nhà này có 'kẻ giả mạo' không?",
           "npcTexts": [ "Có, tuy nhiên tôi không thể nhận biết được đồng loại", "Trừ khi chúng bộc lộ ra những sơ hở"],
           "isExit": false
         },
         {
-          "playerText": "Làm thế nào để có thể giết một kẻ giả mạo?",
+          "playerText": "Cách giết một 'kẻ giả mạo'?",
           "npcTexts": [ "Vũ khí bình thường không làm gì được đâu", "Cậu biết đấy, chúng tôi là những siêu tế bào,...",
-          "Chúng tôi phân tách rất nhanh, hay nói cách khác là siêu hồi phục"],
+          "Chúng tôi phân tách rất nhanh, hay nói cách khác là siêu hồi phục",
+          "Trừ khi cậu có vài món vũ khí từ chính phủ..."],
           "isExit": false
         },
         {
@@ -120,14 +121,14 @@
           "isExit": false
         },
         {
-          "playerText": "Chính phủ muốn nghiên cứu tiếp?",
+          "playerText": "Chính phủ muốn gì?",
           "npcTexts": [ "Tôi không rõ...", "Nhưng có lẽ họ muốn tạo ra gì đó",
           "Một đội quân nhân bản đầy thiện chiến chẳng hạn."],
           "isExit": false
         },
         {
-          "playerText": "Cô nghĩ sao nếu nhân loại sống cùng bọn cô?",
-          "npcTexts": [ "Cũng không khác bình thường là mấy đâu",
+          "playerText": "Nhân lọai sống chung với 'kẻ giả mạo'?",
+          "npcTexts": [ "Cũng không khác cuộc sống bình thường là mấy đâu",
           "Con người cũng có thiện, ác mà","Cuộc sống chỉ tốt đẹp khi không còn cái ác"],
           "isExit": false
         },

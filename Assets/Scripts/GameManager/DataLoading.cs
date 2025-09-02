@@ -59,6 +59,13 @@ public class DataLoading : MonoBehaviour
         }
 
     }
+
+    public GameData[] LoadNewData()
+    {
+        gameDataList = LoadGameData();
+        currentGameData = null;
+        return gameDataList;
+    }
 }
 
 [System.Serializable]

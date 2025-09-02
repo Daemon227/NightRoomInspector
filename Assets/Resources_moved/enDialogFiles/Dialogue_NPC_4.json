@@ -1,41 +1,56 @@
 ﻿{
   "id": "4",
   "npcName": "Room 104",
-  "description": "A woman with unblinking, glaring eyes. Terrifying, yet her voice is calm and articulate.",
+  "description": "A woman with unblinking eyes. Frightening, yet her voice is calm and precise.",
   "isMonster": true,
-  "scanShowDay3":[true, true],
-  "scanShowDay4":[true, false],
+  "scanShowDay3": [true, true],
+  "scanShowDay4": [true, false],
   "dialogueByDay": [
     {
       "day": 1,
       "options": [
         {
-          "playerText": "Hello!",
-          "npcTexts": [ "Hello.", "Don’t mind my eyes, they’ve been like this since I was a child.",
-          "I still see everything clearly—sometimes even clearer than ordinary people." ],
+          "playerText": "Hello there.",
+          "npcTexts": [
+            "Hello.",
+            "Don’t mind my eyes. They’ve been this way since I was young.",
+            "I still see things clearly, maybe clearer than most."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Have you lived here long?",
-          "npcTexts": [ "I just moved in about two months ago.", "It’s noisy at night, but I’ve gotten used to it.",
-          "For me, all I need is a book and silence."],
+          "playerText": "How long have you lived here?",
+          "npcTexts": [
+            "I moved in about two months ago.",
+            "It’s noisy at night, but I’ve gotten used to it.",
+            "For me, a book and silence are enough."
+          ],
           "isExit": false
         },
         {
-          "playerText": "What’s your profession?",
-          "npcTexts": [ "I’m a literature teacher.", "I believe words can be more powerful than weapons.",
-          "Wherever I go, I always carry a few books with me—my most faithful companions."],
+          "playerText": "What’s your job?",
+          "npcTexts": [
+            "I teach literature.",
+            "I believe words are more powerful than weapons.",
+            "Wherever I go, I carry books like companions."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Have you seen anyone strange around here?",
-          "npcTexts": [ "I’ve noticed some new faces, but none that truly worry me.", "Humans are naturally suspicious of each other.",
-          "But most fears are born from our own imagination."],
+          "playerText": "Met anyone strange around here?",
+          "npcTexts": [
+            "I’ve seen new faces, but none truly worrying.",
+            "Humans often doubt one another.",
+            "Fear usually comes from our own imagination."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Goodbye",
-          "npcTexts": [ "Goodbye.", "Remember: What we fear most is often just the shadow of ourselves." ],
+          "playerText": "Goodbye.",
+          "npcTexts": [
+            "Goodbye.",
+            "Remember: What we fear most is often just the shadow of ourselves."
+          ],
           "isExit": true
         }
       ]
@@ -44,33 +59,47 @@
       "day": 2,
       "options": [
         {
-          "playerText": "Hello!",
-          "npcTexts": [ "Hello.", "I just spent the whole evening preparing lesson plans… or was I reading?",
-          "I often confuse work with pleasure." ],
+          "playerText": "Hello there.",
+          "npcTexts": [
+            "Hello.",
+            "I spent the evening preparing lessons… or was it reading?",
+            "I often confuse work with pleasure."
+          ],
           "isExit": false
         },
         {
-          "playerText": "How long have you lived here again?",
-          "npcTexts": [ "Hmm… about a month and a half… maybe longer.", 
-          "When I’m teaching, I often lose track of time, as if every day melts into one continuous flow.",
-          "Do you ever feel that way?" ],
+          "playerText": "How long have you stayed here?",
+          "npcTexts": [
+            "Hmm… about six weeks, maybe more.",
+            "When teaching, I often lose track of time, as if days blend into one stream.",
+            "Do you ever feel that way?"
+          ],
           "isExit": false
         },
         {
-          "playerText": "Do you think this place is safe?",
-          "npcTexts": [ "Safe is… relative.", "Humans are the most unpredictable thing of all.",
-          "When I taught students, just looking into their eyes told me who was lying."],
+          "playerText": "Do you feel safe here?",
+          "npcTexts": [
+            "Safe, relatively.",
+            "People are the most unpredictable.",
+            "I used to see lies in my students’ eyes."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Did you hear anything strange last night?",
-          "npcTexts": [ "I heard footsteps dragging down the hallway.", "But my eyes didn’t see anyone.",
-          "I suppose it was just an auditory illusion."],
+          "playerText": "Hear anything strange last night?",
+          "npcTexts": [
+            "I heard long footsteps in the hall.",
+            "But my eyes saw no one.",
+            "I assume it was only an illusion of sound."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Goodbye",
-          "npcTexts": [ "Goodbye.", "Have a pleasant shift." ],
+          "playerText": "Goodbye.",
+          "npcTexts": [
+            "Goodbye.",
+            "Have a good shift."
+          ],
           "isExit": true
         }
       ]
@@ -79,33 +108,46 @@
       "day": 3,
       "options": [
         {
-          "playerText": "Hello!",
-          "npcTexts": [ "You look more tired than yesterday. I, on the other hand… feel much stronger.", 
-          "Maybe because I’ve been eating well… or perhaps because I’ve learned to absorb the energy of this place."],
+          "playerText": "Hello there.",
+          "npcTexts": [
+            "You look more tired than yesterday. I, however, feel much stronger.",
+            "Perhaps it’s proper meals… or learning to draw energy from the air itself."
+          ],
           "isExit": false
         },
         {
           "playerText": "Do you still enjoy teaching?",
-          "npcTexts": [ "Of course.", 
-          "I love listening to students tremble as they recite poetry in front of the class.",
-          "It excites me… in a peculiar way."],
+          "npcTexts": [
+            "Of course.",
+            "I like hearing students tremble while reading poetry.",
+            "It excites me in a strange way."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Do you get close to anyone here?",
-          "npcTexts": [ "I keep my distance.", "I wait for others to slip up—that’s when you learn the most about them."],
+          "playerText": "Have friends in this place?",
+          "npcTexts": [
+            "I keep my distance.",
+            "Waiting for others to reveal flaws—that’s when you learn the most about them."
+          ],
           "isExit": false
         },
         {
-          "playerText": "What do you think about the strange disease spreading?",
-          "npcTexts": [ "People call it a disease. I call it adaptation.", "The human body always changes with its environment.",
-          "Perhaps we are evolving into something… more complete."],
+          "playerText": "What about the strange illness?",
+          "npcTexts": [
+            "They call it illness, I call it adaptation.",
+            "The body always changes with the environment.",
+            "Maybe we’re evolving to become more complete."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Goodbye",
-          "npcTexts": [ "Good night.", "And remember… don’t let others hear your heartbeat too clearly.",
-          "Some creatures… are drawn to that sound."],
+          "playerText": "Goodbye.",
+          "npcTexts": [
+            "Sleep well.",
+            "And remember… don’t let others hear your heartbeat too clearly.",
+            "Some creatures are drawn to that sound."
+          ],
           "isExit": true
         }
       ]
@@ -114,33 +156,46 @@
       "day": 4,
       "options": [
         {
-          "playerText": "Hello!",
-          "npcTexts": [ "Oh… don’t look at me as if I’ve become a monster.", 
-          "This is merely… the final stage of evolution.",
-          "I see everything more clearly than ever."],
+          "playerText": "Hello there.",
+          "npcTexts": [
+            "Oh… don’t look at me as if I’m a monster.",
+            "This is simply the final stage of evolution.",
+            "I see everything more clearly than ever."
+          ],
           "isExit": false
         },
         {
           "playerText": "Are you feeling well?",
-          "npcTexts": [ "I’ve never felt so powerful.", 
-          "I no longer crave bread or meat."],
+          "npcTexts": [
+            "I’ve never felt stronger.",
+            "I no longer crave bread or meat."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Do you remember what you told me before?",
-          "npcTexts": [ "Of course.", "I told you about books, about teaching, about people.",
-          "I remember everything… because those memories now flow in my very blood."],
+          "playerText": "Do you recall what you said?",
+          "npcTexts": [
+            "Of course.",
+            "I told you of books, teaching, human nature.",
+            "I remember it all… because it flows in my blood now."
+          ],
           "isExit": false
         },
         {
-          "playerText": "What would you do if there was an imposter?",
-          "npcTexts": [ "I think imposters and humans can live together.", "There are good and bad people.",
-          "And imposters are the same."],
+          "playerText": "What if someone impersonates you?",
+          "npcTexts": [
+            "I think humans and impersonators could coexist.",
+            "Some are good, some are bad.",
+            "Same with them."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Goodbye",
-          "npcTexts": [ "Go.", "But remember—if your heart beats too fast… I will hear it."],
+          "playerText": "Goodbye.",
+          "npcTexts": [
+            "Go.",
+            "But remember, if your heart races… I will hear it."
+          ],
           "isExit": true
         }
       ]

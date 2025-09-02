@@ -1,40 +1,55 @@
 ﻿{
   "id": "5",
   "npcName": "Room 201",
-  "description": "A scientist who doesn’t seem quite normal.",
+  "description": "A scientist who doesn’t seem entirely sane.",
   "isMonster": false,
-  "scanShowDay3":[true, true],
-  "scanShowDay4":[true, true],
+  "scanShowDay3": [true, true],
+  "scanShowDay4": [true, true],
   "dialogueByDay": [
     {
       "day": 1,
       "options": [
         {
-          "playerText": "Have you been researching anything lately?",
-          "npcTexts": [ "Oh, of course! I’ve been tinkering with cell tissues.", "They decay so quickly.", "Strange, isn’t it?" ],
+          "playerText": "Your recent research?",
+          "npcTexts": [
+            "Oh, of course! I’ve been studying cell tissue.",
+            "They break down so quickly.",
+            "Strange, isn’t it?"
+          ],
           "isExit": false
         },
         {
-          "playerText": "Who do you usually work with?",
-          "npcTexts": [ "I used to work in a government laboratory.", "But they said my research went too far.",
-          "Ridiculous—just because I tried cultivating a few… special specimens."],
+          "playerText": "Who do you work with?",
+          "npcTexts": [
+            "I once worked in a government lab.",
+            "They said my research went too far.",
+            "Ridiculous—just because I grew some… special samples."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Do you have hobbies besides research?",
-          "npcTexts": [ "Eating, sleeping… all a waste of time.", "I prefer watching how bodies decompose.",
-          "It’s… beautiful, in its own way."],
+          "playerText": "Hobbies besides research?",
+          "npcTexts": [
+            "Eating, sleeping… all a waste of time.",
+            "I prefer watching bodies decay.",
+            "It’s… beautiful, in a certain sense."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Do you go out often?",
-          "npcTexts": [ "Rarely. I don’t like sunlight. It makes my skin… ah,", 
-          "their skin paler. Oops, slip of the tongue. I meant… my skin."],
+          "playerText": "Do you go outside much?",
+          "npcTexts": [
+            "Rarely. I dislike sunlight. It makes my skin… well,",
+            "their skin pale. Oops, I mean… my skin, of course."
+          ],
           "isExit": false
         },
         {
           "playerText": "Goodbye.",
-          "npcTexts": [ "Alright, off you go.", "I still have samples waiting under the microscope." ],
+          "npcTexts": [
+            "Alright, go.",
+            "I still have samples waiting under the microscope."
+          ],
           "isExit": true
         }
       ]
@@ -43,32 +58,45 @@
       "day": 2,
       "options": [
         {
-          "playerText": "What about yesterday’s research?",
-          "npcTexts": [ "Ah, right. The cell tissues.", "Today they didn’t decay—instead, they seemed to regenerate.",
-          "Strange, don’t you think?" ],
+          "playerText": "Yesterday’s research?",
+          "npcTexts": [
+            "Ah yes, the cell tissues.",
+            "Today they don’t break down—they’re regenerating.",
+            "Strange, don’t you think?"
+          ],
           "isExit": false
         },
         {
-          "playerText": "What exactly did you do for the government?",
-          "npcTexts": [ "Just trivial things.", "Synthetic biology, memory simulations, cloning bodies.",
-          "Ah, but… don’t write that down. It’s top secret."],
+          "playerText": "Your field of work?",
+          "npcTexts": [
+            "Just small things.",
+            "Synthetic biology, memory simulations, body replicas.",
+            "Oh, but don’t write this down. It’s classified."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Do you have any friends or family?",
-          "npcTexts": [ "Friends? Family? They all… vanished long ago.", "Now I only have my jars of specimens.",
-          "They’re quiet, obedient, never talk back."],
+          "playerText": "Any close ones left?",
+          "npcTexts": [
+            "Friends? Family? All… gone.",
+            "Now I only have jars of samples.",
+            "Quiet, obedient, never argue."
+          ],
           "isExit": false
         },
         {
           "playerText": "Do you sleep well?",
-          "npcTexts": [ "Sleep only weakens the body.", 
-          "I prefer observing the night instead."],
+          "npcTexts": [
+            "Sleep only weakens the body.",
+            "I prefer watching through the night."
+          ],
           "isExit": false
         },
         {
           "playerText": "Goodbye.",
-          "npcTexts": [ "Go. I need to concentrate…" ],
+          "npcTexts": [
+            "Go. I need to focus…"
+          ],
           "isExit": true
         }
       ]
@@ -77,32 +105,44 @@
       "day": 3,
       "options": [
         {
-          "playerText": "How’s the cell research going?",
-          "npcTexts": [ "I tried grafting strange cells into the samples.", "The result: they multiplied… but erased the original stem cells.",
-          "It looks alive, but in truth, it’s already been replaced."],
+          "playerText": "How’s cell research?",
+          "npcTexts": [
+            "I grafted foreign cells into a culture.",
+            "They multiplied… but erased the original stem cells.",
+            "It looks alive, but the body is replaced."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Isn’t your research dangerous?",
-          "npcTexts": [ "Dangerous? Everything is dangerous if pushed far enough.",
-          "People fear when they see a familiar form—",
-          "but inside… there’s nothing ‘human’ left."],
+          "playerText": "Is your work dangerous?",
+          "npcTexts": [
+            "Dangerous? Everything is, pushed far enough.",
+            "People fear familiar shapes,",
+            "but inside… there’s nothing human left."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Are you still in contact with the government?",
-          "npcTexts": [ "They cut ties with me long ago.", 
-          "But I miss the laboratories… deeply."],
+          "playerText": "Still contact the government?",
+          "npcTexts": [
+            "They cut me off long ago.",
+            "But I miss the labs dearly."
+          ],
           "isExit": false
         },
         {
-          "playerText": "What do you eat to survive?",
-          "npcTexts": [ "I nibble on some of the lab meat samples.", "Don’t look at me like that—it’s… more nutritious than canned food."],
+          "playerText": "What do you eat?",
+          "npcTexts": [
+            "I tried biting lab meat samples.",
+            "Don’t look at me like that—they’re more nutritious than canned food."
+          ],
           "isExit": false
         },
         {
           "playerText": "Goodbye.",
-          "npcTexts": [ "Go now, quickly. I must stay alert…" ],
+          "npcTexts": [
+            "Go, quickly. I must stay sharp…"
+          ],
           "isExit": true
         }
       ]
@@ -111,34 +151,47 @@
       "day": 4,
       "options": [
         {
-          "playerText": "How’s the cell research now?",
-          "npcTexts": [ "They’re… more perfect than I imagined.", "Flesh is no longer flesh, but like a smooth mask.",
-          "You know, I looked in the mirror and saw myself smiling…", "...but I never commanded my face to do that."],
+          "playerText": "How’s cell research now?",
+          "npcTexts": [
+            "They’re… more perfect than expected.",
+            "Flesh no longer flesh, but a smooth mask.",
+            "I looked in the mirror and saw myself smile…",
+            "…though I never told my face to."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Do you think we can still control it?",
-          "npcTexts": [ "Control? Ha… no. They’re rewriting the genetic code on their own now.",
-          "Humans are nothing but… a draft for them.",
-          "Beautiful. Terrifying."],
+          "playerText": "Can we still control this?",
+          "npcTexts": [
+            "Control? Ha… no. They rewrite biology themselves now.",
+            "Humans are just drafts for them.",
+            "Beautiful. Terrifying."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Are you still eating lab meat?",
-          "npcTexts": [ "Today, I don’t need to eat at all. The cells… feed me from within.", 
-          "But the taste of raw flesh… it still lingers, sweet and unforgettable."],
+          "playerText": "Still eating lab meat?",
+          "npcTexts": [
+            "Today, I don’t need food. Cells feed me from within.",
+            "But the taste of raw flesh… still lingers, sweet and unforgettable."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Are the impostors created by the government?",
-          "npcTexts": [ "I can create cloned cells.", 
-          "The government has hundreds… no, thousands like me."],
+          "playerText": "Impostors made by government?",
+          "npcTexts": [
+            "I can create cloned cells.",
+            "The government has hundreds… no, thousands like me."
+          ],
           "isExit": false
         },
         {
           "playerText": "Goodbye.",
-          "npcTexts": [ "You’d better leave now…", "I’m not sure I’ll still have this voice by morning.",
-          "Perhaps… something else will borrow my mouth to greet you."],
+          "npcTexts": [
+            "Leave now…",
+            "I’m not sure this voice will be mine tomorrow.",
+            "Something else may borrow my mouth to greet you."
+          ],
           "isExit": true
         }
       ]

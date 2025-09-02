@@ -1,32 +1,32 @@
 ﻿{
   "id": "2",
   "npcName": "Room 102",
-  "description": "A middle-aged man with a twisted face, fierce eyes, and an unfriendly look. His hoarse voice and lack of expression make others uneasy.",
+  "description": "A middle-aged man with a twisted face, fierce eyes, and an unfriendly look. His hoarse voice lacks emotion, making others uneasy.",
   "isMonster": false,
-  "scanShowDay3":[true, true],
-  "scanShowDay4":[true, true],
+  "scanShowDay3": [true, true],
+  "scanShowDay4": [true, true],
   "dialogueByDay": [
     {
       "day": 1,
       "options": [
         {
           "playerText": "Have you lived here long?",
-          "npcTexts": [ "Long enough. Why ask?", "I’m not planning to move." ],
+          "npcTexts": [ "Long enough. Why ask?", "I’m not moving out." ],
           "isExit": false
         },
         {
-          "playerText": "Have you noticed anything strange?",
-          "npcTexts": [ "No. And if I did, it’s none of your business.", "I opened the door but saw no one…", "Someone must be asking for a beating."],
+          "playerText": "Have you seen anyone strange?",
+          "npcTexts": [ "No. And not my business.", "I don’t care about others.", "If he bothers me, I’ll beat him up."],
           "isExit": false
         },
         {
-          "playerText": "What do you do for work?",
-          "npcTexts": [ "Manual labor.", "Enough to live. Not your concern." ],
+          "playerText": "What kind of work do you do?",
+          "npcTexts": [ "Manual work.", "Enough to live. Not your concern." ],
           "isExit": false
         },
         {
           "playerText": "When do you usually go out?",
-          "npcTexts": [ "When I need to. Otherwise, I stay home.", "You ask too much." ],
+          "npcTexts": [ "When I need to. Otherwise home.", "Why so many questions?" ],
           "isExit": false
         },
         {
@@ -41,22 +41,22 @@
       "options": [
         {
           "playerText": "How long have you stayed here?",
-          "npcTexts": [ "Five years. Or six.", "Who bothers to count?" ],
+          "npcTexts": [ "Five years. Or six.", "Who counts that?" ],
           "isExit": false
         },
         {
-          "playerText": "Did you notice anything unusual?",
-          "npcTexts": [ "Yeah. You standing here asking nonsense."],
+          "playerText": "Noticed anyone acting strange?",
+          "npcTexts": [ "Just you asking nonsense here."],
           "isExit": false
         },
         {
-          "playerText": "Did you work today?",
-          "npcTexts": [ "No. Slept at home.", "Had enough questions yet?" ],
+          "playerText": "Did you go to work today?",
+          "npcTexts": [ "No. Stayed home sleeping.", "Had enough questions yet?" ],
           "isExit": false
         },
         {
           "playerText": "Did you go out today?",
-          "npcTexts": [ "Does it matter to you whether I go out or not?", "Stop asking so much." ],
+          "npcTexts": [ "Does it matter to you if I did?", "You ask too much." ],
           "isExit": false
         },
         {
@@ -71,22 +71,22 @@
       "options": [
         {
           "playerText": "How long have you lived here?",
-          "npcTexts": [ "Already told you. Why ask again?", "What’s wrong with your ears?" ],
+          "npcTexts": [ "Said already. Why repeat?", "What’s wrong with your ears?" ],
           "isExit": false
         },
         {
-          "playerText": "Did you hear anything strange last night?",
-          "npcTexts": [ "Heard footsteps. Probably someone passing by.", "I don’t care. But if he makes noise, I’ll punch him."],
+          "playerText": "Heard anything strange lately?",
+          "npcTexts": [ "Heard footsteps last night. Someone walking.", "Don’t care. If noisy, I’ll punch him."],
           "isExit": false
         },
         {
-          "playerText": "Are you still working?",
-          "npcTexts": [ "No. Quit already.", "If you’re free, leave me alone." ],
+          "playerText": "Are you still working now?",
+          "npcTexts": [ "No. Quit already.", "If you’re free, leave me be." ],
           "isExit": false
         },
         {
-          "playerText": "Do you often go out?",
-          "npcTexts": [ "I’m about to go out and deal with you.", "Stop bothering me." ],
+          "playerText": "Do you often go outside?",
+          "npcTexts": [ "I’ll go out to deal with you.", "Stop bothering me." ],
           "isExit": false
         },
         {
@@ -100,17 +100,17 @@
       "day": 4,
       "options": [
         {
-          "playerText": "Since when have you been here?",
-          "npcTexts": [ "You again.", "When will you have enough?" ],
+          "playerText": "Since when have you lived here?",
+          "npcTexts": [ "It’s you again.", "When will you stop asking?" ],
           "isExit": false
         },
         {
-          "playerText": "Did you see anything strange this morning?",
-          "npcTexts": [ "Yes...", "Your questions."],
+          "playerText": "Did you see anything strange?",
+          "npcTexts": [ "Yes...", "Your endless questions."],
           "isExit": false
         },
         {
-          "playerText": "Are you still working?",
+          "playerText": "Are you still working now?",
           "npcTexts": [ "I don’t need money anymore."],
           "isExit": false
         },
@@ -121,7 +121,7 @@
         },
         {
           "playerText": "Goodbye.",
-          "npcTexts": [ "Get lost...", "Leave before I beat you up." ],
+          "npcTexts": [ "Get lost...", "Leave before I beat you." ],
           "isExit": true
         }
       ]

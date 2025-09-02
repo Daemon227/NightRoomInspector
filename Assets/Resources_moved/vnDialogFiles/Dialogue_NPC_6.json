@@ -18,7 +18,7 @@
           "isExit": false
         },
         {
-          "playerText": "Vì sao phải quấn băng kín thế này?",
+          "playerText": "Sao phải quấn băng thế này?",
           "npcTexts": [
             "Da tôi mỏng, chỉ cần ánh sáng chiếu vào cũng đủ làm tôi bị bỏng",
             "Bác sĩ bảo cứ băng lại, nếu không thì tôi chẳng còn sống nổi."
@@ -62,7 +62,7 @@
           "isExit": false
         },
         {
-          "playerText": "Có người nói cô tới đây vào mùa xuân?",
+          "playerText": "Cô tới đây vào mùa xuân?",
           "npcTexts": [
             "Ờ… cũng có thể… đầu xuân vẫn còn lạnh mà.",
             "Tôi nhớ nhầm thôi, xin đừng nghĩ nhiều."
@@ -70,7 +70,7 @@
           "isExit": false
         },
         {
-          "playerText": "Em họ cô gửi quà gì gần đây?",
+          "playerText": "Món quà từ em họ cô gửi?",
           "npcTexts": [
             "Một chiếc khăn tay. Tôi giữ trong ngăn kéo cạnh giường.",
             "Tôi thích nó nhưng da tôi không cho phép tôi quàng thử"
@@ -78,17 +78,17 @@
           "isExit": false
         },
         {
-          "playerText": "Trông cô hôm nay khác hẳn hôm qua?",
+          "playerText": "Cô hôm nay khỏe chứ?",
           "npcTexts": [
-            "Không rõ tại sao da tôi hôm nay tốt hơn",
-            "Bác sĩ cho phép tôi tháo băng ở đầu. Có lẽ tôi không bệnh nặng như nghĩ."
+            "Tôi cảm giác da tôi có vẻ tốt hơn một chút rồi",
+            "Tuy nhiên tôi vẫn không thể tiếp xúc được với ánh sáng, nó vẫn có thể làm tôi bị bỏng mất."
           ],
           "isExit": false
         },
         {
           "playerText": "Tạm biệt",
           "npcTexts": [
-            "Cậu thấy đấy… có khi tôi không tệ như vẻ ngoài ngày đầu."
+            "Chào anh."
           ],
           "isExit": true
         }
@@ -106,7 +106,7 @@
           "isExit": false
         },
         {
-          "playerText": "Cô cất chiếc khăn tay ở đâu",
+          "playerText": "Cô cất chiếc khăn tay ở đâu?",
           "npcTexts": [
             "Trong ngăn kéo cạnh giường.",
             "À… hôm trước tôi nói trong hộp gỗ nhỏ phải không?",
@@ -118,13 +118,13 @@
           "playerText": "Cô có vẻ trông khỏe hơn nhiều.",
           "npcTexts": [
             "Đúng vậy",
-            "Tôi đã được tháo gần hết băng rồi",
-            "Nhưng kỳ lạ là từng lớp băng rơi đi như mang theo cả ký ức."
+            "Không rõ tại sao da tôi hôm nay tốt hơn",
+            "Bác sĩ cho phép tôi tháo băng ở đầu. Có lẽ tôi không bệnh nặng như nghĩ."
           ],
           "isExit": false
         },
         {
-          "playerText": "Có ai gặp cô sau khi tháo băng chưa?",
+          "playerText": "Có ai biết cô khỏi bệnh chưa?",
           "npcTexts": [
             "Chưa, chỉ có cậu thôi. Tôi dự định sẽ gọi cho em gái vào ngày mai",
             "Người khác thấy có lẽ sẽ không tin tôi từng bệnh thật."
@@ -152,7 +152,7 @@
           "isExit": false
         },
         {
-          "playerText": "Còn chiếc khăn em họ gửi, giờ đâu rồi?",
+          "playerText": "Chiếc khăn được tặng nó đâu rồi?",
           "npcTexts": [
             "Trong ngăn kéo cạnh giường.",
             "À… hôm trước tôi nói trong hộp gỗ nhỏ phải không?",

@@ -1,50 +1,50 @@
 ﻿{
   "id": "6",
   "npcName": "Room 202",
-  "description": "A girl wrapped in bandages from head to toe, leaving only her eyes and mouth exposed.",
+  "description": "A girl wrapped in bandages, leaving only her eyes and mouth exposed.",
   "isMonster": false,
-  "scanShowDay3":[true, true],
-  "scanShowDay4":[true, true],
+  "scanShowDay3": [true, true],
+  "scanShowDay4": [true, true],
   "dialogueByDay": [
     {
       "day": 1,
       "options": [
         {
-          "playerText": "How long have you been here?",
+          "playerText": "How long here?",
           "npcTexts": [
-            "Three years… I arrived in winter, it was freezing cold.",
-            "I can still remember that chill cutting into my skin."
+            "Three years… I came in winter, so cold.",
+            "I still feel that chill cutting into my skin."
           ],
           "isExit": false
         },
         {
-          "playerText": "Why are you wrapped in bandages like this?",
+          "playerText": "Why so many bandages?",
           "npcTexts": [
-            "My skin is thin. Even a ray of light burns me.",
-            "The doctor told me to stay bandaged, otherwise I wouldn’t survive."
+            "My skin is thin. Even sunlight burns me.",
+            "Doctor said keep wrapped, or I wouldn’t survive."
           ],
           "isExit": false
         },
         {
-          "playerText": "Does anyone take care of you?",
+          "playerText": "Anyone care for you?",
           "npcTexts": [
-            "My cousin sends me gifts sometimes.",
-            "She’s kind, though I never dare let her see what I look like."
+            "My cousin sometimes sends gifts.",
+            "Kind of her, though I can’t show her my face."
           ],
           "isExit": false
         },
         {
-          "playerText": "What do you wish for most?",
+          "playerText": "Your biggest wish?",
           "npcTexts": [
-            "Just one day… to look in the mirror and not see a monster.",
-            "I’ve lived with this illness since I was a child."
+            "Just to see myself in the mirror… not a monster.",
+            "I’ve lived with this disease since childhood."
           ],
           "isExit": false
         },
         {
           "playerText": "Goodbye.",
           "npcTexts": [
-            "Thank you for listening. Few people have such patience."
+            "Thanks for listening. Few have such patience."
           ],
           "isExit": true
         }
@@ -54,41 +54,41 @@
       "day": 2,
       "options": [
         {
-          "playerText": "How long have you been here?",
+          "playerText": "How long here?",
           "npcTexts": [
-            "Ah… actually, maybe only two years.",
-            "Time drags on endlessly inside these four walls."
+            "Ah… maybe only two years.",
+            "Time inside these walls always feels endless."
           ],
           "isExit": false
         },
         {
-          "playerText": "Someone said you arrived in spring?",
+          "playerText": "Came here in spring?",
           "npcTexts": [
-            "Uh… maybe… early spring is still cold, isn’t it?",
-            "I just misremembered, please don’t think too much of it."
+            "Maybe… early spring is still cold.",
+            "I just misremembered, please don’t think much of it."
           ],
           "isExit": false
         },
         {
-          "playerText": "What did your cousin send you recently?",
+          "playerText": "Gift from cousin?",
           "npcTexts": [
-            "A handkerchief. I keep it in the drawer beside my bed.",
-            "I like it… but my skin won’t let me wear it around my neck."
+            "A handkerchief. I keep it in the drawer.",
+            "I like it, but my skin won’t let me wear it."
           ],
           "isExit": false
         },
         {
-          "playerText": "You look different from yesterday.",
+          "playerText": "Feeling better today?",
           "npcTexts": [
-            "Strangely, my skin looks better today.",
-            "The doctor let me remove the bandages on my head. Maybe my illness isn’t so severe after all."
+            "I think my skin feels a little better.",
+            "But sunlight could still burn me badly."
           ],
           "isExit": false
         },
         {
           "playerText": "Goodbye.",
           "npcTexts": [
-            "See? Maybe I’m not as bad as I looked on the first day."
+            "Goodbye."
           ],
           "isExit": true
         }
@@ -98,35 +98,35 @@
       "day": 3,
       "options": [
         {
-          "playerText": "So how long has it really been?",
+          "playerText": "So how long here?",
           "npcTexts": [
-            "Two and a half years, I think… I keep miscounting.",
-            "Here, a single day feels like a whole year."
+            "Two and a half years… I keep miscounting.",
+            "Here, each day feels like a year."
           ],
           "isExit": false
         },
         {
-          "playerText": "Where do you keep the handkerchief?",
+          "playerText": "Where’s the handkerchief?",
           "npcTexts": [
             "In the drawer beside my bed.",
-            "Ah… didn’t I say a wooden box last time?",
-            "Sorry, my memory really is awful."
+            "Ah… last time I said wooden box, didn’t I?",
+            "Sorry, my memory is poor."
           ],
           "isExit": false
         },
         {
-          "playerText": "You seem much healthier now.",
+          "playerText": "You look healthier now.",
           "npcTexts": [
             "Yes.",
-            "Most of the bandages are gone now.",
-            "But strangely, with every layer that falls away… it feels like memories fall away with them."
+            "Not sure why my skin improved today.",
+            "Doctor even let me unwrap my head. Maybe I’m not as sick as I thought."
           ],
           "isExit": false
         },
         {
-          "playerText": "Has anyone seen you without the bandages?",
+          "playerText": "Anyone know you’re better?",
           "npcTexts": [
-            "Not yet. Only you. I plan to call my sister tomorrow.",
+            "Not yet, only you. I’ll call my sister tomorrow.",
             "Others might not believe I was ever sick."
           ],
           "isExit": false
@@ -134,7 +134,7 @@
         {
           "playerText": "Goodbye.",
           "npcTexts": [
-            "If you don’t mind, come visit me again tomorrow <3"
+            "Come again tomorrow if you’d like <3"
           ],
           "isExit": true
         }
@@ -144,36 +144,36 @@
       "day": 4,
       "options": [
         {
-          "playerText": "So how long has it really been?",
+          "playerText": "So how long here?",
           "npcTexts": [
-            "Three years. Yes… I’m sure this time.",
-            "But if I’m wrong again… well, that wouldn’t be surprising, would it?"
+            "Three years. Yes… I think it’s right this time.",
+            "But if I’m wrong again… not surprising, is it?"
           ],
           "isExit": false
         },
         {
-          "playerText": "And the handkerchief your cousin sent—where is it now?",
+          "playerText": "Where’s the handkerchief?",
           "npcTexts": [
             "In the drawer beside my bed.",
-            "Ah… didn’t I say a wooden box last time?",
-            "Sorry, my memory really is awful."
+            "Ah… last time I said wooden box, didn’t I?",
+            "Sorry, my memory is poor."
           ],
           "isExit": false
         },
         {
           "playerText": "How do you feel now?",
           "npcTexts": [
-            "Today, I’m more beautiful than ever.",
-            "But sometimes I’m afraid… this beauty doesn’t belong to me."
+            "Today, I feel more beautiful than ever.",
+            "But sometimes I fear… this beauty isn’t mine."
           ],
           "isExit": false
         },
         {
-          "playerText": "Have you tried leaving the house?",
+          "playerText": "Have you gone outside?",
           "npcTexts": [
-            "Tomorrow, I want to go outside for a walk.",
-            "To see how people look at me… will they recognize me?",
-            "Will you come with me tomorrow?"
+            "Tomorrow, I want to go out for a walk.",
+            "To see how others look at me… will they recognize me?",
+            "Will you come with me?"
           ],
           "isExit": false
         },

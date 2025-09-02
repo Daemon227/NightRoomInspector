@@ -1,37 +1,52 @@
 ﻿{
   "id": "7",
   "npcName": "Room 203",
-  "description": "A beautiful girl, so stunning that no words can describe her beauty.",
+  "description": "A beautiful girl, beyond words to describe.",
   "isMonster": true,
-  "scanShowDay3":[true, true],
-  "scanShowDay4":[true, false],
+  "scanShowDay3": [true, true],
+  "scanShowDay4": [true, false],
   "dialogueByDay": [
     {
       "day": 1,
       "options": [
         {
-          "playerText": "What do you do for a living?",
-          "npcTexts": [ "I’m a model.", "Mostly I smile, pose… and make sure people can’t look away." ],
+          "playerText": "Your job?",
+          "npcTexts": [
+            "I’m a model.",
+            "Mostly smiling, posing… making others unable to look away."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Why are you here?",
-          "npcTexts": [ "Simply because of work.", "I had a few photoshoots in this old apartment." ],
+          "playerText": "Why stay here?",
+          "npcTexts": [
+            "Simply for work.",
+            "I had some shoots in this shabby lodge."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Is there anything you fear?",
-          "npcTexts": [ "I don’t fear the dark. I don’t fear blood.", "I only fear… that no one will look at me anymore." ],
+          "playerText": "Afraid of anything?",
+          "npcTexts": [
+            "Not of dark, not of blood.",
+            "I only fear… no one watching me anymore."
+          ],
           "isExit": false
         },
         {
-          "playerText": "You’re very beautiful.",
-          "npcTexts": [ "I’ve heard that plenty of times. That’s sweet of you.", "But… I won’t be swayed that easily." ],
+          "playerText": "You’re very pretty.",
+          "npcTexts": [
+            "I hear that often. Cute words.",
+            "But… I won’t be swayed so easily."
+          ],
           "isExit": false
         },
         {
           "playerText": "Goodbye.",
-          "npcTexts": [ "Next time, try dressing up a little.", "You don’t look too bad though." ],
+          "npcTexts": [
+            "Next time dress up a bit.",
+            "You don’t look bad though."
+          ],
           "isExit": true
         }
       ]
@@ -40,28 +55,44 @@
       "day": 2,
       "options": [
         {
-          "playerText": "Is modeling stressful?",
-          "npcTexts": [ "Stressful?", "Not at all. This job gives me money, fame.", "I love it." ],
+          "playerText": "Model life hard?",
+          "npcTexts": [
+            "Hard?",
+            "Not at all. It gives me money, fame.",
+            "I love it."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Do you ever feel lonely?",
-          "npcTexts": [ "Oh, I always have so many fans.", "But in this apartment, it seems no one has recognized me yet." ],
+          "playerText": "Feel lonely here?",
+          "npcTexts": [
+            "Oh, I always have fans.",
+            "But in this lodge, no one seems to notice me."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Is there anything you fear?",
-          "npcTexts": [ "I fear the day I grow old…", "When I’m no longer as beautiful as I am now." ],
+          "playerText": "Still fear anything?",
+          "npcTexts": [
+            "I fear the day I grow old…",
+            "When I can’t be beautiful anymore."
+          ],
           "isExit": false
         },
         {
-          "playerText": "May I take you out to dinner?",
-          "npcTexts": [ "I think you should pick a place with beautiful lighting.", "Because, you know, a model like me always deserves the perfect setting." ],
+          "playerText": "Dinner with me?",
+          "npcTexts": [
+            "Pick a place with good lighting.",
+            "You know, a model deserves a setting that suits her."
+          ],
           "isExit": false
         },
         {
           "playerText": "Goodbye.",
-          "npcTexts": [ "Good night, I need to rest for tomorrow’s shoot.", "But maybe someday I’ll have time for you." ],
+          "npcTexts": [
+            "Bye. I must sleep early for tomorrow’s shoot.",
+            "But maybe someday I’ll spare time for you."
+          ],
           "isExit": true
         }
       ]
@@ -70,28 +101,46 @@
       "day": 3,
       "options": [
         {
-          "playerText": "Do you love your job?",
-          "npcTexts": [ "Of course.", "If I ever quit modeling, I’d probably become an actress.", "Look at me—don’t I have the looks for it?" ],
+          "playerText": "Love your work?",
+          "npcTexts": [
+            "Of course.",
+            "If not modeling, I’d act.",
+            "Look at me—I’m pretty enough."
+          ],
           "isExit": false
         },
         {
-          "playerText": "What do you fear most?",
-          "npcTexts": [ "I fear losing this beauty…", "But maybe I’ll never truly grow ugly." ],
+          "playerText": "Your biggest fear?",
+          "npcTexts": [
+            "Losing this beauty…",
+            "But maybe I’ll never grow ugly."
+          ],
           "isExit": false
         },
         {
-          "playerText": "A model’s diet?",
-          "npcTexts": [ "I used to diet to stay in shape.", "But now… I don’t think it’s necessary.", "I don’t feel hungry anymore." ],
-          "isExit": false
-        },     
-        {
-          "playerText": "What if I asked you to dinner?",
-          "npcTexts": [ "If you insist, then maybe next week.", "But honestly… I don’t feel like eating right now.", "Maybe by then I’ll crave something." ],
+          "playerText": "Your diet?",
+          "npcTexts": [
+            "I used to starve to stay slim.",
+            "Now? No need.",
+            "I don’t feel hunger anymore."
+          ],
           "isExit": false
         },
         {
-          "playerText": "Goodbye.",
-          "npcTexts": [ "Don’t say goodbye, say ‘see you soon.’", "In this shabby place, having you to talk to every night isn’t so bad." ],
+          "playerText": "If I asked you out?",
+          "npcTexts": [
+            "If you insist… next week maybe.",
+            "I just don’t want to eat now.",
+            "Perhaps I’ll crave something then."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "See you.",
+          "npcTexts": [
+            "Don’t say goodbye, say see you.",
+            "Having you here each night isn’t bad."
+          ],
           "isExit": true
         }
       ]
@@ -100,28 +149,48 @@
       "day": 4,
       "options": [
         {
-          "playerText": "How was work today?",
-          "npcTexts": [ "A whole day of shooting left me exhausted.", "Everyone else looked disgusting.", "Only I will always remain beautiful." ],
+          "playerText": "Work today?",
+          "npcTexts": [
+            "Shooting all day wore me out.",
+            "Everyone looked disgusting.",
+            "Only I remain beautiful."
+          ],
           "isExit": false
         },
         {
-          "playerText": "What do you fear most?",
-          "npcTexts": [ "I fear nothing anymore.", "Now I am the one with eternal beauty.", "Tell me, do you like me?" ],
+          "playerText": "Still fear anything?",
+          "npcTexts": [
+            "Nothing anymore.",
+            "Now I have eternal beauty.",
+            "Do you like me?"
+          ],
           "isExit": false
         },
         {
-          "playerText": "Do you want to eat something?",
-          "npcTexts": [ "Today I had a lot of raw food…", "I mean dishes like sashimi, sushi.", "But you… you look delicious too. Too bad I’m already full." ],
+          "playerText": "Want to eat?",
+          "npcTexts": [
+            "I ate lots of raw flesh today…",
+            "I mean sushi, sashimi.",
+            "But you look tasty too… pity I’m full."
+          ],
           "isExit": false
-        },     
+        },
         {
-          "playerText": "What about our date next week?",
-          "npcTexts": [ "Next week?", "Why not tomorrow instead?", "I hope you’ll come pick me up…", "...And then we can truly enjoy ourselves." ],
+          "playerText": "About next week?",
+          "npcTexts": [
+            "Next week?",
+            "Why not tomorrow?",
+            "Come pick me up…",
+            "...and we’ll have fun together."
+          ],
           "isExit": false
         },
         {
           "playerText": "See you.",
-          "npcTexts": [ "Goodbye.", "I’m looking forward to tomorrow. I think I’m starting to like you." ],
+          "npcTexts": [
+            "Goodbye.",
+            "I can’t wait for tomorrow. I think I like you."
+          ],
           "isExit": true
         }
       ]

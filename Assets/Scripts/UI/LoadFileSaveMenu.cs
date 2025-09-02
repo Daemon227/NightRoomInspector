@@ -34,7 +34,8 @@ public class LoadFileSaveMenu: MonoBehaviour,IMenu
     }
     public void ActiveEvent()
     {
-        GameData[] gameDataList = DataLoading.Instance.gameDataList;
+
+        GameData[] gameDataList = DataLoading.Instance.LoadNewData();
         Debug.Log("Game data list length: " + gameDataList.Length);
         for (int i = 0; i < gameDataList.Length; i++)
         {

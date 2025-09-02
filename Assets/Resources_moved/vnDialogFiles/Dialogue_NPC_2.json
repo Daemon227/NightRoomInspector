@@ -15,9 +15,9 @@
           "isExit": false
         },
         {
-          "playerText": "Anh có nhận thấy điều gì lạ không?",
-          "npcTexts": [ "Không. Nếu có thì cũng không phải việc của anh.", "Tôi mở ra thì không thấy ai…",
-          "Chắc ai đó muốn bị ăn đòn."],
+          "playerText": "Anh thấy ai kỳ lạ không?",
+          "npcTexts": [ "Không. Nếu có thì cũng không phải việc của anh.", "Tôi không quan tâm kẻ khác",
+          "Nếu hắn gây sự với tôi thì chỉ cần cho hắn ăn đòn là được."],
           "isExit": false
         },
         {
@@ -46,7 +46,7 @@
           "isExit": false
         },
         {
-          "playerText": "Anh thấy gì khác thường không?",
+          "playerText": "Anh thấy ai khác thường không?",
           "npcTexts": [ "Có anh đứng đây hỏi vớ vẩn, thế thôi."],
           "isExit": false
         },
@@ -76,8 +76,8 @@
           "isExit": false
         },
         {
-          "playerText": "Đêm qua anh có nghe thấy gì lạ không?",
-          "npcTexts": [ "Nghe tiếng chân. Chắc ai đó đi đâu đó.", "Tôi không quan tâm. Nhưng nếu hắn làm ồn tôi sẽ đấm hắn."],
+          "playerText": "Anh có nghe thấy gì lạ không?",
+          "npcTexts": [ "Nghe tiếng chân tối qua. Chắc ai đó đi đâu đó.", "Tôi không quan tâm. Nhưng nếu hắn làm ồn tôi sẽ đấm hắn."],
           "isExit": false
         },
         {
@@ -106,7 +106,7 @@
           "isExit": false
         },
         {
-          "playerText": "Sáng nay anh có thấy gì lạ không?",
+          "playerText": "Anh có thấy gì lạ không?",
           "npcTexts": [ "Có...", "Mấy câu hỏi của anh."],
           "isExit": false
         },
@@ -116,7 +116,7 @@
           "isExit": false
         },
         {
-          "playerText": "Anh có muốn đi ra ngoài không?",
+          "playerText": "Anh có muốn ra ngoài không?",
           "npcTexts": [ "Không. Ra ngoài để làm gì?", "Hít không khí bẩn à?" ],
           "isExit": false
         },

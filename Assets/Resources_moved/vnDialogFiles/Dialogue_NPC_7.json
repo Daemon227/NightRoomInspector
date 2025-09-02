@@ -47,7 +47,7 @@
           "isExit": false
         },
         {
-          "playerText": "Cô có hay cảm thấy cô đơn không?",
+          "playerText": "Cô có cảm thấy cô đơn không?",
           "npcTexts": [ "Ồ, tôi luôn có rất nhiều người hâm mộ", "Nhưng ở căn trọ này thì có vẻ như chưa ai nhận ra tôi."],
           "isExit": false
         },
@@ -57,7 +57,7 @@
           "isExit": false
         },
         {
-          "playerText": "Tôi có thể mời cô đi ăn tối được không?",
+          "playerText": "Tôi muốn mời cô đi ăn tối?",
           "npcTexts": [ "Tôi nghĩ anh nên chọn một nơi có ánh sáng đẹp", 
           "Vì anh biêt đấy một người mẫu như tôi thì luôn muốn mình được ngồi ở một nơi tương xứng." ],
           "isExit": false
@@ -73,7 +73,7 @@
       "day": 3,
       "options": [
         {
-          "playerText": "Cô có yêu công việc của mình không?",
+          "playerText": "Cô có yêu công việc chứ?",
           "npcTexts": [ "Tất nhiên rồi", "Nếu buộc phải bỏ nghề người mẫu có lẽ tôi sẽ làm diễn viên",
           "Anh nhìn xem tôi đủ xinh đẹp mà"],
           "isExit": false
@@ -90,7 +90,7 @@
           "isExit": false
         },     
         {
-          "playerText": "Nếu tôi mời cô đi ăn tối thì sao?",
+          "playerText": "Nếu tôi mời cô đi ăn thì sao?",
           "npcTexts": [ "Nếu anh có lòng tốt thì hẹn anh tuần sau nhé.", 
           "Vì thật sự bây giờ tôi không muốn ăn gì.", "Có lẽ tuần tới tôi sẽ thèm ăn gì đó đấy" ],
           "isExit": false
