@@ -11737,7 +11737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialData:
-    cutSceneID: 11
+    cutSceneID: 30
     cutSceneEngName: Tutorial
     cutSceneVnName: "H\u01B0\u1EDBng d\u1EABn"
     enDescriptions:

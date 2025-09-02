@@ -13,16 +13,20 @@ public class MissionManager : MonoBehaviour
     private void OnEnable()
     {
         EventManager.OpenTheDoor += UpdateMissionUI;
-        EventManager.OnChangeLanguage += UpdateUIByLanguage;
+        EventManager.OnChangeLanguage += UpdateUIByEvent;
+        EventManager.OnAllMissionComleted += UpdateUIByEvent;
+        EventManager.OnChangeDay += UpdateUIByEvent;
     }
 
     private void OnDisable()
     {
         EventManager.OpenTheDoor -= UpdateMissionUI;
-        EventManager.OnChangeLanguage -= UpdateUIByLanguage;
+        EventManager.OnChangeLanguage -= UpdateUIByEvent;
+        EventManager.OnAllMissionComleted -= UpdateUIByEvent;
+        EventManager.OnChangeDay -= UpdateUIByEvent;
     }
 
-    public void UpdateUIByLanguage()
+    public void UpdateUIByEvent()
     {
         UpdateMissionUI(0);
     }
@@ -48,7 +52,7 @@ public class MissionManager : MonoBehaviour
         }
 
         // Nếu check hết phòng rồi
-        if (gm.reportToBoss)
+        if (!gm.reportToBoss)
         {
             missionText.text = MultiLanguageManager.Instance.GetText("Mission_Report");
         }

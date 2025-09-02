@@ -18,16 +18,20 @@ public class CallingUIManager : MonoBehaviour
     public GameObject buttonGroup2;
     public TextMeshProUGUI dialogText;
 
+    public AudioSource phoneAudio;
+    public AudioClip ringPhoneClip;
     private PhoneDialogue phoneDialogue;
-    private string filename = "PhoneDialogues/";
+    private string filename = "phoneDialogues/";
   
     private void OnEnable()
     {
         EventManager.StartCalling += LoadingHanle;
+        EventManager.OnChangeLanguage += UpdateUI;
     }
     private void OnDisable()
     {
         EventManager.StartCalling -= LoadingHanle;
+        EventManager.OnChangeLanguage -= UpdateUI;
     }
 
     private void Start()
@@ -36,12 +40,7 @@ public class CallingUIManager : MonoBehaviour
     }
     public void FirstOptionsSettup()
     {
-        //set text cho button
-        buttons[0].GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Report_Floor_1");
-        buttons[1].GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Report_Floor_2");
-        buttons[2].GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("No_Report");
-        buttons[3].GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Wrong_Call");
-
+        UpdateUI();
         List<GameObject> rooms1 = GameManager.Instance.roomOnFloor1;
         List<GameObject> rooms2 = GameManager.Instance.roomOnFloor2;
         buttons[0].onClick.AddListener(() => ShowRoomOnFloor(rooms1));
@@ -49,10 +48,26 @@ public class CallingUIManager : MonoBehaviour
         buttons[2].onClick.AddListener(NoReportSomeone);
         buttons[3].onClick.AddListener(ReportFalseAlarm);
     }
+    public void UpdateUI()
+    {
+        //set text cho button
+        buttons[0].GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Report_Floor_1");
+        buttons[1].GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Report_Floor_2");
+        buttons[2].GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("No_Report");
+        buttons[3].GetComponentInChildren<TextMeshProUGUI>().text = MultiLanguageManager.Instance.GetText("Wrong_Call");
+    }
     public void LoadingHanle()
     {
-        string fullFilename = filename + MultiLanguageManager.Instance.currentLanguage + "PhoneDialogue";
-        LoadPhoneDialog(fullFilename);
+        string fullFilename = "";
+        if (MultiLanguageManager.Instance.currentLanguage.Equals("vn"))
+        {
+            fullFilename = filename + "vnPhoneDialogue";
+        }
+        else
+        {
+            fullFilename = filename + "enPhoneDialogue";
+        }
+        StartCoroutine(LoadPhoneDialog(fullFilename)) ;
         StartCoroutine(RingThePhone());
     }
     public IEnumerator RingThePhone()
@@ -61,7 +76,11 @@ public class CallingUIManager : MonoBehaviour
         GameManager.Instance.canMove = false;
         // bat animation rung dt
         ringThePhonePanel.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        phoneAudio.clip = ringPhoneClip;
+        phoneAudio.Play();
+        phoneAudio.loop = true;
+        yield return new WaitForSeconds(3f);
+        phoneAudio.Stop();
         ringThePhonePanel.SetActive(false);
 
         // hien hoi thoai.
@@ -77,19 +96,21 @@ public class CallingUIManager : MonoBehaviour
 
         buttonGroup1.SetActive(true);
     }
-    public void LoadPhoneDialog(string filename)
+    public IEnumerator LoadPhoneDialog(string filename)
     {
-        if (phoneDialogue != null) return;
+        //if (phoneDialogue != null) return;
         var handle = Addressables.LoadAssetAsync<TextAsset>(filename);
-        handle.Completed += (AsyncOperationHandle<TextAsset> task) =>
+        yield return handle;
+        if (handle.Status == AsyncOperationStatus.Succeeded)
         {
-            if(task.Status == AsyncOperationStatus.Succeeded)
-            {
-                string jsonText = task.Result.text;
-                phoneDialogue = JsonUtility.FromJson<PhoneDialogue>(jsonText);
-                Debug.Log("Phone Load Succeeded");
-            }
-        };
+            string jsonText = handle.Result.text;
+            phoneDialogue = JsonUtility.FromJson<PhoneDialogue>(jsonText);
+            Debug.Log("Phone Load Succeeded");
+        }
+        else
+        {
+            Debug.LogError("Failed to load phone dialogue: " + filename);
+        }
     }
       
     public void ShowRoomOnFloor(List<GameObject> rooms)

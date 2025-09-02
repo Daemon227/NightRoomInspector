@@ -39,7 +39,7 @@ public class LoadFileSaveMenu: MonoBehaviour,IMenu
         Debug.Log("Game data list length: " + gameDataList.Length);
         for (int i = 0; i < gameDataList.Length; i++)
         {
-            if (gameDataList[i] != null)
+            if (gameDataList[i] != null && gameDataList[i].currentDay !=0)
             {
                 filesaveName[i].text = gameDataList[i].name;
                 int index = i; // Capture the current value of i     

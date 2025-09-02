@@ -24,6 +24,10 @@ public class SettingManager : MonoBehaviour
     public Button showTutorialButton;
 
     public Button saveAndExitButton;
+    private void Awake()
+    {
+        Screen.SetResolution(1280, 720, false);
+    }
     private void Start()
     {
         close.onClick.AddListener(CloseSetting);
@@ -34,6 +38,7 @@ public class SettingManager : MonoBehaviour
         musicSlider.onValueChanged.AddListener(MusicSetting);
         sfxSlider.onValueChanged.AddListener(SFXSetting);
         resolutionSetting.onValueChanged.AddListener(ResolutionSetting);
+        SettingDataLoader.Instance.resolutionIndex = 1;
         languageSetting.onValueChanged.AddListener(LanguageSetting);
         if (saveAndExitButton != null)
         {
@@ -43,6 +48,7 @@ public class SettingManager : MonoBehaviour
 
         musicSlider.value = AudioManager.Instance.musicVolume;
         sfxSlider.value = AudioManager.Instance.sfxVolume;
+        
     }
 
     public void MusicSetting(float volume)
@@ -60,7 +66,7 @@ public class SettingManager : MonoBehaviour
         switch (index)
         {
             case 0:
-                Screen.SetResolution(1920, 1080, true);
+                Screen.SetResolution(1920, 1080, false);
                 Debug.Log("Set to 1920x1080");
                 SettingDataLoader.Instance.resolutionIndex = 0;
                 break;;

@@ -88,7 +88,6 @@ public class GameManager : MonoBehaviour
             door.SetDoorSprite();
             reportedRoom = null;
         }
-        turnOnLight = false;
         checkFullRoom = false;
         reportToBoss = false; 
         currentDay += 1;

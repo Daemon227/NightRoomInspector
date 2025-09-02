@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dea69d41f90c6ea4fa55c27c1d60c145, type: 3}
-  m_Name: AddressableAssetGroupSortSettings
+  m_Script: {fileID: 11500000, guid: 5834b5087d578d24c926ce20cd31e6d6, type: 3}
+  m_Name: phoneDialogues_ContentUpdateGroupSchema
   m_EditorClassIdentifier: 
-  sortOrder:
-  - 127c317d74005f54e865fdba35ee779d
-  - 6ca5ad86ceb9c0a4ab8cc8fc5f576852
-  - 9554b9899e92c3849850552cd8b3637d
-  - dc9ba7f474cdade43b81ed5f036cb26c
+  m_Group: {fileID: 11400000, guid: f85390683d76d0d4f94bd03ef83306cd, type: 2}
+  m_StaticContent: 0

@@ -5492,6 +5492,8 @@ MonoBehaviour:
   buttonPrefab: {fileID: 1760110910775924178, guid: cd5f556e7d215b24c864e43f6b5e9df2, type: 3}
   buttonGroup2: {fileID: 149341822}
   dialogText: {fileID: 1162514400}
+  phoneAudio: {fileID: 672178417}
+  ringPhoneClip: {fileID: 8300000, guid: 167ab20da0aaf7f4eb66594935457cac, type: 3}
 --- !u!114 &254816676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8991,8 +8993,8 @@ MonoBehaviour:
     - This is all that remains of you after that night.
     vnDescriptions:
     - "B\u1EA1n mu\u1ED1n ch\u1EA1y \u01B0?. M\u1ED9t k\u1EBB gi\u1EA3 m\u1EA1o trong
-      ng\xF4i nh\xE0 \u0111\xE3 m\u1EA5t ki\u1EC3m so\xE1t v\xE0 \u0111\xE2y l\xE0
-      nh\u1EEFng g\xEC c\xF2n s\xF3t l\u1EA1i c\u1EE7a b\u1EA1n sau \u0111\xEAm \u0111\xF3."
+      ng\xF4i nh\xE0 \u0111\xE3 m\u1EA5t ki\u1EC3m so\xE1t \u0111\xE3 t\u1EDBi v\xE0
+      t\u1EA5n c\xF4ng b\u1EA1n"
     - "\u0110\xE2y l\xE0 nh\u1EEFng g\xEC c\xF2n s\xF3t l\u1EA1i c\u1EE7a b\u1EA1n
       sau \u0111\xEAm h\xF4m \u0111\xF3."
     images:
@@ -11798,6 +11800,7 @@ GameObject:
   - component: {fileID: 672178414}
   - component: {fileID: 672178416}
   - component: {fileID: 672178415}
+  - component: {fileID: 672178417}
   m_Layer: 5
   m_Name: CallingPanel
   m_TagString: Untagged
@@ -11866,6 +11869,103 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672178413}
   m_CullTransparentMesh: 1
+--- !u!82 &672178417
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672178413}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 8962705329528796057, guid: 628357781cf565242b5dcde4129bfd06, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &677893994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19727,11 +19827,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "C\xF4ng vi\u1EC7c nghe c\xF3 v\u1EBB \u0111\u01A1n gi\u1EA3n \u2014 ch\u1EC9
-    c\u1EA7n ki\u1EC3m tra t\u1EA5t c\u1EA3 kh\xE1ch thu\xEA, d\u1ECDn d\u1EB9p khi
-    c\u1EA7n v\xE0 b\xE1o c\xE1o cho \xF4ng ch\u1EE7 tr\u01B0\u1EDBc khi k\u1EBFt
-    th\xFAc ca. Ch\u1EC9 c\xF3 m\u1ED9t l\u01B0u \xFD nh\u1ECF: h\xE3y \u0111\u1EC3
-    \xFD \u0111\u1EBFn nh\u1EEFng k\u1EBB b\u1EA5t th\u01B0\u1EDDng."
+  m_text: what is that
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3e91945c86b531c4aad0ee2e6d38d72a, type: 2}
   m_sharedMaterial: {fileID: 1452277609298777069, guid: 3e91945c86b531c4aad0ee2e6d38d72a, type: 2}

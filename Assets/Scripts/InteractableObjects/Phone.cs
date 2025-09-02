@@ -29,6 +29,7 @@ public class Phone : InteractableObject
                         string notification = MultiLanguageManager.Instance.GetText("N_NoOne_Answer");
                         EventManager.ShowNotification(notification);
                         GameManager.Instance.reportToBoss = true;
+                        EventManager.OnAllMissionComleted?.Invoke();
                         ClearOption();
                         return;
                     }

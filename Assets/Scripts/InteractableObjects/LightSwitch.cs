@@ -5,6 +5,11 @@ public class LightSwitch : InteractableObject
 {
     public GameObject lights;
 
+    private void OnEnable()
+    {
+        EventManager.OnChangeDay += TurnOfLight;
+    }
+    
     public override void SetButtonLanguage(TextMeshProUGUI text, int optionIndex)
     {
         switch (optionIndex)
@@ -49,6 +54,18 @@ public class LightSwitch : InteractableObject
                 // set di chuyen
                 GameManager.Instance.canMove = true;
                 break;
+        }
+    }
+    public void TurnOfLight()
+    {
+        if(GameManager.Instance.currentDay == 2)
+        {
+            GameManager.Instance.turnOnLight = false;
+            lights.SetActive(false);
+        }
+        else
+        {
+            GameManager.Instance.turnOnLight = true;
         }
     }
 }
