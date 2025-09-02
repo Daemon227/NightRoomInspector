@@ -10,6 +10,7 @@
             "Menu_Exit_Title": "Are you sure you want to exit?",
             "Menu_Exit": "Exit",
             "Menu_Tutorial":"How to play",
+            "Menu_Warning":"Warning",
 
             //button
             "Room":"Room",
@@ -98,7 +99,8 @@
             "Note_Mission": "Pay attention to tenants who speak strangely, say things inconsistent with previous days, or talk in a way that doesn’t sound human.",
             "Save_Note":"Daily auto-save file",
 
-            
+            //Warning
+            "Warning":"The game contains horror images. Please consider carefully before playing.",
         },
         "vn": {
             "Menu_New_Game": "Chơi mới",
@@ -110,6 +112,7 @@
             "Menu_Exit_Title": "Bạn có chắc muốn thoát không?",
             "Menu_Exit": "Thoát",
             "Menu_Tutorial":"Hướng dẫn chơi",
+            "Menu_Warning":"Cảnh báo",
 
             "Room":"Phòng",
             "Message":"Lời nhắn",
@@ -197,6 +200,9 @@
             "Note_Third_Mission":"3. Báo cáo trước khi ra về.",
             "Note_Mission":"Để ý những người thuê phòng ăn nói kỳ lạ, không ăn khớp với ngày trước hoặc nói chuyện không giống con người.",
             "Save_Note":"File tự lưu hàng ngày",
+
+            //Warning
+            "Warning":"Game có chứa hình ảnh kinh dị nhe, Vui lòng cân nhắc trước khi chơi",
         }
     }
 }

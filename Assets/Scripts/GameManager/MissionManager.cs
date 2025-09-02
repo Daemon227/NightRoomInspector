@@ -35,7 +35,6 @@ public class MissionManager : MonoBehaviour
         var gm = GameManager.Instance;
         int checkedRooms = gm.GetRoomCheckedCount();
         int totalRooms = gm.GetTotalRoomNeedCheck();
-        Debug.LogWarning("WTF");
         // Nếu chưa check hết phòng
         if (!gm.checkFullRoom)
         {
