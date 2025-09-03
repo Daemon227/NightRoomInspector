@@ -5,7 +5,6 @@ public class SettingDataLoader : MonoBehaviour
 {
     public static SettingDataLoader Instance;
     public int resolutionIndex = 0;
-    private string settingFileName = "settings.json";
 
     private void Awake()
     {
@@ -37,7 +36,6 @@ public class SettingDataLoader : MonoBehaviour
 
     public void LoadSetting()
     {
-#if UNITY_WEBGL && !UNITY_EDITOR
         if (PlayerPrefs.HasKey("settings"))
         {
             string json = PlayerPrefs.GetString("settings");
@@ -49,20 +47,6 @@ public class SettingDataLoader : MonoBehaviour
         {
             Debug.LogWarning("No settings found in PlayerPrefs (WebGL).");
         }
-#else
-        string path = Path.Combine(Application.persistentDataPath, settingFileName);
-        if (File.Exists(path))
-        {
-            string json = File.ReadAllText(path);
-            SettingData loadedSettings = JsonUtility.FromJson<SettingData>(json);
-            ApplySettings(loadedSettings);
-            Debug.Log("Settings loaded from " + path);
-        }
-        else
-        {
-            Debug.LogWarning("No settings file found at " + path);
-        }
-#endif
     }
 
     public void SaveSettings()
@@ -73,16 +57,9 @@ public class SettingDataLoader : MonoBehaviour
 
         SettingData settingData = new SettingData(musicVolume, sfxVolume, language);
         string json = JsonUtility.ToJson(settingData);
-
-#if UNITY_WEBGL && !UNITY_EDITOR
         PlayerPrefs.SetString("settings", json);
         PlayerPrefs.Save();
         Debug.Log("Settings saved to PlayerPrefs (WebGL).");
-#else
-        string path = Path.Combine(Application.persistentDataPath, settingFileName);
-        File.WriteAllText(path, json);
-        Debug.Log("Settings saved to " + path);
-#endif
     }
 
     private void ApplySettings(SettingData data)

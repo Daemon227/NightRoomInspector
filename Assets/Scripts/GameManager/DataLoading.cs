@@ -10,7 +10,7 @@ public class DataLoading : MonoBehaviour
     public static DataLoading Instance;
     public GameData currentGameData;
     public GameData[] gameDataList;
-    private string saveFileName = "savegame.json";
+    //private string saveFileName = "savegame.json";
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -39,24 +39,16 @@ public class DataLoading : MonoBehaviour
 
         SaveDataWrapper saveDataWrapper = new SaveDataWrapper(gameDataList);
         string json = JsonUtility.ToJson(saveDataWrapper, true);
-
-#if UNITY_WEBGL && !UNITY_EDITOR
         // WebGL: save vào PlayerPrefs
         PlayerPrefs.SetString("savegame", json);
         PlayerPrefs.Save();
         Debug.Log("Game data saved to PlayerPrefs (WebGL).");
-#else
-        // PC/Mobile: save file vào persistentDataPath
-        string path = Path.Combine(Application.persistentDataPath, saveFileName);
-        File.WriteAllText(path, json);
-        Debug.Log("Game data saved to " + path);
-#endif
+
     }
 
 
     public GameData[] LoadGameData()
     {
-#if UNITY_WEBGL && !UNITY_EDITOR
         // WebGL: load từ PlayerPrefs
         if (PlayerPrefs.HasKey("savegame"))
         {
@@ -71,28 +63,14 @@ public class DataLoading : MonoBehaviour
             Debug.LogWarning("No save data found in PlayerPrefs (WebGL).");
             return null;
         }
-#else
-        // PC/Mobile: load file
-        string path = Path.Combine(Application.persistentDataPath, saveFileName);
-        if (File.Exists(path))
-        {
-            string json = File.ReadAllText(path);
-            SaveDataWrapper loadedData = JsonUtility.FromJson<SaveDataWrapper>(json);
-            gameDataList = loadedData.gameDataArray;
-            Debug.Log("Game data loaded from " + path);
-            return gameDataList;
-        }
-        else
-        {
-            Debug.LogWarning("No save file found at " + path);
-            return null;
-        }
-#endif
     }
 
     public GameData[] LoadNewData()
     {
-        gameDataList = LoadGameData();
+        if(LoadGameData() != null)
+        {
+            gameDataList = LoadGameData(); 
+        }
         currentGameData = null;
         return gameDataList;
     }

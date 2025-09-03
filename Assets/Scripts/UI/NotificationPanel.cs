@@ -16,6 +16,9 @@ public class NotificationPanel : MonoBehaviour
     }
     public IEnumerator ShowNotiffication()
     {
+        SetActiveUIElements(false);
+        yield return new WaitForSeconds(1f);
+        SetActiveUIElements(true);
         title.text = MultiLanguageManager.Instance.GetText("Menu_Warning");
         content.text = MultiLanguageManager.Instance.GetText("Warning");
         instruction.text = MultiLanguageManager.Instance.GetText("Instruction_Click_To_Continue");
@@ -24,5 +27,11 @@ public class NotificationPanel : MonoBehaviour
         menu.SetActive(true);
         AudioManager.Instance.PlayThemeMusic();
         this.gameObject.SetActive(false);
+    }
+    public void SetActiveUIElements(bool value)
+    {
+        title.gameObject.SetActive(value);
+        content.gameObject.SetActive(value);
+        instruction.gameObject.SetActive(value);
     }
 }

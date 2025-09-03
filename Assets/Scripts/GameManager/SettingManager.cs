@@ -26,7 +26,10 @@ public class SettingManager : MonoBehaviour
     public Button saveAndExitButton;
     private void Awake()
     {
+#if !UNITY_WEBGL
         Screen.SetResolution(1280, 720, false);
+#endif
+
     }
     private void Start()
     {
@@ -63,6 +66,7 @@ public class SettingManager : MonoBehaviour
     }
     public void ResolutionSetting(int index)
     {
+#if !UNITY_WEBGL
         switch (index)
         {
             case 0:
@@ -86,6 +90,7 @@ public class SettingManager : MonoBehaviour
                 SettingDataLoader.Instance.resolutionIndex = 3;
                 break;
         }
+#endif
     }
 
     public void LanguageSetting(int index)
