@@ -1,48 +1,125 @@
-**Night Room Inspector**
-2D pixel-art puzzle horror focused on a chatbox UI — scan, interrogate, decide. Playable on WebGL and PC app.
+# 🌙 Night Room Inspector
 
-Introduction
-You are unemployed and happen to find a flyer recruiting for a night room inspector at an old lodging house. The contract is only 4 nights, but the salary is suspiciously high. The job sounds simple: clean up if dirty, check all tenants, and report to the landlord if you notice anything unusual. However, among these tenants lurk beings known as “Impostors” — they are not human. Each night, all tenants become increasingly distorted and grotesque.
-The game features 3 different endings depending on the choices you make.
+*A 2D pixel-art puzzle horror game focused on a chatbox UI — scan, interrogate, decide.*
 
-**Key Features**
-• Short horror narrative: 4 nights of tense gameplay with branching choices.
-• 3 Endings: your reports, trust level, and actions affect the outcome.
-• Multiple interactions: pick up/examine items, chat with tenants, scan bodies, and shoot when suspicious.
-• Pixel art 2D: moody atmosphere, worn-down rooms, and unsettling details.
-• Chatbox-driven gameplay: interrogation and deduction through dialogue.
-• Cross-platform: runs on WebGL (browser) and PC app.
-⚠️ Content Warning: Horror themes, body distortion, sudden audio/visual scares. Player discretion advised.
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-WebGL%20%7C%20Windows-blue.svg)]()
 
-**Gameplay**
-1. Night shift: patrol the corridor, clean rooms if dirty, check tenants one by one.
-2. Observe & note: track suspicious behavior, lies, environmental inconsistencies
-3. Body scan: use the scanner to detect biological anomalies.
-4. Chat interrogation: choose questions/answers in the chatbox to pressure or calm suspects.
-5. Decide: REPORT (suspected), IGNORE, or ACT (restrain/shoot) if danger is high.
-6. Consequences: your choices affect trust, transformations, available resources, and the ending.
+---
 
-**Core Mechanics**
-• Suspicion system: suspicion rises/falls based on tenant behavior, dialogue, and scans.
-• Scan & match: compare scan results with tenant records (structural anomalies…).
-• Items: light switch, scan machine, gun
-• Daily reports: submit a written report each night, selecting tenants and evidence.
+## 📖 Introduction
 
-**Controls (default)**
-ActionPC (Keyboard/Mouse)WebGLMoveWASD / Arrow keysWASD / Arrow keys
-Installation & Launch
-WebGL
-  1. Open link: https://daemon-t.itch.io/night-room-inspector
-  2. If WebGL errors occur, enable Hardware Acceleration in your browser.
-PC (Windows)
-  1. Download from link: https://daemon-t.itch.io/night-room-inspector
-  2. Extract and run NightRoomInspector.exe.
+You are unemployed and stumble upon a flyer recruiting a **Night Room Inspector** for an old lodging house. The contract lasts only **4 nights**, but the salary is suspiciously high.
 
-**Credits**
-• Design & Programming: Hoang Tien Dat
-• Pixel Art: Anisaous
-• Audio: Void1 Gaming
-• Special Thanks: players who test and give feedback!
+The job sounds simple:
 
-**Contact**
-• Email: hoangtiendat220704@gmail.com
+* 🧹 Clean the room if dirty
+* 🚪 Check each tenant
+* 📑 Report anything unusual
+
+However, among the tenants lurk beings called **"Impostors"** — not human. Each night, they grow increasingly grotesque and distorted.
+
+➡️ The game has **3 different endings** depending on your choices.
+
+---
+
+## ✨ Key Features
+
+* 🕯 **Short horror narrative**: 4 tense nights with branching choices.
+* 🔀 **3 Endings**: based on your reports, trust levels, and actions.
+* 🗨 **Multiple interactions**: pick up/examine items, chat with tenants, scan bodies, and use your weapon when necessary.
+* 🎨 **Pixel art 2D**: eerie atmosphere with unsettling details.
+* 💬 **Chatbox-driven gameplay**: interrogation and deduction through dialogue.
+* 💻 **Cross-platform**: playable on **WebGL & PC**.
+
+⚠️ **Content Warning**: Horror themes, body distortion, sudden audio/visual scares. Player discretion advised.
+
+---
+
+## 🎮 Gameplay Flow
+
+1. 🌌 **Night shift**: patrol corridors, clean rooms, check tenants.
+2. 👀 **Observe & note**: track suspicious behavior, lies, environmental inconsistencies.
+3. 🧪 **Body scan**: detect biological anomalies.
+4. 💬 **Interrogation**: choose dialogue options to pressure or calm suspects.
+5. ⚖️ **Decide**: REPORT / IGNORE / ACT (restrain, shoot).
+6. 🔄 **Consequences**: affect trust, transformations, resources, and the ending.
+
+---
+
+## 🛠 Core Mechanics
+
+* 📊 **Suspicion System**: rises/falls based on actions, dialogue, and scans.
+* 🔬 **Scan & Match**: compare scan data with tenant records.
+* 🧰 **Items**: light switch, scanner, gun.
+* 📝 **Daily Reports**: submit nightly reports with suspects and evidence.
+
+---
+
+## ⌨️ Controls (default)
+
+| Action | PC (Keyboard/Mouse) | WebGL             |
+| ------ | ------------------: | :---------------- |
+| Move   |   WASD / Arrow keys | WASD / Arrow keys |
+
+---
+
+## 📥 Installation & Launch
+
+### 🌐 WebGL
+
+1. Open: `https://daemon-t.itch.io/night-room-inspector`
+2. If WebGL errors occur → enable **Hardware Acceleration** in your browser.
+
+### 💻 Windows (PC)
+
+1. Download: `https://daemon-t.itch.io/night-room-inspector`
+2. Extract and run `NightRoomInspector.exe`
+
+---
+
+## 🧾 Reports & Endings
+
+Each night you submit a **report** selecting tenants and evidence. Reports + actions directly influence the **3 endings**.
+
+---
+
+## 🎨 Screenshots / Assets
+
+> Suggestion: place files in `assets/screenshots/` or `docs/images/` in the repo and update paths below.
+
+```
+![Screenshot 1](docs/images/screenshot1.png)
+![Screenshot 2](docs/images/screenshot2.png)
+```
+
+---
+
+## 👥 Credits
+
+* 🎮 **Design & Programming**: Hoang Tien Dat
+* 🎨 **Pixel Art**: Anisaous
+* 🔊 **Audio**: Void1 Gaming
+* 🙏 **Special Thanks**: players who test and give feedback
+
+---
+
+## 📄 License
+
+Recommended: **MIT License**. Add a `LICENSE` file in the repo if you agree.
+
+---
+
+## 📬 Contact
+
+* ✉️ Email: `hoangtiendat220704@gmail.com`
+
+---
+
+### Suggested first commit
+
+```
+git init
+git add .
+git commit -m "chore: add initial README for Night Room Inspector"
+```
