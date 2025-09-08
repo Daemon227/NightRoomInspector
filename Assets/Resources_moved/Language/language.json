@@ -1,0 +1,208 @@
+﻿{
+    "languages": {
+        "en": {
+            "Menu_New_Game": "New Game",
+            "Menu_Continue": "Continue",
+            "Menu_Setting": "Settings",
+            "Menu_About": "Credits",
+            "Menu_Loading": "Loading...",
+            "Menu_Instruction_ClickToContinue": "Click to continue",
+            "Menu_Exit_Title": "Are you sure you want to exit?",
+            "Menu_Exit": "Exit",
+            "Menu_Tutorial":"How to play",
+            "Menu_Warning":"Warning",
+
+            //button
+            "Room":"Room",
+            "Message": "Message",
+            "Exit": "Exit",
+            "Select_Saved_File":"Please select a saved file",
+            "Select_Slot_To_Save":"Please select a slot to save",
+            "Leave": "Leave",
+            "Knock": "Knock",
+            "Chat": "Chat",
+            "Scan": "Scan",
+            "Shoot": "Shoot",
+            "Turn_Light_On": "Turn Light On",
+            "Turn_Light_Off": "Turn Light Off",
+            "Open_Window": "Open Window",
+            "Open_Door": "Open Door",
+            "Call": "Call",
+            "Jump": "Jump",
+            "Clean": "Clean",
+            "Button_GoHome":"Go Home",
+            "Button_Load": "Load",
+            "Button_Back": "< Back",
+            "Button_Close":"Close",
+            "Button_Wait":"Wait a moment",
+            "Button_Save":"Save",
+            "Button_View":"View",
+            "Button_SaveAndExit": "Save and Exit",
+            "Button_Exit_Yes":"Yes",
+            "Button_Exit_No":"No",
+            "Button_BackToMenu": "Back to Menu",
+            "Button_Try_Again": "Try again",
+            "Button_Pickup":"Pick Up",
+
+
+            "Mission_CheckRoom":"Room Checked:",
+            "Mission_Report":"Report to Boss",
+            "Mission_Back":"Go Home",
+
+            //notiffication
+            "N_Turn_On_Light":"I must turn on the light first",
+            "N_Empty_Room":"This room is empty",
+            "N_Cannot_Open_Door":"I can't open the door, why is there a fire outside?",
+            "N_Hear_Sound":"Wait, I hear a strange sound in the house",
+            "N_Mission_Not_Completed":"I haven't completed the daily mission yet",
+            "N_Has_Reported":"I have reported to boss, go home now",
+            "N_Not_Checked_All_Room":"I haven't checked all the rooms yet",
+            "N_NoOne_Answer":"No one answers the phone",
+
+            //Result
+            "Result_Title":"Result",
+            "Result_Reported":"You killed:",
+            "Result_Mistaken":"Mistakenly killed:",
+            
+            //normal Text
+            "Day":"Day:",
+            "Empty_File":"Empty File",
+            "Wrong_Call":"Wrong Call",
+            "Report_Floor_1": "On the 1st floor",
+            "Report_Floor_2": "On the 2nd floor",
+            "No_Report":"No one is abnormal",
+            "ReThink":"ReThink",
+            "You_Died": "You died",
+
+            //Instruction Text
+            "Instruction_Scan": "Move the mouse over the area to scan",
+            "Instruction_Click_To_Continue":"Click anywhere to continue",
+
+            //setting ui
+            "Setting_Title":"Settings",
+            "Setting_Music":"Music",
+            "Setting_SFX":"SFX",
+            "Setting_Language":"Language",
+            "Setting_Resolution":"Resolution",
+
+            //Credits ui
+            "Designer_Text":"Game Designer",
+            "Programmer_Text": "Game Programmer",
+            "Artist_Text":"Environment Artist",
+            "Music_SFX_Text":"Music, SFX",
+
+            //Note ui
+            "Note_Title": "Daily Tasks",
+            "Note_First_Mission": "1. Turn on the light if it’s off, clean up if it’s dirty.",
+            "Note_Second_Mission": "2. Check all rooms with guests staying.",
+            "Note_Third_Mission": "3. Report before leaving.",
+            "Note_Mission": "Pay attention to tenants who speak strangely, say things inconsistent with previous days, or talk in a way that doesn’t sound human.",
+            "Save_Note":"Daily auto-save file",
+
+            //Warning
+            "Warning":"The game contains horror images. Please consider carefully before playing.",
+        },
+        "vn": {
+            "Menu_New_Game": "Chơi mới",
+            "Menu_Continue": "Tiếp tục",
+            "Menu_Setting": "Cài đặt",
+            "Menu_About": "Người thực hiện",
+            "Menu_Loading": "Đang tải...",
+            "Menu_Instruction_ClickToContinue": "Nhấp để tiếp tục",
+            "Menu_Exit_Title": "Bạn có chắc muốn thoát không?",
+            "Menu_Exit": "Thoát",
+            "Menu_Tutorial":"Hướng dẫn chơi",
+            "Menu_Warning":"Cảnh báo",
+
+            "Room":"Phòng",
+            "Message":"Lời nhắn",
+            "Exit": "Thoát",
+            "Select_Saved_File":"Hãy chọn một file lưu game",
+            "Select_Slot_To_Save":"Hãy chọn một ô để lưu",
+            "Leave": "Rời đi",
+            "Knock": "Gõ cửa",
+            "Chat": "Trò chuyện",
+            "Scan": "Dùng máy quét",
+            "Shoot": "Bắn",
+            "Turn_Light_On": "Bật đèn",
+            "Turn_Light_Off": "Tắt đèn",
+            "Open_Window": "Mở cửa sổ",
+            "Open_Door": "Mở cửa",
+            "Call": "Gọi điện",
+            "Jump": "Nhảy",
+            "Clean": "Dọn dẹp",
+            "Button_GoHome":"Về nhà",
+            "Button_Load": "Tải",
+            "Button_Back": "< Quay lại",
+            "Button_Close":"Đóng",
+            "Button_Wait":"Chờ chút",
+            "Button_Save":"Lưu",
+            "Button_View":"Xem",
+            "Button_SaveAndExit": "Lưu và thoát",
+            "Button_Exit_Yes":"Có",
+            "Button_Exit_No":"Không",
+            "Button_BackToMenu": "Quay lại menu",
+            "Button_Try_Again": "Thử lại",
+            "Button_Pickup":"Nhặt",
+
+
+            "Mission_CheckRoom":"Phòng đã kiểm tra:",
+            "Mission_Report":"Báo cáo sếp",
+            "Mission_Back":"Về nhà",
+            
+
+            //notiffication
+            "N_Turn_On_Light":"Phải bật đèn trước đã",
+            "N_Empty_Room":"Phòng này không còn ai ở nữa",
+            "N_Cannot_Open_Door":"Mình không thể mở cửa, tại sao bên ngoài lại có cháy?",
+            "N_Hear_Sound":"Khoan đã, mình nghe thấy âm thanh kỳ lạ trong nhà",
+            "N_Mission_Not_Completed":"Mình chưa hoàn thành nhiệm vụ hàng ngày",
+            "N_Has_Reported":"Mình đã báo cáo với sếp, về nhà thôi",
+            "N_Not_Checked_All_Room":"Mình chưa kiểm tra hết các phòng",
+            "N_NoOne_Answer":"Không ai nghe máy cả",
+
+            //Result
+            "Result_Title":"Kết quả",
+            "Result_Reported":"Bạn đã giết:",
+            "Result_Mistaken":"Giết nhầm:",
+            
+            //normal Text
+            "Day":"Ngày:",
+            "Empty_File":"File trống",
+            "Wrong_Call":"Gọi nhầm",
+            "Report_Floor_1": "Ở tầng 1",
+            "Report_Floor_2": "Ở tầng 2",
+            "No_Report":"Không thấy ai bất thường",
+            "ReThink":"Suy nghĩ lại",
+            "You_Died": "Bạn đã chết",
+            
+            //Instruction Text
+            "Instruction_Scan":"Di chuyển chuột tới vị trí cần quét",
+            "Instruction_Click_To_Continue": "Click vào nơi bất kỳ để chuyển",
+
+            //setting ui
+            "Setting_Title":"Cài đặt",
+            "Setting_Music":"Nhạc",
+            "Setting_SFX":"Âm thanh",
+            "Setting_Language":"Ngôn ngữ",
+            "Setting_Resolution":"Độ phân giải",
+
+            //Credits ui
+            "Designer_Text":"thiết kế game",
+            "Programmer_Text": "Lập trình game",
+            "Artist_Text":"Người vẽ bối cảnh",
+            "Music_SFX_Text":"Nhạc, Âm thanh",
+
+            //Note ui
+            "Note_Title":"Nhiệm vụ hàng ngày",
+            "Note_First_Mission":"1. Bật đèn nếu đèn tắt, dọn dẹp nếu bẩn.",
+            "Note_Second_Mission":"2. Kiểm tra tất cả các phòng có khách ở.",
+            "Note_Third_Mission":"3. Báo cáo trước khi ra về.",
+            "Note_Mission":"Để ý những người thuê phòng ăn nói kỳ lạ, không ăn khớp với ngày trước hoặc nói chuyện không giống con người.",
+            "Save_Note":"File tự lưu hàng ngày",
+
+            //Warning
+            "Warning":"Game có chứa hình ảnh kinh dị nhe, Vui lòng cân nhắc trước khi chơi",
+        }
+    }
+}

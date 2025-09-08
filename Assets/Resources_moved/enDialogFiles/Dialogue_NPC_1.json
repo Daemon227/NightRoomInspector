@@ -1,0 +1,130 @@
+﻿{
+  "id": 1,
+  "npcName": "Room 101",
+  "description": "A woman around 60 to 70 years old",
+  "isMonster": true,
+  "scanShowDay3":[false, true],
+  "scanShowDay4":[false, false],
+  "dialogueByDay": [
+    {
+      "day": 1,
+      "options": [
+        {
+          "playerText": "Have you lived here long?",
+          "npcTexts": [ "I moved here about 5 years ago.", "Back then it was quiet, not many people around.", "Things are fine, except for strange noises some nights."],
+          "isExit": false
+        },
+        {
+          "playerText": "What do you do daily?",
+          "npcTexts": [ "I take sewing jobs, people bring clothes and pick them up after a few days.", "I usually work mornings, rest in the afternoon, then read or drink tea in the evening.", "It’s enough to live."],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you know anyone here?",
+          "npcTexts": [ "No, I just make small talk.", "Everyone here is busy, nobody cares much about others." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you keep pets?",
+          "npcTexts": [ "No, never had one.", "Pets need care, but I prefer quiet.", "So my room is always empty."],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye",
+          "npcTexts": ["Alright, take care at night."],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "options": [
+        {
+          "playerText": "How long have you stayed?",
+          "npcTexts": [ "More than 6 years now.", "Back then, few rooms had lights at night.", "Now it’s busier, but I still close my door early."],
+          "isExit": false
+        },
+        {
+          "playerText": "What do you do daily?",
+          "npcTexts": [ "Still sewing, but fewer customers.", "I listen to the radio at night to feel less lonely.", "Sometimes I sleep early, sometimes stay up late sewing."],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you know the neighbors?",
+          "npcTexts": [ "I know some faces, some stop by to chat.", "I don’t recall names, just clothes or voices.", "People come and go, always changing."],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you keep pets?",
+          "npcTexts": [ "Never had pets.", "I’m too old to care for them.", "So my room is always empty."],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye",
+          "npcTexts": ["Watch your back tonight, the wind is strong."],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "options": [
+        {
+          "playerText": "How long have you stayed?",
+          "npcTexts": [ "So long… I don’t know anymore.", "Sometimes I recall each day, sometimes it all blends into one endless night.", "Ahh… my head hurts, my eyes… my eyes…"],
+          "isExit": false
+        },
+        {
+          "playerText": "What do you do daily?",
+          "npcTexts": [ "I still sew… but not just clothes.", "I like stitching together torn things. Sometimes fabric, sometimes… other things.", "The sound of the needle piercing layers is soothing."],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you know the neighbors?",
+          "npcTexts": [ "Of course, I know everyone. They all come to my room eventually.", "They may not remember, but I recall each person’s scent. Especially when they stand very close."],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you keep pets?",
+          "npcTexts": [ "I keep some… but they no longer look the same.", "They stay silent, obedient… and never leave.", "Do you want to meet them?" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye",
+          "npcTexts": ["Next time… don’t rush away. I’ll show you what I just stitched."],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "options": [
+        {
+          "playerText": "How long have you stayed?",
+          "npcTexts": [ "I’ve been here since before this house was built.", "These walls know me, every brick has drunk warm blood.", "Time is a trick. This place doesn’t change, only people come and go."],
+          "isExit": false
+        },
+        {
+          "playerText": "What do you do daily?",
+          "npcTexts": [ "I stitch layers of skin so they fit tight, no gaps.", "Sometimes it’s the guest’s skin, sometimes my own.", "The needle knows the way, I only follow."],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you know the neighbors?",
+          "npcTexts": [ "They’re all here… inside me.", "They don’t talk much anymore, but I hear them when night falls.", "You’ll understand, once the door closes."],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you keep pets?",
+          "npcTexts": [ "Yes… but they’re not the same anymore.", "They crawl on the floor, scratching… only quiet when I touch them.", "You’ll see them when the lights go out."],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye",
+          "npcTexts": ["Stay… so I don’t have to search anymore."],
+          "isExit": true
+        }
+      ]
+    }
+  ]
+}

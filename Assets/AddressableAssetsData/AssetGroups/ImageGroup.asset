@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: ImageGroup
+  m_EditorClassIdentifier: 
+  m_GroupName: ImageGroup
+  m_GUID: dc9ba7f474cdade43b81ed5f036cb26c
+  m_SerializeEntries:
+  - m_GUID: 0da5fc66a6371de4ba02d964f6a785a3
+    m_Address: CharacterImgs/NPC_Image_Id_7_day_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 12ce3a8ccb118ba43a48a435a1f326df
+    m_Address: CharacterImgs/NPC_Image_Id_7_day_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14a9a24acdcb0ee44821d259999bba8e
+    m_Address: CharacterImgs/NPC_Image_Id_3_day_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f9b5dbc130ceee438c99d44dc11e6bc
+    m_Address: CharacterImgs/NPC_Image_Id_2_day_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2405de7ee1e83b943b57e02d7d98f76c
+    m_Address: CharacterImgs/NPC_Image_Id_8_day_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 26338f70755034c45922dfcaea3a72a3
+    m_Address: CharacterImgs/NPC_Image_Id_5_day_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e094f26de585164e935affddaff5899
+    m_Address: CharacterImgs/NPC_Image_Id_5_day_4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 369634f9d1e2e064d873d3b78fc174dc
+    m_Address: CharacterImgs/NPC_Image_Id_1_day_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 36dfcda6b3aa6d5498d6523a27dbe252
+    m_Address: CharacterImgs/NPC_Image_Id_7_day_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 39d7886467d027046aa6db4e834c95ef
+    m_Address: CharacterImgs/NPC_Image_Id_1_day_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c5404872802bfa4d814f001808f6709
+    m_Address: CharacterImgs/NPC_Image_Id_2_day_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4007b50ae28b9174eb60e6c6ac4f8ae7
+    m_Address: CharacterImgs/NPC_Image_Id_7_day_4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 43194325b3945ab4985d26bcd72942f0
+    m_Address: CharacterImgs/NPC_Image_Id_6_day_4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 43d77451c13ec4848a686b74e34781ec
+    m_Address: CharacterImgs/NPC_Image_Id_4_day_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5579a54b000989344a41c23cc9a45b45
+    m_Address: CharacterImgs/NPC_Image_Id_3_day_4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 586e2e863cf9d524487159370db0769c
+    m_Address: CharacterImgs/NPC_Image_Id_4_day_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a8eba1b347523045a3681466053ff1f
+    m_Address: CharacterImgs/NPC_Image_Id_3_day_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5c6bb5f356756534986df02505c6c914
+    m_Address: CharacterImgs/NPC_Image_Id_4_day_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 61053a44ba549ad4ba88ee46940c2362
+    m_Address: CharacterImgs/NPC_Image_Id_5_day_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 69e8ecb7c98dbbf4ab0d1ce1781d119c
+    m_Address: CharacterImgs/NPC_Image_Id_6_day_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76f15bb5d383c4241a5f0d23f260402e
+    m_Address: CharacterImgs/NPC_Image_Id_3_day_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 84b4ade096fba4449949455ca5b8b2ee
+    m_Address: CharacterImgs/NPC_Image_Id_6_day_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 87cae02a988ee404a818d190de141e27
+    m_Address: CharacterImgs/NPC_Image_Id_1_day_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e65d2c4a77f1a94c91606e89d47591d
+    m_Address: CharacterImgs/NPC_Image_Id_5_day_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 927062278b4210a4d9f1d5ce5f6e2ca6
+    m_Address: CharacterImgs/NPC_Image_Id_6_day_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bec420697eeed8b418caeaf9bf470fe1
+    m_Address: CharacterImgs/NPC_Image_Id_4_day_4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c46807731141eec4fae4644505ca8538
+    m_Address: CharacterImgs/NPC_Image_Id_2_day_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7c7b102678d9a1439a45597ef708bdf
+    m_Address: CharacterImgs/NPC_Image_Id_8_day_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc895c1598a73d04c91e5912660e0897
+    m_Address: CharacterImgs/NPC_Image_Id_2_day_4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f44c65c0534b5fa4bb37e603ba47a9b8
+    m_Address: CharacterImgs/NPC_Image_Id_1_day_4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f54e51a65d9e04b40be8b150e153ce2a
+    m_Address: CharacterImgs/NPC_Image_Id_8_day_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fa136a4b60ee63845a4522d5fee18671
+    m_Address: CharacterImgs/NPC_Image_Id_8_day_4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: c14e726273e9efb45b39dedea2323aa9, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 4794f0ba97c9fdb4b9399e1705b4118d, type: 2}
+    - {fileID: 11400000, guid: 9a73b7b51dd4f5c4dbbf19e5c238a8f7, type: 2}

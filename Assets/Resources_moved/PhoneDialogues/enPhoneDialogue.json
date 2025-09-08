@@ -1,0 +1,68 @@
+﻿{
+  "phonedialog": [
+    {
+      "day": 1,
+      "greetings": [
+        "Hello. Was your first day on the job alright?",
+        "Did you notice anyone suspicious in the house?"
+      ],
+      "responseAffterReport": [
+        "So even on the first day, someone slipped up.",
+        "Good work.",
+        "Our people will handle it tonight.",
+        "Thank you."
+      ],
+      "responseAffterNoReport": [
+        "Looks like no one slipped up on the first day.",
+        "Alright, keep trying tomorrow.",
+        "They’re dangerous. We need to identify them quickly.",
+        "Remember what everyone said today."
+      ],
+      "signOff": [
+        "Hmm.",
+        "Goodbye."
+      ]
+    },
+    {
+      "day": 2,
+      "greetings": [
+        "Hello. Did you find anyone unusual?",
+        "I hope you did your job well today."
+      ],
+      "responseAffterReport": [
+        "Well done. We’ll take care of him tonight.",
+        "Keep it up tomorrow."
+      ],
+      "responseAffterNoReport": [
+        "Really, no one suspicious?",
+        "Pay closer attention tomorrow. They’re truly dangerous.",
+        "Watch for those whose words don’t match, or sound inhuman.",
+        "Goodbye."
+      ],
+      "signOff": [
+        "Alright, get back to work.",
+        "Report to me at the end of your shift."
+      ]
+    },
+    {
+      "day": 3,
+      "greetings": [
+        "Hello, I was looking forward to your call.",
+        "Did you find anyone unusual?"
+      ],
+      "responseAffterReport": [
+        "Good work.",
+        "It seems the radiation they emit has begun changing people.",
+        "From now on it’ll be harder to spot them."
+      ],
+      "responseAffterNoReport": [
+        "Are you even taking this seriously?",
+        "Don’t hide the truth from me.",
+        "People have already been changed by them. They’re very dangerous."
+      ],
+      "signOff": [
+        "Stay focused on the job."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+﻿{
+  "id": "2",
+  "npcName": "Room 102",
+  "description": "A middle-aged man with a twisted face, fierce eyes, and an unfriendly look. His hoarse voice lacks emotion, making others uneasy.",
+  "isMonster": false,
+  "scanShowDay3": [true, true],
+  "scanShowDay4": [true, true],
+  "dialogueByDay": [
+    {
+      "day": 1,
+      "options": [
+        {
+          "playerText": "Have you lived here long?",
+          "npcTexts": [ "Long enough. Why ask?", "I’m not moving out." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Have you seen anyone strange?",
+          "npcTexts": [ "No. And not my business.", "I don’t care about others.", "If he bothers me, I’ll beat him up."],
+          "isExit": false
+        },
+        {
+          "playerText": "What kind of work do you do?",
+          "npcTexts": [ "Manual work.", "Enough to live. Not your concern." ],
+          "isExit": false
+        },
+        {
+          "playerText": "When do you usually go out?",
+          "npcTexts": [ "When I need to. Otherwise home.", "Why so many questions?" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye.",
+          "npcTexts": [ "Good.", "Leave me alone." ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "options": [
+        {
+          "playerText": "How long have you stayed here?",
+          "npcTexts": [ "Five years. Or six.", "Who counts that?" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Noticed anyone acting strange?",
+          "npcTexts": [ "Just you asking nonsense here."],
+          "isExit": false
+        },
+        {
+          "playerText": "Did you go to work today?",
+          "npcTexts": [ "No. Stayed home sleeping.", "Had enough questions yet?" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Did you go out today?",
+          "npcTexts": [ "Does it matter to you if I did?", "You ask too much." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye.",
+          "npcTexts": [ "Good.", "Don’t come back." ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "options": [
+        {
+          "playerText": "How long have you lived here?",
+          "npcTexts": [ "Said already. Why repeat?", "What’s wrong with your ears?" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Heard anything strange lately?",
+          "npcTexts": [ "Heard footsteps last night. Someone walking.", "Don’t care. If noisy, I’ll punch him."],
+          "isExit": false
+        },
+        {
+          "playerText": "Are you still working now?",
+          "npcTexts": [ "No. Quit already.", "If you’re free, leave me be." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you often go outside?",
+          "npcTexts": [ "I’ll go out to deal with you.", "Stop bothering me." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye.",
+          "npcTexts": [ "Fine.", "Get away from my door." ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "options": [
+        {
+          "playerText": "Since when have you lived here?",
+          "npcTexts": [ "It’s you again.", "When will you stop asking?" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Did you see anything strange?",
+          "npcTexts": [ "Yes...", "Your endless questions."],
+          "isExit": false
+        },
+        {
+          "playerText": "Are you still working now?",
+          "npcTexts": [ "I don’t need money anymore."],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you want to go out?",
+          "npcTexts": [ "No. What for?", "To breathe dirty air?" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye.",
+          "npcTexts": [ "Get lost...", "Leave before I beat you." ],
+          "isExit": true
+        }
+      ]
+    }
+  ]
+}

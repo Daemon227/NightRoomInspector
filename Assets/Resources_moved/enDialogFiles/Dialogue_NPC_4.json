@@ -1,0 +1,204 @@
+﻿{
+  "id": "4",
+  "npcName": "Room 104",
+  "description": "A woman with unblinking eyes. Frightening, yet her voice is calm and precise.",
+  "isMonster": true,
+  "scanShowDay3": [true, true],
+  "scanShowDay4": [true, false],
+  "dialogueByDay": [
+    {
+      "day": 1,
+      "options": [
+        {
+          "playerText": "Hello there.",
+          "npcTexts": [
+            "Hello.",
+            "Don’t mind my eyes. They’ve been this way since I was young.",
+            "I still see things clearly, maybe clearer than most."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "How long have you lived here?",
+          "npcTexts": [
+            "I moved in about two months ago.",
+            "It’s noisy at night, but I’ve gotten used to it.",
+            "For me, a book and silence are enough."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "What’s your job?",
+          "npcTexts": [
+            "I teach literature.",
+            "I believe words are more powerful than weapons.",
+            "Wherever I go, I carry books like companions."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Met anyone strange around here?",
+          "npcTexts": [
+            "I’ve seen new faces, but none truly worrying.",
+            "Humans often doubt one another.",
+            "Fear usually comes from our own imagination."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye.",
+          "npcTexts": [
+            "Goodbye.",
+            "Remember: What we fear most is often just the shadow of ourselves."
+          ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "options": [
+        {
+          "playerText": "Hello there.",
+          "npcTexts": [
+            "Hello.",
+            "I spent the evening preparing lessons… or was it reading?",
+            "I often confuse work with pleasure."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "How long have you stayed here?",
+          "npcTexts": [
+            "Hmm… about six weeks, maybe more.",
+            "When teaching, I often lose track of time, as if days blend into one stream.",
+            "Do you ever feel that way?"
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you feel safe here?",
+          "npcTexts": [
+            "Safe, relatively.",
+            "People are the most unpredictable.",
+            "I used to see lies in my students’ eyes."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Hear anything strange last night?",
+          "npcTexts": [
+            "I heard long footsteps in the hall.",
+            "But my eyes saw no one.",
+            "I assume it was only an illusion of sound."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye.",
+          "npcTexts": [
+            "Goodbye.",
+            "Have a good shift."
+          ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "options": [
+        {
+          "playerText": "Hello there.",
+          "npcTexts": [
+            "You look more tired than yesterday. I, however, feel much stronger.",
+            "Perhaps it’s proper meals… or learning to draw energy from the air itself."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you still enjoy teaching?",
+          "npcTexts": [
+            "Of course.",
+            "I like hearing students tremble while reading poetry.",
+            "It excites me in a strange way."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Have friends in this place?",
+          "npcTexts": [
+            "I keep my distance.",
+            "Waiting for others to reveal flaws—that’s when you learn the most about them."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "What about the strange illness?",
+          "npcTexts": [
+            "They call it illness, I call it adaptation.",
+            "The body always changes with the environment.",
+            "Maybe we’re evolving to become more complete."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye.",
+          "npcTexts": [
+            "Sleep well.",
+            "And remember… don’t let others hear your heartbeat too clearly.",
+            "Some creatures are drawn to that sound."
+          ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "options": [
+        {
+          "playerText": "Hello there.",
+          "npcTexts": [
+            "Oh… don’t look at me as if I’m a monster.",
+            "This is simply the final stage of evolution.",
+            "I see everything more clearly than ever."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Are you feeling well?",
+          "npcTexts": [
+            "I’ve never felt stronger.",
+            "I no longer crave bread or meat."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Do you recall what you said?",
+          "npcTexts": [
+            "Of course.",
+            "I told you of books, teaching, human nature.",
+            "I remember it all… because it flows in my blood now."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "What if someone impersonates you?",
+          "npcTexts": [
+            "I think humans and impersonators could coexist.",
+            "Some are good, some are bad.",
+            "Same with them."
+          ],
+          "isExit": false
+        },
+        {
+          "playerText": "Goodbye.",
+          "npcTexts": [
+            "Go.",
+            "But remember, if your heart races… I will hear it."
+          ],
+          "isExit": true
+        }
+      ]
+    }
+  ]
+}

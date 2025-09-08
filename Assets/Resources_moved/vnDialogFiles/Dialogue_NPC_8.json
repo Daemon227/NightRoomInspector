@@ -1,0 +1,143 @@
+﻿{
+  "id": "8",
+  "npcName": "Phòng 204",
+  "description": "Một cô gái trông không có chút sức sống nào, giọng nói thì giống như một người đàn ông.",
+  "isMonster": true,
+  "scanShowDay3":[false, false],
+  "scanShowDay4":[false, false],
+  "dialogueByDay": [
+    {
+      "day": 1,
+      "options": [
+        {
+          "playerText": "Trông cô có vẻ không được khỏe",
+          "npcTexts": [ "Xin lỗi có chuyện này tôi muốn nói...", "...Tôi không phải con người...",
+          "...Xin anh đừng báo cáo tôi với chính phủ",
+          "Tôi thề tôi khác với những kẻ khác."],
+          "isExit": false
+        },
+        {
+          "playerText": "Cô không phải con người?",
+          "npcTexts": [ "Tôi được gọi là 'kẻ giả mạo', nhưng tôi vẫn có lý trí.", "Tôi muốn chung sống với con người." ],
+          "isExit": false
+        },
+        {
+          "playerText": "Cô có định làm hại tôi?",
+          "npcTexts": [ "Tôi không tấn công con người...", "...Tôi không ăn thịt" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Tại sao tôi phải tin cô?",
+          "npcTexts": [ "Ừm không có lý do nào cả", "Nhưng nếu anh chọn giết tôi thì anh sẽ không bao giờ biết sự thật" ],
+          "isExit": false
+        },
+        {
+          "playerText": "Rời đi.",
+          "npcTexts": [ "Nếu anh muốn biết sự thật...", "...Anh có thể quay lại" ],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "options": [
+        {
+          "playerText": "Tại sao cô lại tới đây ở?",
+          "npcTexts": [ "Trong lúc lang thang tôi gặp xác của cô gái này", "Tôi thề là tôi không giết cô ấy...",
+          "Tôi ký sinh vào cô ấy, bằng cách nào đó tôi có được ký ức của cô gái này."],
+          "isExit": false
+        },
+        {
+          "playerText": "Nguồn gốc của cô là gì?",
+          "npcTexts": [ "Chúng tôi được sinh ra từ phòng thí nghiệm", "Nhưng có vẻ bị thất bại và chúng tôi thoát ra",
+          "Chúng tôi chỉ là những tế bào nhưng có khả năng phân chia cực nhanh",
+          "Có lẽ đồng loại của tôi đã đi khắp thành phố này rồi"],
+          "isExit": false
+        },
+        {
+          "playerText": "Tại sao cô không giết tôi?",
+          "npcTexts": [ "Tôi đã nói là tôi khác những kẻ khác", "Tôi có lý trí... Chúng tôi có 2 biến thể chính",
+          "Một loại có lý trí, thông minh và một loại không có lý trí"],
+          "isExit": false
+        },
+        {
+          "playerText": "Làm sao các người tồn tại được?",
+          "npcTexts": [ "Cách nhanh nhất để duy trì năng lượng là ăn thịt sống", "Chúng tôi bị hấp dẫn bởi con người",
+          "Tuy nhiên các tế bào của tôi có thể tự tổng hợp năng lượng"],
+          "isExit": false
+        },
+        {
+          "playerText": "Rời đi.",
+          "npcTexts": [ "Tạm biệt.Tôi biết anh vẫn còn nghi ngờ tôi"],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "options": [
+        {
+          "playerText": "Mong muốn của cô là gì?",
+          "npcTexts": [ "Tôi muốn được tồn tại", "Trải nghiệm cuộc sống như một con người"],
+          "isExit": false
+        },
+        {
+          "playerText": "Trong nhà này có 'kẻ giả mạo' không?",
+          "npcTexts": [ "Có, tuy nhiên tôi không thể nhận biết được đồng loại", "Trừ khi chúng bộc lộ ra những sơ hở"],
+          "isExit": false
+        },
+        {
+          "playerText": "Cách giết một 'kẻ giả mạo'?",
+          "npcTexts": [ "Vũ khí bình thường không làm gì được đâu", "Cậu biết đấy, chúng tôi là những siêu tế bào,...",
+          "Chúng tôi phân tách rất nhanh, hay nói cách khác là siêu hồi phục",
+          "Trừ khi cậu có vài món vũ khí từ chính phủ..."],
+          "isExit": false
+        },
+        {
+          "playerText": "Cô muốn gì ở tôi?",
+          "npcTexts": [ "Một cơ hội. Chỉ cần thế thôi.",
+          "Tôi muốn chứng minh cho anh thấy không phải kẻ nào cũng là quái vật"],
+          "isExit": false
+        },
+        {
+          "playerText": "Rời đi.",
+          "npcTexts": [ "Cảm ơn anh đã tin tôi"],
+          "isExit": true
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "options": [
+        {
+          "playerText": "Nếu tôi bắn cô thì sao?",
+          "npcTexts": [ "Nếu như đó là điều anh muốn", "Tôi sẽ không phản kháng"],
+          "isExit": false
+        },
+        {
+          "playerText": "Những kẻ bị tôi báo cáo đi đâu rồi?",
+          "npcTexts": [ "Nếu anh báo cáo đúng kẻ giả mạo họ sẽ tới bắt hắn đi", "Nếu không đúng, bạn sẽ thấy một vài túi rác ở dưới tầng 1",
+          "Đó là những gì còn sót lại"],
+          "isExit": false
+        },
+        {
+          "playerText": "Chính phủ muốn gì?",
+          "npcTexts": [ "Tôi không rõ...", "Nhưng có lẽ họ muốn tạo ra gì đó",
+          "Một đội quân nhân bản đầy thiện chiến chẳng hạn."],
+          "isExit": false
+        },
+        {
+          "playerText": "Nhân lọai sống chung với 'kẻ giả mạo'?",
+          "npcTexts": [ "Cũng không khác cuộc sống bình thường là mấy đâu",
+          "Con người cũng có thiện, ác mà","Cuộc sống chỉ tốt đẹp khi không còn cái ác"],
+          "isExit": false
+        },
+        {
+          "playerText": "Rời đi.",
+          "npcTexts": [ "Một ngày nào đó tôi mong có thể gặp lại anh...","Sau đêm nay tôi sẽ đi khỏi đây"],
+          "isExit": true
+        }
+      ]
+    }
+  ]
+}

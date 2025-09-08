@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: phoneDialogues
+  m_EditorClassIdentifier: 
+  m_GroupName: phoneDialogues
+  m_GUID: 6ca5ad86ceb9c0a4ab8cc8fc5f576852
+  m_SerializeEntries:
+  - m_GUID: 323c1fdc587be5d479d8ac492da4c245
+    m_Address: phoneDialogues/vnPhoneDialogue
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f5d38f2e1f8b9ac4bb2de0f98308b0ce
+    m_Address: phoneDialogues/enPhoneDialogue
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: c14e726273e9efb45b39dedea2323aa9, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d44570f9bb5ed474dacd81de73c94751, type: 2}
+    - {fileID: 11400000, guid: e5e1ecb2ab465cd42bf7acbe8603faa9, type: 2}
