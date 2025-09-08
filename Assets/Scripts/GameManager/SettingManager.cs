@@ -24,6 +24,16 @@ public class SettingManager : MonoBehaviour
     public Button showTutorialButton;
 
     public Button saveAndExitButton;
+
+    private void OnEnable()
+    {
+        EventManager.OnChangeLanguage += UpdateUI;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnChangeLanguage -= UpdateUI;
+    }
     private void Awake()
     {
 #if !UNITY_WEBGL
@@ -100,12 +110,10 @@ public class SettingManager : MonoBehaviour
             case 0:
                 MultiLanguageManager.Instance.ChangeLanguage("en");
                 Debug.Log("Set to English");             
-                UpdateUI();
                 break;
             case 1:
                 MultiLanguageManager.Instance.ChangeLanguage("vn");
                 Debug.Log("Set to Vietnamese");
-                UpdateUI();
                 break;        
         }
     }

@@ -88,6 +88,14 @@ public class GameManager : MonoBehaviour
             door.SetDoorSprite();
             reportedRoom = null;
         }
+        foreach(var room in roomOnFloor1)
+        {
+            room.GetComponent<Door>().hasChecked = false;
+        }
+        foreach(var room in roomOnFloor2)
+        {
+            room.GetComponent<Door>().hasChecked = false;
+        }
         checkFullRoom = false;
         reportToBoss = false; 
         currentDay += 1;

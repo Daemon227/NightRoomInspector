@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 15003, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Web
+  m_Name: New Windows Profile
   m_EditorClassIdentifier: 
   m_AssetVersion: 1
-  m_BuildTarget: 20
-  m_Subtarget: 0
-  m_PlatformId: 84a3bb9e7420477f885e98145999eb20
+  m_BuildTarget: 19
+  m_Subtarget: 2
+  m_PlatformId: 4e3c793746204150860bf175a9a41a05
   m_PlatformBuildProfile:
-    rid: 1454351585621835847
+    rid: 1454351609034702919
   m_OverrideGlobalSceneList: 0
   m_Scenes: []
   m_ScriptingDefines: []
@@ -34,13 +34,13 @@ MonoBehaviour:
     - line: '|   targetDevice: 2'
     - line: '|   useOnDemandResources: 0'
     - line: '|   accelerometerFrequency: 60'
-    - line: '|   companyName: Daemon.T'
+    - line: '|   companyName: Made by Daemon.T'
     - line: '|   productName: Night room inspector'
     - line: '|   defaultCursor: {instanceID: 0}'
     - line: '|   cursorHotspot: {x: 0, y: 0}'
     - line: '|   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b:
         0.1254902, a: 1}'
-    - line: '|   m_ShowUnitySplashScreen: 0'
+    - line: '|   m_ShowUnitySplashScreen: 1'
     - line: '|   m_ShowUnitySplashLogo: 1'
     - line: '|   m_SplashScreenOverlayOpacity: 1'
     - line: '|   m_SplashScreenAnimation: 1'
@@ -67,8 +67,8 @@ MonoBehaviour:
     - line: '|   m_HolographicTrackingLossScreen: {instanceID: 0}'
     - line: '|   defaultScreenWidth: 1280'
     - line: '|   defaultScreenHeight: 720'
-    - line: '|   defaultScreenWidthWeb: 1280'
-    - line: '|   defaultScreenHeightWeb: 720'
+    - line: '|   defaultScreenWidthWeb: 960'
+    - line: '|   defaultScreenHeightWeb: 600'
     - line: '|   m_StereoRenderingPath: 0'
     - line: '|   m_ActiveColorSpace: 1'
     - line: '|   unsupportedMSAAFallback: 0'
@@ -521,8 +521,7 @@ MonoBehaviour:
     - line: '|   openGLRequireES31: 0'
     - line: '|   openGLRequireES31AEP: 0'
     - line: '|   openGLRequireES32: 0'
-    - line: '|   m_TemplateCustomTags:'
-    - line: '|     PRODUCT_DESCRIPTION: '
+    - line: '|   m_TemplateCustomTags: {}'
     - line: '|   mobileMTRendering:'
     - line: '|     Android: 1'
     - line: '|     iPhone: 1'
@@ -531,10 +530,7 @@ MonoBehaviour:
     - line: '|   m_BuildTargetGroupLightmapSettings: []'
     - line: '|   m_BuildTargetGroupLoadStoreDebugModeSettings: []'
     - line: '|   m_BuildTargetNormalMapEncoding: []'
-    - line: '|   m_BuildTargetDefaultTextureCompressionFormat:'
-    - line: '|   - serializedVersion: 3'
-    - line: '|     m_BuildTarget: WebGL'
-    - line: '|     m_Formats: 05000000'
+    - line: '|   m_BuildTargetDefaultTextureCompressionFormat: []'
     - line: '|   playModeTestRunnerEnabled: 0'
     - line: '|   runPlayModeTestAsEditModeTest: 0'
     - line: '|   actionOnDotNetUnhandledException: 1'
@@ -787,9 +783,9 @@ MonoBehaviour:
     - line: '|   webGLWasmArithmeticExceptions: 0'
     - line: '|   webGLLinkerTarget: 1'
     - line: '|   webGLThreadsSupport: 0'
-    - line: '|   webGLDecompressionFallback: 1'
+    - line: '|   webGLDecompressionFallback: 0'
     - line: '|   webGLInitialMemorySize: 32'
-    - line: '|   webGLMaximumMemorySize: 1024'
+    - line: '|   webGLMaximumMemorySize: 2048'
     - line: '|   webGLMemoryGrowthMode: 2'
     - line: '|   webGLMemoryLinearGrowthStep: 16'
     - line: '|   webGLMemoryGeometricGrowthStep: 0.2'
@@ -918,8 +914,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 1454351585621835847
-      type: {class: WebGLPlatformSettings, ns: UnityEditor.WebGL, asm: UnityEditor.WebGL.Extensions}
+    - rid: 1454351609034702919
+      type: {class: WindowsPlatformSettings, ns: UnityEditor.WindowsStandalone, asm: UnityEditor.WindowsStandalone.Extensions}
       data:
         m_Development: 0
         m_ConnectProfiler: 0
@@ -930,9 +926,11 @@ MonoBehaviour:
         m_ExplicitNullChecks: 0
         m_ExplicitDivideByZeroChecks: 0
         m_ExplicitArrayBoundsChecks: 0
-        m_CompressionType: -1
+        m_CompressionType: 0
         m_InstallInBuildFolder: 0
-        m_CodeOptimization: 2
-        m_WebGLClientBrowserPath: 
-        m_WebGLClientBrowserType: 0
-        m_WebGLTextureSubtarget: 0
+        m_WindowsBuildAndRunDeployTarget: 0
+        m_Architecture: 0
+        m_CreateSolution: 0
+        m_CopyPDBFiles: 0
+        m_WindowsDevicePortalAddress: 
+        m_WindowsDevicePortalUsername: 
