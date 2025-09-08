@@ -95,7 +95,6 @@ Each night you submit a **report** selecting tenants and evidence. Reports + act
 
 ---
 
-### Suggested first commit
 
 ```
 git init
