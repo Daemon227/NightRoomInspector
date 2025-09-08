@@ -94,10 +94,3 @@ Each night you submit a **report** selecting tenants and evidence. Reports + act
 * ✉️ Email: `hoangtiendat220704@gmail.com`
 
 ---
-
-
-```
-git init
-git add .
-git commit -m "chore: add initial README for Night Room Inspector"
-```
